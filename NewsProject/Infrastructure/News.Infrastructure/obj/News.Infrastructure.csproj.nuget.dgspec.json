@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Honor\\Desktop\\NewsProject\\Infrastructure\\News.Infrastructure\\News.Infrastructure.csproj": {}
+    "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Infrastructure\\News.Infrastructure\\News.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Honor\\Desktop\\NewsProject\\Infrastructure\\News.Infrastructure\\News.Infrastructure.csproj": {
+    "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Infrastructure\\News.Infrastructure\\News.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Honor\\Desktop\\NewsProject\\Infrastructure\\News.Infrastructure\\News.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Infrastructure\\News.Infrastructure\\News.Infrastructure.csproj",
         "projectName": "News.Infrastructure",
-        "projectPath": "C:\\Users\\Honor\\Desktop\\NewsProject\\Infrastructure\\News.Infrastructure\\News.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Infrastructure\\News.Infrastructure\\News.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Honor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Honor\\Desktop\\NewsProject\\Infrastructure\\News.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Infrastructure\\News.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Honor\\AppData\\Roaming\\NuGet\\NuGet.Config",

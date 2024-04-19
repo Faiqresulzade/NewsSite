@@ -45,7 +45,7 @@ namespace News.Persistence.Configuration
                     ReadCount = i * 5,
                     IsDeleted = false,
                     CreatedAt = DateTime.Now,
-                    Id = i,
+                    Id = i+1,
                 });
             }
         }

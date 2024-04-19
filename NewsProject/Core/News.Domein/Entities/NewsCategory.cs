@@ -5,7 +5,7 @@ namespace News.Domain.Entities
     /// <summary>
     /// Represents a category under which news articles are classified.
     /// </summary>
-    public class NewsCategory : EntityBase
+    public sealed class NewsCategory : EntityBase
     {
         public string Name { get; set; }
         public IList<News> News { get; set; }

@@ -1,0 +1,11 @@
+C:\Users\Honor\Desktop\News\NewsProject\Infrastructure\News.Infrastructure\bin\Debug\net6.0\News.Infrastructure.deps.json
+C:\Users\Honor\Desktop\News\NewsProject\Infrastructure\News.Infrastructure\bin\Debug\net6.0\News.Infrastructure.dll
+C:\Users\Honor\Desktop\News\NewsProject\Infrastructure\News.Infrastructure\bin\Debug\net6.0\News.Infrastructure.pdb
+C:\Users\Honor\Desktop\News\NewsProject\Infrastructure\News.Infrastructure\obj\Debug\net6.0\News.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Honor\Desktop\News\NewsProject\Infrastructure\News.Infrastructure\obj\Debug\net6.0\News.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Honor\Desktop\News\NewsProject\Infrastructure\News.Infrastructure\obj\Debug\net6.0\News.Infrastructure.AssemblyInfo.cs
+C:\Users\Honor\Desktop\News\NewsProject\Infrastructure\News.Infrastructure\obj\Debug\net6.0\News.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Honor\Desktop\News\NewsProject\Infrastructure\News.Infrastructure\obj\Debug\net6.0\News.Infrastructure.dll
+C:\Users\Honor\Desktop\News\NewsProject\Infrastructure\News.Infrastructure\obj\Debug\net6.0\refint\News.Infrastructure.dll
+C:\Users\Honor\Desktop\News\NewsProject\Infrastructure\News.Infrastructure\obj\Debug\net6.0\News.Infrastructure.pdb
+C:\Users\Honor\Desktop\News\NewsProject\Infrastructure\News.Infrastructure\obj\Debug\net6.0\ref\News.Infrastructure.dll

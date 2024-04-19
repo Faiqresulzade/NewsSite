@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BYx22yfrr5oOTya8ezHzMVNunzqNirzQ2RkTndN6I/MdlItVmelDlQJkgIqcm1hj3uCMyaoGsTAJfHrx4AvMlg==",
+  "dgSpecHash": "13nUNFFnpWPTHBHop88zhGe9NaDABVye1+oo8DfdRKhZjItKtBifpKQhX3zCibr4Zpp8lE0dqUtWaOn/vGS/Yg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Honor\\Desktop\\NewsProject\\Core\\News.Domein\\News.Domain.csproj",
+  "projectFilePath": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Core\\News.Domein\\News.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

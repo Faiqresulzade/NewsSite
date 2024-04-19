@@ -5,7 +5,7 @@
     /// </summary>
     public abstract class EntityBase : IEntityBase
     {
-        public int Id { get; set; }
+        public int Id { get; set; }//init
         public DateTime CreatedAt { get; set; }
         public bool IsDeleted { get; set; }
     }

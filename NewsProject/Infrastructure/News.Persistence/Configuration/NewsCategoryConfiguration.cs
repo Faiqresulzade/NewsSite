@@ -43,7 +43,7 @@ namespace News.Persistence.Configuration
                     Name = faker.Commerce.Categories(1)[0],
                     IsDeleted = false,
                     CreatedAt = DateTime.Now,
-                    Id= i,
+                    Id= i+1,
                 }) ;
         }
     }

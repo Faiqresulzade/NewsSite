@@ -5,7 +5,7 @@ namespace News.Domain.Entities
     /// <summary>
     /// Entity representing a news class.
     /// </summary>
-    public class News : EntityBase
+    public sealed class News : EntityBase
     {
         public string AuthorName { get; set; }
         public string Title { get; set; }

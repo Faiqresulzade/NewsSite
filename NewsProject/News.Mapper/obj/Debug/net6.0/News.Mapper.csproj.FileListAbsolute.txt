@@ -1,0 +1,17 @@
+C:\Users\Honor\Desktop\News\NewsProject\News.Mapper\bin\Debug\net6.0\News.Mapper.deps.json
+C:\Users\Honor\Desktop\News\NewsProject\News.Mapper\bin\Debug\net6.0\News.Mapper.dll
+C:\Users\Honor\Desktop\News\NewsProject\News.Mapper\bin\Debug\net6.0\News.Mapper.pdb
+C:\Users\Honor\Desktop\News\NewsProject\News.Mapper\bin\Debug\net6.0\News.Application.dll
+C:\Users\Honor\Desktop\News\NewsProject\News.Mapper\bin\Debug\net6.0\News.Domain.dll
+C:\Users\Honor\Desktop\News\NewsProject\News.Mapper\bin\Debug\net6.0\News.Application.pdb
+C:\Users\Honor\Desktop\News\NewsProject\News.Mapper\bin\Debug\net6.0\News.Domain.pdb
+C:\Users\Honor\Desktop\News\NewsProject\News.Mapper\obj\Debug\net6.0\News.Mapper.csproj.AssemblyReference.cache
+C:\Users\Honor\Desktop\News\NewsProject\News.Mapper\obj\Debug\net6.0\News.Mapper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Honor\Desktop\News\NewsProject\News.Mapper\obj\Debug\net6.0\News.Mapper.AssemblyInfoInputs.cache
+C:\Users\Honor\Desktop\News\NewsProject\News.Mapper\obj\Debug\net6.0\News.Mapper.AssemblyInfo.cs
+C:\Users\Honor\Desktop\News\NewsProject\News.Mapper\obj\Debug\net6.0\News.Mapper.csproj.CoreCompileInputs.cache
+C:\Users\Honor\Desktop\News\NewsProject\News.Mapper\obj\Debug\net6.0\News.Mapper.csproj.CopyComplete
+C:\Users\Honor\Desktop\News\NewsProject\News.Mapper\obj\Debug\net6.0\News.Mapper.dll
+C:\Users\Honor\Desktop\News\NewsProject\News.Mapper\obj\Debug\net6.0\refint\News.Mapper.dll
+C:\Users\Honor\Desktop\News\NewsProject\News.Mapper\obj\Debug\net6.0\News.Mapper.pdb
+C:\Users\Honor\Desktop\News\NewsProject\News.Mapper\obj\Debug\net6.0\ref\News.Mapper.dll

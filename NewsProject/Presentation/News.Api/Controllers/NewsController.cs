@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using News.Application.Abstraction.Interfaces.UnitOfWorks;
 using NewsEntity = News.Domain.Entities.News;
+using MediatR;
+using News.Application.Features.NewsCategory.Queries.GetAllCategories;
 
 namespace News.Api.Controllers
 {
@@ -8,17 +10,17 @@ namespace News.Api.Controllers
     [ApiController]
     public class NewsController : ControllerBase
     {
-        private readonly IUnitOfWork _unitOfWork;
+        private readonly IMediator _mediator;
 
-        public NewsController(IUnitOfWork unitOfWork)
+        public NewsController(IMediator mediator)
         {
-            _unitOfWork = unitOfWork;
+            _mediator = mediator;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            return Ok(await _unitOfWork.GetReadRepository<NewsEntity>().GetAllAsync(x => x.IsDeleted == false));
+            return Ok(await _mediator.Send(new GetAllCategoriesQueryRequest()));
         }
     }
 }

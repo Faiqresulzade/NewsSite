@@ -107,3 +107,9 @@ C:\Users\Honor\Desktop\News\NewsProject\Presentation\News.Api\obj\Debug\net6.0\r
 C:\Users\Honor\Desktop\News\NewsProject\Presentation\News.Api\obj\Debug\net6.0\News.Api.pdb
 C:\Users\Honor\Desktop\News\NewsProject\Presentation\News.Api\obj\Debug\net6.0\News.Api.genruntimeconfig.cache
 C:\Users\Honor\Desktop\News\NewsProject\Presentation\News.Api\obj\Debug\net6.0\ref\News.Api.dll
+C:\Users\Honor\Desktop\News\NewsProject\Presentation\News.Api\bin\Debug\net6.0\MediatR.dll
+C:\Users\Honor\Desktop\News\NewsProject\Presentation\News.Api\bin\Debug\net6.0\MediatR.Contracts.dll
+C:\Users\Honor\Desktop\News\NewsProject\Presentation\News.Api\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Honor\Desktop\News\NewsProject\Presentation\News.Api\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\Honor\Desktop\News\NewsProject\Presentation\News.Api\bin\Debug\net6.0\News.Mapper.dll
+C:\Users\Honor\Desktop\News\NewsProject\Presentation\News.Api\bin\Debug\net6.0\News.Mapper.pdb

@@ -8,9 +8,11 @@
 
   <ItemGroup>
     <Folder Include="Abstraction\AbstractClass\" />
+    <Folder Include="Features\Products\Command\" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.29" />
   </ItemGroup>
 

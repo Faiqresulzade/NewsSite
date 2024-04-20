@@ -1,4 +1,5 @@
-using News.Persistence.Registrations;
+using News.Api.AllRegistrations;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
@@ -11,7 +12,8 @@ builder.Configuration
     .AddJsonFile("appsettings.json",false)
     .AddJsonFile($"appsettings.{env.EnvironmentName}.json",true);
 
-builder.Services.AddPersistence(builder.Configuration);
+
+AllRegistration.RegisterAllDI(builder);
 
 var app = builder.Build();
 

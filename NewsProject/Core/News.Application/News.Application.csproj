@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Abstraction\Classes\" />
     <Folder Include="Features\Products\Command\" />
   </ItemGroup>
 

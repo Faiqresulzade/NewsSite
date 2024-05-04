@@ -17,7 +17,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Infrastructure\News.Persistence\News.Persistence.csproj" />
-    <ProjectReference Include="..\..\News.Mapper\News.Mapper.csproj" />
   </ItemGroup>
 
 </Project>

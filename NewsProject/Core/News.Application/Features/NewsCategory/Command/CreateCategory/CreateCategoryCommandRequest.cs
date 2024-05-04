@@ -2,7 +2,8 @@
 
 namespace News.Application.Features.NewsCategory.Command.CreateCategory
 {
-    internal class CreateCategoryCommandRequest : IRequest
+    public class CreateCategoryCommandRequest : IRequest
     {
+        public string Name { get; set; }
     }
 }

@@ -10,7 +10,6 @@
         "dependencies": {
           "MediatR": "12.2.0",
           "Microsoft.EntityFrameworkCore.Design": "6.0.29",
-          "News.Mapper": "1.0.0",
           "News.Persistence": "1.0.0",
           "Swashbuckle.AspNetCore": "6.5.0"
         },
@@ -565,7 +564,8 @@
           "Microsoft.EntityFrameworkCore": "6.0.29",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.29",
           "News.Application": "1.0.0",
-          "News.Domain": "1.0.0"
+          "News.Domain": "1.0.0",
+          "News.Mapper": "1.0.0"
         },
         "runtime": {
           "News.Persistence.dll": {}

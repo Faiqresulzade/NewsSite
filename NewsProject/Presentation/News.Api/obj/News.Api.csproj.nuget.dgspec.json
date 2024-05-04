@@ -157,6 +157,9 @@
               },
               "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Core\\News.Domein\\News.Domain.csproj": {
                 "projectPath": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Core\\News.Domein\\News.Domain.csproj"
+              },
+              "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\News.Mapper\\News.Mapper.csproj": {
+                "projectPath": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\News.Mapper\\News.Mapper.csproj"
               }
             }
           }
@@ -301,9 +304,6 @@
             "projectReferences": {
               "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Infrastructure\\News.Persistence\\News.Persistence.csproj": {
                 "projectPath": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Infrastructure\\News.Persistence\\News.Persistence.csproj"
-              },
-              "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\News.Mapper\\News.Mapper.csproj": {
-                "projectPath": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\News.Mapper\\News.Mapper.csproj"
               }
             }
           }

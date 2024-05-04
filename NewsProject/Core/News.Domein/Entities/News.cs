@@ -12,16 +12,14 @@ namespace News.Domain.Entities
         public string Description { get; set; }
         public int ReadCount { get; set; }
         public string ImagePath { get; set; }
-
         public int CategoryId { get; set; }
         public NewsCategory Category { get; set; }
 
-        public News()
-        {
+        public News() { }
 
-        }
-        public News(string authorName, string title, string description, int readCount, string imagePath)
+        public News(string authorName, string title, string description, int readCount, string imagePath, int categoryId)
         {
+            CategoryId = categoryId;
             AuthorName = authorName;
             Title = title;
             Description = description;

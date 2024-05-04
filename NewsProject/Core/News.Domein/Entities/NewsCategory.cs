@@ -8,12 +8,9 @@ namespace News.Domain.Entities
     public sealed class NewsCategory : EntityBase
     {
         public string Name { get; set; }
-        public IList<News> News { get; set; }
+        public IList<News>? News { get; set; }
 
-        public NewsCategory()
-        {
-
-        }
+        public NewsCategory() { }
 
         public NewsCategory(string name) => Name = name;
     }

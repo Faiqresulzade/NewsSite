@@ -18,6 +18,5 @@ namespace News.Persistence.Context
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
-
     }
 }

@@ -9,10 +9,8 @@ namespace News.Persistence.UnitOfWorks
     {
         private readonly AppDbContext _dbContext;
 
-        public UnitOfWork(AppDbContext dbContext)
-        {
-            _dbContext = dbContext;
-        }
+        public UnitOfWork(AppDbContext dbContext) => _dbContext = dbContext;
+
         public async ValueTask DisposeAsync() => await _dbContext.DisposeAsync();
 
         public int Save() => _dbContext.SaveChanges();
@@ -21,6 +19,6 @@ namespace News.Persistence.UnitOfWorks
 
         IReadRepository<T> IUnitOfWork.GetReadRepository<T>() => new ReadRepository<T>(_dbContext);
 
-        IWriteRepository<T> IUnitOfWork.GetWriteRepository<T>()=>new WriteRepository<T>(_dbContext);
+        IWriteRepository<T> IUnitOfWork.GetWriteRepository<T>() => new WriteRepository<T>(_dbContext);
     }
 }

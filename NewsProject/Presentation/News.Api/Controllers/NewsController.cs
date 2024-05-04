@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using News.Application.Abstraction.Interfaces.UnitOfWorks;
 using NewsEntity = News.Domain.Entities.News;
 using MediatR;
 using News.Application.Features.NewsCategory.Queries.GetAllCategories;
@@ -12,15 +11,11 @@ namespace News.Api.Controllers
     {
         private readonly IMediator _mediator;
 
-        public NewsController(IMediator mediator)
-        {
-            _mediator = mediator;
-        }
+        public NewsController(IMediator mediator) => _mediator = mediator;
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
-        {
-            return Ok(await _mediator.Send(new GetAllCategoriesQueryRequest()));
-        }
+        public async Task<IActionResult> GetAll() =>
+            Ok(await _mediator.Send(new GetAllCategoriesQueryRequest()));
+
     }
 }

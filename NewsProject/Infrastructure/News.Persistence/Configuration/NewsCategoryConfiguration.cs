@@ -9,7 +9,7 @@ namespace News.Persistence.Configuration
     /// <summary>
     /// Configuration class for the <see cref="NewsCategory"/> entity.
     /// </summary>
-    public class NewsCategoryConfiguration : IEntityTypeConfiguration<NewsCategory>,ISeedData<NewsCategory>
+    public class NewsCategoryConfiguration : IEntityTypeConfiguration<NewsCategory>, ISeedData<NewsCategory>
     {
 
         /// <summary>
@@ -43,8 +43,8 @@ namespace News.Persistence.Configuration
                     Name = faker.Commerce.Categories(1)[0],
                     IsDeleted = false,
                     CreatedAt = DateTime.Now,
-                    Id= i+1,
-                }) ;
+                    Id = i + 1,
+                });
         }
     }
 }

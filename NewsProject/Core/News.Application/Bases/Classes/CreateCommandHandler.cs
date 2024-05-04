@@ -2,10 +2,10 @@
 
 namespace News.Application.Bases.Classes
 {
-    public class CreateCommandHandler<T>
+    public abstract class CreateCommandHandler<T>
     {
-       private protected IUnitOfWork unitOfWork;
-       private protected readonly T factory;
+        private protected readonly IUnitOfWork unitOfWork;
+        private protected readonly T factory;
 
         public CreateCommandHandler(IUnitOfWork unitOfWork, T factory)
         {

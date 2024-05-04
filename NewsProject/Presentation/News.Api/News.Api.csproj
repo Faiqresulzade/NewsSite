@@ -19,4 +19,8 @@
     <ProjectReference Include="..\..\Infrastructure\News.Persistence\News.Persistence.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Bases\Classes\" />
+  </ItemGroup>
+
 </Project>

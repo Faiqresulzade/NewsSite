@@ -2,7 +2,6 @@
 using News.Application.Abstraction.Interfaces.Factories;
 using News.Application.Abstraction.Interfaces.UnitOfWorks;
 using News.Application.Bases.Classes;
-using News.Application.Extensions;
 using News.Application.Extensions.UnitOfWorks;
 using Category = News.Domain.Entities.NewsCategory;
 

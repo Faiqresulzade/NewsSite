@@ -5,7 +5,7 @@ using News.Domain.Comman;
 
 namespace News.Application.Extensions.UnitOfWorks
 {
-    public static class UnitOfExtension
+    public static class UnitOfWorkExtension
     {
         public static async Task AddAsync<Tentity, Tfactory, Trequest>(this IUnitOfWork unitOfWork, Tfactory factory, Trequest request)
             where Tentity : class, IEntityBase, new()

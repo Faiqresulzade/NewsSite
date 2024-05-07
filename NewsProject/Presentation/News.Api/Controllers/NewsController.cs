@@ -2,20 +2,18 @@
 using NewsEntity = News.Domain.Entities.News;
 using MediatR;
 using News.Application.Features.NewsCategory.Queries.GetAllCategories;
+using News.Api.Bases.Classes;
 
 namespace News.Api.Controllers
 {
-    [Route("api/[controller]/[action]")]
-    [ApiController]
-    public class NewsController : ControllerBase
+    [Route("api/[controller]/[action]"), ApiController]
+    public class NewsController : BaseController
     {
-        private readonly IMediator _mediator;
-
-        public NewsController(IMediator mediator) => _mediator = mediator;
+        public NewsController(IMediator mediator) : base(mediator) { }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll() =>
-            Ok(await _mediator.Send(new GetAllCategoriesQueryRequest()));
+        public async Task<IActionResult> GetAll()
+            => Ok(await mediator.Send(new GetAllCategoriesQueryRequest()));
 
     }
 }

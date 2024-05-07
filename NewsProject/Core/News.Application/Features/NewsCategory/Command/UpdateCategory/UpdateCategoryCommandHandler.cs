@@ -6,7 +6,7 @@ using Category = News.Domain.Entities.NewsCategory;
 
 namespace News.Application.Features.NewsCategory.Command.UpdateCategory
 {
-    public class UpdateCategoryCommandHandler : UpdateCommandHandler, IRequestHandler<UpdateCategoryCommandRequest>
+    internal class UpdateCategoryCommandHandler : UpdateCommandHandler, IRequestHandler<UpdateCategoryCommandRequest>
     {
         public UpdateCategoryCommandHandler(IUnitOfWork unitOfWork, IMapper mapper)
         : base(unitOfWork, mapper) { }

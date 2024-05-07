@@ -2,12 +2,12 @@
 
 namespace News.Application.Bases.Classes
 {
-    public abstract class CreateCommandHandler<T>
+    internal abstract class CreateCommandHandler<Tfactory>
     {
         private protected readonly IUnitOfWork unitOfWork;
-        private protected readonly T factory;
+        private protected readonly Tfactory factory;
 
-        public CreateCommandHandler(IUnitOfWork unitOfWork, T factory)
+        public CreateCommandHandler(in IUnitOfWork unitOfWork, in Tfactory factory)
         {
             this.unitOfWork = unitOfWork;
             this.factory = factory;

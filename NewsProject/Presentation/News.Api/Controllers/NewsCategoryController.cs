@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using News.Api.Bases.Classes;
 using News.Api.Bases.Interfaces;
 using News.Application.Features.NewsCategory.Command.CreateCategory;
 using News.Application.Features.NewsCategory.Command.DeleteCategory;
@@ -8,36 +9,28 @@ using News.Application.Features.NewsCategory.Queries.GetAllCategories;
 
 namespace News.Api.Controllers
 {
-    [Route("api/[controller]/[action]")]
-    [ApiController]
-    public class NewsCategoryController : ControllerBase,
+    [Route("api/[controller]/[action]"), ApiController]
+    internal class NewsCategoryController : BaseController,
         IReadable, IRemoveable<DeleteCategoryCommandRequest>,
         IUpdateable<UpdateCategoryCommandRequest>, ICreatable<CreateCategoryCommandRequest>
     {
-        private readonly IMediator _mediator;
-
-        public NewsCategoryController(IMediator mediator) => _mediator = mediator;
+        public NewsCategoryController(IMediator mediator) : base(mediator) { }
 
         [HttpGet]
         public async Task<IActionResult> GetAll()
-            => Ok(await _mediator.Send(new GetAllCategoriesQueryRequest()));
+          => Ok(await mediator.Send(new GetAllCategoriesQueryRequest()));
 
         [HttpPost]
         public async Task<IActionResult> Create(CreateCategoryCommandRequest request)
-            => await ExecuteCommand(() => _mediator.Send(request));
+          => await ExecuteCommand<IActionResult>(() => mediator.Send(request), () => Ok());
 
         [HttpPost]
         public async Task<IActionResult> Update(UpdateCategoryCommandRequest request)
-            => await ExecuteCommand(() => _mediator.Send(request));
+          => await ExecuteCommand<IActionResult>(() => mediator.Send(request), () => Ok());
 
         [HttpPost]
         public async Task<IActionResult> Delete(DeleteCategoryCommandRequest request)
-            => await ExecuteCommand(() => _mediator.Send(request));
+          => await ExecuteCommand<IActionResult>(() => mediator.Send(request), () => Ok());
 
-        private async Task<IActionResult> ExecuteCommand(Action action)
-        {
-            action?.Invoke();
-            return Ok();
-        }
     }
 }

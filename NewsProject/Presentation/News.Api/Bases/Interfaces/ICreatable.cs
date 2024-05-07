@@ -3,8 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace News.Api.Bases.Interfaces
 {
-    public interface ICreatable<Trequest> where Trequest : class, IRequest
+    internal interface ICreatable<Trequest> where Trequest : class, IRequest
     {
-        private protected Task<IActionResult> Create(Trequest request);
+        public Task<IActionResult> Create(Trequest request);
     }
 }

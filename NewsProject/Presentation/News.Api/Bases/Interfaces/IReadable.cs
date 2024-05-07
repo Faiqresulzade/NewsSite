@@ -2,8 +2,8 @@
 
 namespace News.Api.Bases.Interfaces
 {
-    public interface IReadable
+    internal interface IReadable
     {
-        private protected Task<IActionResult> GetAll();
+        public Task<IActionResult> GetAll();
     }
 }

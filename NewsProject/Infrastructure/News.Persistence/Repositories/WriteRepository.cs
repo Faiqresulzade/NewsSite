@@ -6,7 +6,7 @@ namespace News.Persistence.Repositories
 {
     public class WriteRepository<T> : IWriteRepository<T> where T : class, IEntityBase, new()
     {
-        public WriteRepository(DbContext dbContext) => _dbContext = dbContext;
+        public WriteRepository(in DbContext dbContext) => _dbContext = dbContext;
         private readonly DbContext _dbContext;
 
         private DbSet<T> _table => _dbContext.Set<T>();

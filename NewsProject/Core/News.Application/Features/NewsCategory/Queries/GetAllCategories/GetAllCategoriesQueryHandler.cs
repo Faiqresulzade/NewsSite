@@ -21,8 +21,8 @@ namespace News.Application.Features.NewsCategory.Queries.GetAllCategories
         {
             var categories = await _unitOfWork.GetReadRepository<Category>().GetAllAsync(n => !n.IsDeleted);
            
-            var mappedData = _mapper.Map<GetAllCategoriesQueryResponse, Category>(categories);
-            return mappedData;
+            var mapedData = _mapper.Map<GetAllCategoriesQueryResponse, Category>(categories);
+            return mapedData;
         }
     }
 }

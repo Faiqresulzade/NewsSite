@@ -7,16 +7,14 @@ using Category = News.Domain.Entities.NewsCategory;
 
 namespace News.Application.Features.NewsCategory.Command.CreateCategory
 {
-    public class CreateCategoryCommandHandler : CreateCommandHandler<ICategoryFactory>, IRequestHandler<CreateCategoryCommandRequest>
+    internal class CreateCategoryCommandHandler : CreateCommandHandler<ICategoryFactory>, IRequestHandler<CreateCategoryCommandRequest>
     {
         public CreateCategoryCommandHandler(IUnitOfWork unitOfWork, ICategoryFactory factory)
         : base(unitOfWork, factory) { }
 
 
         public async Task Handle(CreateCategoryCommandRequest request, CancellationToken cancellationToken)
-        {
-            await unitOfWork.AddAsync<Category, ICategoryFactory, CreateCategoryCommandRequest>(factory, request);
-            await unitOfWork.SaveAsync();
-        }
+         => await unitOfWork.AddAsync<Category, ICategoryFactory, CreateCategoryCommandRequest>(factory, request);
+
     }
 }

@@ -3,9 +3,9 @@ using News.Application.Registrations;
 using News.Mapper.Registrations;
 namespace News.Api.AllRegistrations
 {
-    public static class AllRegistration
+    internal static class AllRegistration
     {
-        public static void RegisterAllDI(WebApplicationBuilder builder)
+        internal static void RegisterAllDI(WebApplicationBuilder builder)
         {
             builder.Services.AddPersistence(builder.Configuration);
             builder.Services.AddApplication();

@@ -11,7 +11,7 @@ namespace News.Application.Features.NewsCategory.Queries.GetAllCategories
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
 
-        public GetAllCategoriesQueryHandler(IUnitOfWork unitOfWork, IMapper mapper)
+        public GetAllCategoriesQueryHandler(in IUnitOfWork unitOfWork,in IMapper mapper)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;

@@ -9,7 +9,7 @@ namespace News.Application.Features.NewsCategory.Command.CreateCategory
 {
     internal class CreateCategoryCommandHandler : CreateCommandHandler<ICategoryFactory>, IRequestHandler<CreateCategoryCommandRequest>
     {
-        public CreateCategoryCommandHandler(IUnitOfWork unitOfWork, ICategoryFactory factory)
+        public CreateCategoryCommandHandler(in IUnitOfWork unitOfWork,in ICategoryFactory factory)
         : base(unitOfWork, factory) { }
 
 

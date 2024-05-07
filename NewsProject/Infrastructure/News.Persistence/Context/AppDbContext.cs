@@ -8,7 +8,7 @@ namespace News.Persistence.Context
     public class AppDbContext : DbContext
     {
         public AppDbContext() { }
-        public AppDbContext(DbContextOptions options) : base(options) { }
+        public AppDbContext(in DbContextOptions options) : base(options) { }
 
         DbSet<NewsCategory> NewsCategories { get; set; }
         DbSet<NewsEntity> News { get; set; }

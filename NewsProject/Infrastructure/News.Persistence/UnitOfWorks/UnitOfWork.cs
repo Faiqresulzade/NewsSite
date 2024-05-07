@@ -9,7 +9,7 @@ namespace News.Persistence.UnitOfWorks
     {
         private readonly AppDbContext _dbContext;
 
-        public UnitOfWork(AppDbContext dbContext) => _dbContext = dbContext;
+        public UnitOfWork(in AppDbContext dbContext) => _dbContext = dbContext;
 
         public async ValueTask DisposeAsync() => await _dbContext.DisposeAsync();
 

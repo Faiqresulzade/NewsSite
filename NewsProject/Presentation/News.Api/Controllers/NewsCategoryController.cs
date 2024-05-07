@@ -14,7 +14,7 @@ namespace News.Api.Controllers
         IReadable, IRemoveable<DeleteCategoryCommandRequest>,
         IUpdateable<UpdateCategoryCommandRequest>, ICreatable<CreateCategoryCommandRequest>
     {
-        public NewsCategoryController(IMediator mediator) : base(mediator) { }
+        public NewsCategoryController(in IMediator mediator) : base(mediator) { }
 
         [HttpGet]
         public async Task<IActionResult> GetAll()

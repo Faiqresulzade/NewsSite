@@ -7,7 +7,7 @@ namespace News.Application.Features.NewsCategory.Command.DeleteCategory
 {
     internal class DeleteCategoryCommandHandler : DeleteCommandHandler, IRequestHandler<DeleteCategoryCommandRequest>
     {
-        public DeleteCategoryCommandHandler(IUnitOfWork unitOfWork) : base(unitOfWork) { }
+        public DeleteCategoryCommandHandler(in IUnitOfWork unitOfWork) : base(unitOfWork) { }
 
         public async Task Handle(DeleteCategoryCommandRequest request, CancellationToken cancellationToken)
           => await base.SoftDelete<Category>(request.Id);

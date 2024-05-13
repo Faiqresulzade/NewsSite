@@ -2,6 +2,22 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "AutoMapper/13.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/AutoMapper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/AutoMapper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Bogus/35.5.0": {
         "type": "package",
         "compile": {
@@ -70,12 +86,12 @@
         },
         "compile": {
           "ref/netcoreapp3.1/Microsoft.Data.SqlClient.dll": {
-            "related": ".xml;.pdb"
+            "related": ".pdb;.xml"
           }
         },
         "runtime": {
           "lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll": {
-            "related": ".xml;.pdb"
+            "related": ".pdb;.xml"
           }
         },
         "runtimeTargets": {
@@ -785,6 +801,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "AutoMapper": "13.0.1",
           "MediatR": "12.2.0",
           "Microsoft.EntityFrameworkCore": "6.0.29",
           "News.Domain": "1.0.0"
@@ -826,6 +843,21 @@
     }
   },
   "libraries": {
+    "AutoMapper/13.0.1": {
+      "sha512": "/Fx1SbJ16qS7dU4i604Sle+U9VLX+WSNVJggk6MupKVkYvvBm4XqYaeFuf67diHefHKHs50uQIS2YEDFhPCakQ==",
+      "type": "package",
+      "path": "automapper/13.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "automapper.13.0.1.nupkg.sha512",
+        "automapper.nuspec",
+        "icon.png",
+        "lib/net6.0/AutoMapper.dll",
+        "lib/net6.0/AutoMapper.xml"
+      ]
+    },
     "Bogus/35.5.0": {
       "sha512": "iCXszbIvvxgfb01bPe/s3R6pQSKX6rpcQWqM7wqDt+lsMogR6fkSWBwqOxLpdXmMB7mgZNNk2hm2M1shoIiekA==",
       "type": "package",
@@ -2068,19 +2100,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Honor\\.nuget\\packages\\": {}
+    "C:\\Users\\faig.rasulzada\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Infrastructure\\News.Infrastructure\\News.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Infrastructure\\News.Infrastructure\\News.Infrastructure.csproj",
       "projectName": "News.Infrastructure",
-      "projectPath": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Infrastructure\\News.Infrastructure\\News.Infrastructure.csproj",
-      "packagesPath": "C:\\Users\\Honor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Infrastructure\\News.Infrastructure\\obj\\",
+      "projectPath": "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Infrastructure\\News.Infrastructure\\News.Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\faig.rasulzada\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Infrastructure\\News.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Honor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\faig.rasulzada\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2094,14 +2126,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Core\\News.Application\\News.Application.csproj": {
-              "projectPath": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Core\\News.Application\\News.Application.csproj"
+            "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Core\\News.Application\\News.Application.csproj": {
+              "projectPath": "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Core\\News.Application\\News.Application.csproj"
             },
-            "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Core\\News.Domein\\News.Domain.csproj": {
-              "projectPath": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Core\\News.Domein\\News.Domain.csproj"
+            "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Core\\News.Domein\\News.Domain.csproj": {
+              "projectPath": "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Core\\News.Domein\\News.Domain.csproj"
             },
-            "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Infrastructure\\News.Persistence\\News.Persistence.csproj": {
-              "projectPath": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Infrastructure\\News.Persistence\\News.Persistence.csproj"
+            "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Infrastructure\\News.Persistence\\News.Persistence.csproj": {
+              "projectPath": "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Infrastructure\\News.Persistence\\News.Persistence.csproj"
             }
           }
         }
@@ -2131,7 +2163,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

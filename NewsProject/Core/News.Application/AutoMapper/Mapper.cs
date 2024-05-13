@@ -3,7 +3,7 @@ using AutoMapper.Internal;
 using News.Application.Bases.Classes.Singleton;
 using NewsMapper = News.Application.Abstraction.Interfaces.AutoMapper.IMapper;
 
-namespace News.Mapper.AutoMapper
+namespace News.Application.AutoMapper
 {
     //singleton
     public class Mapper : SingletonBase<Mapper>, NewsMapper

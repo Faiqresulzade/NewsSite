@@ -9,8 +9,8 @@ namespace News.Application.Features.NewsCategory.Command.UpdateCategory
 {
     internal class UpdateCategoryCommandHandler : UpdateCommandHandler, IRequestHandler<UpdateCategoryCommandRequest>
     {
-        public UpdateCategoryCommandHandler(IUnitOfWork unitOfWork, IMapper mapper)
-        : base(unitOfWork, mapper) { }
+        public UpdateCategoryCommandHandler(IUnitOfWork unitOfWork)
+        : base(unitOfWork) { }
 
         public async Task Handle(UpdateCategoryCommandRequest request, CancellationToken cancellationToken)
         {

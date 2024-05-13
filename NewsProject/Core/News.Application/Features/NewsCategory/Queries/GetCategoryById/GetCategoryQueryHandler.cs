@@ -8,7 +8,7 @@ namespace News.Application.Features.NewsCategory.Queries.GetCategoryById
 {
     public class GetCategoryQueryHandler : GetQueryHandler, IRequestHandler<GetCategoryQueryRequest, GetCategoryQueryResponse>
     {
-        public GetCategoryQueryHandler(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork, mapper) { }
+        public GetCategoryQueryHandler(IUnitOfWork unitOfWork) : base(unitOfWork) { }
 
         async Task<GetCategoryQueryResponse> IRequestHandler<GetCategoryQueryRequest, GetCategoryQueryResponse>.Handle(GetCategoryQueryRequest request, CancellationToken cancellationToken)
          => await base.GetEntity<GetCategoryQueryResponse, Category>(request.Id);

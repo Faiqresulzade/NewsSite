@@ -13,7 +13,7 @@ namespace News.Application.Bases.Classes.Query
         private protected readonly IUnitOfWork unitOfWork;
         private protected readonly IMapper mapper;
 
-        public GetAllQueryHandler(IUnitOfWork unitOfWork, IMapper mapper)
+        public GetAllQueryHandler(IUnitOfWork unitOfWork)
         {
             this.unitOfWork = unitOfWork;
             //this.mapper = SingletonBase<Mapper>;

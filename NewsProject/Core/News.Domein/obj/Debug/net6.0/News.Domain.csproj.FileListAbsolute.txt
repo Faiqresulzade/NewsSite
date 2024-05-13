@@ -9,3 +9,15 @@ C:\Users\Honor\Desktop\News\NewsProject\Core\News.Domein\obj\Debug\net6.0\News.D
 C:\Users\Honor\Desktop\News\NewsProject\Core\News.Domein\obj\Debug\net6.0\refint\News.Domain.dll
 C:\Users\Honor\Desktop\News\NewsProject\Core\News.Domein\obj\Debug\net6.0\News.Domain.pdb
 C:\Users\Honor\Desktop\News\NewsProject\Core\News.Domein\obj\Debug\net6.0\ref\News.Domain.dll
+C:\Users\faig.rasulzada\Desktop\News\NewsProject\Core\News.Domein\bin\Debug\net6.0\News.Domain.deps.json
+C:\Users\faig.rasulzada\Desktop\News\NewsProject\Core\News.Domein\bin\Debug\net6.0\News.Domain.dll
+C:\Users\faig.rasulzada\Desktop\News\NewsProject\Core\News.Domein\bin\Debug\net6.0\News.Domain.pdb
+C:\Users\faig.rasulzada\Desktop\News\NewsProject\Core\News.Domein\obj\Debug\net6.0\News.Domain.csproj.AssemblyReference.cache
+C:\Users\faig.rasulzada\Desktop\News\NewsProject\Core\News.Domein\obj\Debug\net6.0\News.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\faig.rasulzada\Desktop\News\NewsProject\Core\News.Domein\obj\Debug\net6.0\News.Domain.AssemblyInfoInputs.cache
+C:\Users\faig.rasulzada\Desktop\News\NewsProject\Core\News.Domein\obj\Debug\net6.0\News.Domain.AssemblyInfo.cs
+C:\Users\faig.rasulzada\Desktop\News\NewsProject\Core\News.Domein\obj\Debug\net6.0\News.Domain.csproj.CoreCompileInputs.cache
+C:\Users\faig.rasulzada\Desktop\News\NewsProject\Core\News.Domein\obj\Debug\net6.0\News.Domain.dll
+C:\Users\faig.rasulzada\Desktop\News\NewsProject\Core\News.Domein\obj\Debug\net6.0\refint\News.Domain.dll
+C:\Users\faig.rasulzada\Desktop\News\NewsProject\Core\News.Domein\obj\Debug\net6.0\News.Domain.pdb
+C:\Users\faig.rasulzada\Desktop\News\NewsProject\Core\News.Domein\obj\Debug\net6.0\ref\News.Domain.dll

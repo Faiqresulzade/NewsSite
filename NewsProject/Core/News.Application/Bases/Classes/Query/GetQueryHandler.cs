@@ -9,10 +9,10 @@ namespace News.Application.Bases.Classes.Query
         private protected readonly IUnitOfWork unitOfWork;
         private protected readonly IMapper mapper;
 
-        public GetQueryHandler(IUnitOfWork unitOfWork, IMapper mapper)
+        public GetQueryHandler(IUnitOfWork unitOfWork)
         {
             this.unitOfWork = unitOfWork;
-            this.mapper = mapper;
+            //this.mapper = mapper;
         }
 
         private protected virtual async Task<TResponse> GetEntity<TResponse, Tentity>(int id)

@@ -8,7 +8,7 @@ namespace News.Application.Features.NewsCategory.Queries.GetAllCategories
 {
     public class GetAllCategoriesQueryHandler : GetAllQueryHandler, IRequestHandler<GetAllCategoriesQueryRequest, IList<GetAllCategoriesQueryResponse>>
     {
-        public GetAllCategoriesQueryHandler(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork, mapper) { }
+        public GetAllCategoriesQueryHandler(IUnitOfWork unitOfWork) : base(unitOfWork) { }
 
         public async Task<IList<GetAllCategoriesQueryResponse>> Handle(GetAllCategoriesQueryRequest request, CancellationToken cancellationToken)
           => await base.GetAllEntity<GetAllCategoriesQueryResponse, Category>();

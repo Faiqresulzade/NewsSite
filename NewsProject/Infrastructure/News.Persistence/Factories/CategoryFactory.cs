@@ -4,8 +4,9 @@ using News.Domain.Entities;
 
 namespace News.Persistence.Factories
 {
-    public class CategoryFactory : ICategoryFactory
+    internal class CategoryFactory : ICategoryFactory
     {
         public NewsCategory Create(CreateCategoryCommandRequest request) => new NewsCategory(request.Name);
+
     }
 }

@@ -9,6 +9,7 @@ namespace News.Application.Registrations
         {
             var assembly = Assembly.GetExecutingAssembly();
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(assembly));
+
         }
     }
 }

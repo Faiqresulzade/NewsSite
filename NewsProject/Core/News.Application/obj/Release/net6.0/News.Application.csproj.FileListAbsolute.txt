@@ -1,0 +1,15 @@
+C:\Users\Honor\Desktop\News\NewsProject\Core\News.Application\bin\Release\net6.0\News.Application.deps.json
+C:\Users\Honor\Desktop\News\NewsProject\Core\News.Application\bin\Release\net6.0\News.Application.dll
+C:\Users\Honor\Desktop\News\NewsProject\Core\News.Application\bin\Release\net6.0\News.Application.pdb
+C:\Users\Honor\Desktop\News\NewsProject\Core\News.Application\bin\Release\net6.0\News.Domain.dll
+C:\Users\Honor\Desktop\News\NewsProject\Core\News.Application\bin\Release\net6.0\News.Domain.pdb
+C:\Users\Honor\Desktop\News\NewsProject\Core\News.Application\obj\Release\net6.0\News.Application.csproj.AssemblyReference.cache
+C:\Users\Honor\Desktop\News\NewsProject\Core\News.Application\obj\Release\net6.0\News.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Honor\Desktop\News\NewsProject\Core\News.Application\obj\Release\net6.0\News.Application.AssemblyInfoInputs.cache
+C:\Users\Honor\Desktop\News\NewsProject\Core\News.Application\obj\Release\net6.0\News.Application.AssemblyInfo.cs
+C:\Users\Honor\Desktop\News\NewsProject\Core\News.Application\obj\Release\net6.0\News.Application.csproj.CoreCompileInputs.cache
+C:\Users\Honor\Desktop\News\NewsProject\Core\News.Application\obj\Release\net6.0\News.Application.csproj.CopyComplete
+C:\Users\Honor\Desktop\News\NewsProject\Core\News.Application\obj\Release\net6.0\News.Application.dll
+C:\Users\Honor\Desktop\News\NewsProject\Core\News.Application\obj\Release\net6.0\refint\News.Application.dll
+C:\Users\Honor\Desktop\News\NewsProject\Core\News.Application\obj\Release\net6.0\News.Application.pdb
+C:\Users\Honor\Desktop\News\NewsProject\Core\News.Application\obj\Release\net6.0\ref\News.Application.dll

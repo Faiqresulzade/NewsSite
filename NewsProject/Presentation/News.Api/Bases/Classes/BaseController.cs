@@ -7,8 +7,7 @@ namespace News.Api.Bases.Classes
     {
         private protected readonly IMediator mediator;
 
-        public BaseController(in IMediator mediator) => this.mediator = mediator;
-
+        public BaseController(IMediator mediator) => this.mediator = mediator;
 
         private protected virtual async Task<IActionResult> ExecuteCommand<T>(Action action, Func<T> returnMethod)
              where T : IActionResult

@@ -6,9 +6,9 @@ using System.Linq.Expressions;
 
 namespace News.Persistence.Repositories
 {
-    public class ReadRepository<T> : IReadRepository<T> where T : class, IEntityBase, new()
+    internal class ReadRepository<T> : IReadRepository<T> where T : class, IEntityBase, new()
     {
-        public ReadRepository(in DbContext dbContext) => _dbContext = dbContext;
+        public ReadRepository(DbContext dbContext) => _dbContext = dbContext;
 
         private readonly DbContext _dbContext;
         private DbSet<T> _table => _dbContext.Set<T>();

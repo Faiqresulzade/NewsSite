@@ -8,10 +8,10 @@ namespace News.Persistence.Context
     public class AppDbContext : DbContext
     {
         public AppDbContext() { }
-        public AppDbContext(in DbContextOptions options) : base(options) { }
+        public AppDbContext(DbContextOptions options) : base(options) { }
 
-        DbSet<NewsCategory> NewsCategories { get; set; }
-        DbSet<NewsEntity> News { get; set; }
+        private DbSet<NewsCategory> NewsCategories { get; set; }
+        private DbSet<NewsEntity> News { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

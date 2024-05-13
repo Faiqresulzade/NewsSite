@@ -29,7 +29,7 @@ namespace News.Persistence.Configuration
         /// </summary>
         /// <param name="builder"></param>
         /// <param name="count"></param>
-        public void AddSeedData(EntityTypeBuilder<NewsEntity> builder, int count)
+        public void AddSeedData(EntityTypeBuilder<NewsEntity> builder,in int count)
         {
             Faker faker = new Faker();
             for (int i = 0; i < count; i++)

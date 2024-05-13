@@ -1,0 +1,5 @@
+C:\Users\Honor\Desktop\News\NewsProject\News.Mapper\obj\Debug\net6.0\News.Mapper.csproj.AssemblyReference.cache
+C:\Users\Honor\Desktop\News\NewsProject\News.Mapper\obj\Debug\net6.0\News.Mapper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Honor\Desktop\News\NewsProject\News.Mapper\obj\Debug\net6.0\News.Mapper.AssemblyInfoInputs.cache
+C:\Users\Honor\Desktop\News\NewsProject\News.Mapper\obj\Debug\net6.0\News.Mapper.AssemblyInfo.cs
+C:\Users\Honor\Desktop\News\NewsProject\News.Mapper\obj\Debug\net6.0\News.Mapper.csproj.CoreCompileInputs.cache

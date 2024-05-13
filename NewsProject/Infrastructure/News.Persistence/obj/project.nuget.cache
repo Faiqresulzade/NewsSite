@@ -1,10 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "0Hd4I4qRMoVZVkQC/4QQCs6xYV7JjtyYQqk/ZqnLahQnWv10cnPNaT4FS7NcwpHMavvXb6u6dhmf4UV27zY6aQ==",
+  "dgSpecHash": "JByIT8/i4kKA20ronO9PUjkHM4h2kUNo22klAqpXnbqKptM6b5EklkqXP47WojggxRg8vRxOUHVi2RpBtmlO5Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Infrastructure\\News.Persistence\\News.Persistence.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Honor\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Honor\\.nuget\\packages\\bogus\\35.5.0\\bogus.35.5.0.nupkg.sha512",
     "C:\\Users\\Honor\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Honor\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",

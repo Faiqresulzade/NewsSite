@@ -5,11 +5,11 @@ using News.Persistence.Repositories;
 
 namespace News.Persistence.UnitOfWorks
 {
-    public class UnitOfWork : IUnitOfWork
+    internal class UnitOfWork : IUnitOfWork
     {
         private readonly AppDbContext _dbContext;
 
-        public UnitOfWork(in AppDbContext dbContext) => _dbContext = dbContext;
+        public UnitOfWork(AppDbContext dbContext) => _dbContext = dbContext;
 
         public async ValueTask DisposeAsync() => await _dbContext.DisposeAsync();
 

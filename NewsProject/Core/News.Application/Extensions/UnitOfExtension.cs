@@ -6,9 +6,9 @@ using News.Domain.Comman;
 
 namespace News.Application.Extensions.UnitOfWorks
 {
-    internal static class UnitOfWorkExtension
+    public static class UnitOfWorkExtension
     {
-        internal static async Task AddAsync<Tentity, Tfactory, Trequest>(this IUnitOfWork unitOfWork, Tfactory factory, Trequest request)
+        public static async Task AddAsync<Tentity, Tfactory, Trequest>(this IUnitOfWork unitOfWork, Tfactory factory, Trequest request)
             where Tentity : class, IEntityBase, new()
             where Tfactory : IFactory<Tentity, Trequest>
             where Trequest : IRequest
@@ -16,7 +16,6 @@ namespace News.Application.Extensions.UnitOfWorks
             Tentity entity = factory.Create(request);
             IWriteRepository<Tentity> repository = unitOfWork.GetWriteRepository<Tentity>();
             await repository.AddAsync(entity);
-            await unitOfWork.SaveAsync();
         }
     }
 }

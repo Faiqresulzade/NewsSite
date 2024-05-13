@@ -9,7 +9,6 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Core\News.Application\News.Application.csproj" />
     <ProjectReference Include="..\..\Core\News.Domein\News.Domain.csproj" />
-    <ProjectReference Include="..\..\News.Mapper\News.Mapper.csproj" />
     <ProjectReference Include="..\News.Persistence\News.Persistence.csproj" />
   </ItemGroup>
 

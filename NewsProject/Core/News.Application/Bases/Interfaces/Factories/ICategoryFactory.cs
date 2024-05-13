@@ -5,6 +5,6 @@ namespace News.Application.Abstraction.Interfaces.Factories
 {
     public interface ICategoryFactory : IFactory<NewsCategory, CreateCategoryCommandRequest>
     {
-       public NewsCategory Create(CreateCategoryCommandRequest request);
+       public NewsCategory Create( CreateCategoryCommandRequest request);
     }
 }

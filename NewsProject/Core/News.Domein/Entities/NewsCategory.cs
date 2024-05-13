@@ -12,6 +12,6 @@ namespace News.Domain.Entities
 
         public NewsCategory() { }
 
-        public NewsCategory(string name) => Name = name;
+        public NewsCategory(in string name) => Name = name;
     }
 }

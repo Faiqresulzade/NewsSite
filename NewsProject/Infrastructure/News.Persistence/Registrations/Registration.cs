@@ -16,12 +16,13 @@ namespace News.Persistence.Registrations
         public static void AddPersistence(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<AppDbContext>(x => x.UseSqlServer(configuration.GetConnectionString("Default")));
+            
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddScoped(typeof(IReadRepository<>), typeof(ReadRepository<>));
             services.AddScoped(typeof(IWriteRepository<>), typeof(WriteRepository<>));
-            services.AddScoped<ICategoryFactory,CategoryFactory>();
+            services.AddScoped<ICategoryFactory, CategoryFactory>();
 
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
         }
     }
 }

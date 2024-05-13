@@ -10,11 +10,11 @@ using News.Application.Features.NewsCategory.Queries.GetAllCategories;
 namespace News.Api.Controllers
 {
     [Route("api/[controller]/[action]"), ApiController]
-    internal class NewsCategoryController : BaseController,
+    public class NewsCategoryController : BaseController,
         IReadable, IRemoveable<DeleteCategoryCommandRequest>,
         IUpdateable<UpdateCategoryCommandRequest>, ICreatable<CreateCategoryCommandRequest>
     {
-        public NewsCategoryController(in IMediator mediator) : base(mediator) { }
+        public NewsCategoryController(IMediator mediator) : base(mediator) { }
 
         [HttpGet]
         public async Task<IActionResult> GetAll()

@@ -2,13 +2,14 @@
 using News.Application.Abstraction.Interfaces.AutoMapper;
 using News.Application.Abstraction.Interfaces.UnitOfWorks;
 using News.Application.Bases.Classes;
+using News.Application.Bases.Classes.Command;
 using Category = News.Domain.Entities.NewsCategory;
 
 namespace News.Application.Features.NewsCategory.Command.UpdateCategory
 {
     internal class UpdateCategoryCommandHandler : UpdateCommandHandler, IRequestHandler<UpdateCategoryCommandRequest>
     {
-        public UpdateCategoryCommandHandler(in IUnitOfWork unitOfWork,in IMapper mapper)
+        public UpdateCategoryCommandHandler(IUnitOfWork unitOfWork, IMapper mapper)
         : base(unitOfWork, mapper) { }
 
         public async Task Handle(UpdateCategoryCommandRequest request, CancellationToken cancellationToken)
@@ -19,7 +20,6 @@ namespace News.Application.Features.NewsCategory.Command.UpdateCategory
             Category mapedData = mapper.Map<Category, UpdateCategoryCommandRequest>(request);
 
             await unitOfWork.GetWriteRepository<Category>().UpdateAsync(mapedData);
-            await unitOfWork.SaveAsync();
         }
     }
 }

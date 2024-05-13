@@ -3,6 +3,11 @@ using News.Domain.Comman;
 
 namespace News.Application.Bases.Classes.Command
 {
+    /// <summary>
+    /// Base class for command handlers responsible for deleting entities, 
+    /// providing access to a unit of work.
+    /// </summary>
+
     internal abstract class DeleteCommandHandler
     {
         private protected readonly IUnitOfWork unitOfWork;

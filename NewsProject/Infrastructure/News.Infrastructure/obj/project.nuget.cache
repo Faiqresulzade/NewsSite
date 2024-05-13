@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "IU5sU48XxfCVYkPpK41aSktu9XfWOQqXaZvEf/1/VjEZINK7sEN3dU7mVoIap4B/4pnrm0b42MxL4mXtpoMThQ==",
+  "dgSpecHash": "O+Sw1Xdm5KYjWukF0Rd/ru0amCbYlBss2Xc4XnNRVmn8IbmiQ0px4DUULFdpDscOVLemybrThozlOkzN0mO7zA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Infrastructure\\News.Infrastructure\\News.Infrastructure.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Honor\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Honor\\.nuget\\packages\\bogus\\35.5.0\\bogus.35.5.0.nupkg.sha512",
     "C:\\Users\\Honor\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
     "C:\\Users\\Honor\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "SSQ8yG8qFhikxoQ0UyORuKM775XvDcPYc5mVIKAaAY/EYizTMwZs8Jf6Z1Ab+MhMsMbC3XG146Vbo5p8qfZDMg==",
+  "dgSpecHash": "mHORL5bw0fEBO0Yps5034iQxqCdIELzuj2cQdwqbDmO+KWvkX2ahn5nlJnsVXkLlLXdaU0cvrTYI8Q2mDrq1iw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Core\\News.Application\\News.Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Honor\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Honor\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
     "C:\\Users\\Honor\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\Honor\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.29\\microsoft.entityframeworkcore.6.0.29.nupkg.sha512",

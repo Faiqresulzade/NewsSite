@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "C9jDMZQGxG7PPbfVJ0JKbZZpoDjzhOPoFKvB0KRjQtzkf2bpKgNoIJ6jg/NMaRFzO669SVR66pjNYjaxDYlTgw==",
+  "dgSpecHash": "wwdiUp5nuP6BvB9SsXdxbPv2rDN1iIoUZM+TbZDaxOv0jsANH1kIbAfZCGivkVl9VRE8L29eEXIVEBiTQPt0kw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Presentation\\News.Api\\News.Api.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Honor\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Honor\\.nuget\\packages\\bogus\\35.5.0\\bogus.35.5.0.nupkg.sha512",
     "C:\\Users\\Honor\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Honor\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",

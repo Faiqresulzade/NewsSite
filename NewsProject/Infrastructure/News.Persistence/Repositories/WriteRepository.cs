@@ -1,10 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using News.Application.Abstraction.Interfaces.Repositories;
+using News.Application.Bases.Interfaces.DI;
 using News.Domain.Comman;
 
 namespace News.Persistence.Repositories
 {
-    internal class WriteRepository<T> : IWriteRepository<T> where T : class, IEntityBase, new()
+    public class WriteRepository<T> :IScoped, IWriteRepository<T> where T : class, IEntityBase, new()
     {
         public WriteRepository(DbContext dbContext) => _dbContext = dbContext;
         private readonly DbContext _dbContext;

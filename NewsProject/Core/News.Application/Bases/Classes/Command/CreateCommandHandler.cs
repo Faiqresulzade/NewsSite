@@ -12,7 +12,7 @@ namespace News.Application.Bases.Classes.Command
         private protected readonly IUnitOfWork unitOfWork;
         private protected readonly Tfactory factory;
 
-        public CreateCommandHandler(in IUnitOfWork unitOfWork, in Tfactory factory)
+        public CreateCommandHandler(in IUnitOfWork unitOfWork, Tfactory factory)
         {
             this.unitOfWork = unitOfWork;
             this.factory = factory;

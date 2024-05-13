@@ -20,9 +20,9 @@ namespace News.Persistence.Registrations
             services.AddDbContext<AppDbContext>(x => x.UseSqlServer(configuration.GetConnectionString("Default")));
             // services.Add(new ServiceDescriptor(typeof(IReadRepository<>),typeof( ReadRepository<>), ServiceLifetime.Scoped));
 
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
-            //services.AddScoped(typeof(IReadRepository<>), typeof(ReadRepository<>));
-            //services.AddScoped(typeof(IWriteRepository<>), typeof(WriteRepository<>));
+            //services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped(typeof(IReadRepository<>), typeof(ReadRepository<>));
+            services.AddScoped(typeof(IWriteRepository<>), typeof(WriteRepository<>));
             //services.AddScoped<ICategoryFactory, CategoryFactory>();
         }
     }

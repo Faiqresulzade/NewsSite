@@ -8,7 +8,7 @@ namespace News.Application.Bases.Classes.Singleton
     /// </summary>
     /// <typeparam name="T">The type of the class inheriting from SingletonBase.</typeparam>
 
-    public abstract class SingletonBase<T> : ISingletonBase<T> where T : class, new()
+    public abstract class SingletonBase<T>  where T : class, new()
     {
         private static readonly Lazy<T> _instance = new Lazy<T>(() => new T());
 

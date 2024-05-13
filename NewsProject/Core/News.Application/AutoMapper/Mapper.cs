@@ -13,7 +13,6 @@ namespace News.Application.AutoMapper
         public static List<TypePair> typePairs = new();
         private IMapper _mapperContainer;
 
-
         public TDestination Map<TDestination, TSource>(TSource source, string? ignore = null)
         {
             Config<TDestination, TSource>(5, ignore);
@@ -51,16 +50,22 @@ namespace News.Application.AutoMapper
 
             typePairs.Add(typePair);
 
-            var config = new MapperConfiguration(cfg =>
+            MapperConfiguration config = default;
+            try
             {
-                foreach (var item in typePairs)
-                {
-                    if (ignore is not null)
-                        cfg.CreateMap(item.SourceType, item.DestinationType).MaxDepth(depth).ForMember(ignore, x => x.Ignore()).ReverseMap();
-                    else
-                        cfg.CreateMap(item.SourceType, item.DestinationType).MaxDepth(depth).ReverseMap();
-                }
-            });
+                config = new MapperConfiguration(cfg =>
+               {
+                   foreach (var item in typePairs)
+                       if (ignore is not null)
+                           cfg.CreateMap(item.SourceType, item.DestinationType).MaxDepth(depth).ForMember(ignore, x => x.Ignore()).ReverseMap();
+                       else
+                           cfg.CreateMap(item.SourceType, item.DestinationType).MaxDepth(depth).ReverseMap();
+               });
+            }
+            catch (Exception)
+            {
+            }
+
 
             _mapperContainer = config.CreateMapper();
         }

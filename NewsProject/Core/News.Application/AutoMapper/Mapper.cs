@@ -5,7 +5,10 @@ using NewsMapper = News.Application.Abstraction.Interfaces.AutoMapper.IMapper;
 
 namespace News.Application.AutoMapper
 {
-    //singleton
+    /// <summary>
+    /// Singleton class responsible for mapping objects between different types using AutoMapper.
+    /// </summary>
+
     public class Mapper : SingletonBase<Mapper>, NewsMapper
     {
         public static List<TypePair> typePairs = new();

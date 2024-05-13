@@ -1,6 +1,6 @@
 ﻿using News.Persistence.Registrations;
 using News.Application.Registrations;
-//using News.Mapper.Registrations;
+
 namespace News.Api.AllRegistrations
 {
     public static class AllRegistration

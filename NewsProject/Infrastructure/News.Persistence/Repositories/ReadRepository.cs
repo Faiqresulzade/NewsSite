@@ -1,12 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
 using News.Application.Abstraction.Interfaces.Repositories;
+using News.Application.Bases.Interfaces.DI;
 using News.Domain.Comman;
 using System.Linq.Expressions;
 
 namespace News.Persistence.Repositories
 {
-    internal class ReadRepository<T> : IReadRepository<T> where T : class, IEntityBase, new()
+    public class ReadRepository<T> : IScoped, IReadRepository<T> where T : class, IEntityBase, new()
     {
         public ReadRepository(DbContext dbContext) => _dbContext = dbContext;
 

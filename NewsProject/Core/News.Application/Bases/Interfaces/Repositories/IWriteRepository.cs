@@ -1,4 +1,5 @@
-﻿using News.Domain.Comman;
+﻿using News.Application.Bases.Interfaces.DI;
+using News.Domain.Comman;
 
 namespace News.Application.Abstraction.Interfaces.Repositories
 {
@@ -6,7 +7,7 @@ namespace News.Application.Abstraction.Interfaces.Repositories
     /// Represents a generic repository interface for performing write operations on entities of type <typeparamref name="T"/>.
     /// </summary>
     /// <typeparam name="T">The type of entity for which the repository provides write operations.</typeparam>
-    public interface IWriteRepository<T> where T : class, IEntityBase, new()
+    public interface IWriteRepository<T>: IDependencyInjections where T : class, IEntityBase, new()
     {
         /// <summary>
         /// Adds a new entity asynchronously.

@@ -1,5 +1,6 @@
 ﻿using News.Application.Abstraction.Interfaces.AutoMapper;
 using News.Application.Abstraction.Interfaces.UnitOfWorks;
+using News.Application.AutoMapper;
 using News.Domain.Comman;
 
 namespace News.Application.Bases.Classes.Query
@@ -16,7 +17,7 @@ namespace News.Application.Bases.Classes.Query
         public GetAllQueryHandler(IUnitOfWork unitOfWork)
         {
             this.unitOfWork = unitOfWork;
-            //this.mapper = SingletonBase<Mapper>;
+            this.mapper = Mapper.Instance;
         }
 
         private protected virtual async Task<IList<TResponse>> GetAllEntity<TResponse, Tentity>()

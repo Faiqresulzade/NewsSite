@@ -1,6 +1,4 @@
-﻿using News.Application.Bases.Interfaces.Singleton;
-
-namespace News.Application.Abstraction.Interfaces.AutoMapper
+﻿namespace News.Application.Abstraction.Interfaces.AutoMapper
 {
     /// <summary>
     /// interface for custom IMapper

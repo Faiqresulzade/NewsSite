@@ -1,6 +1,4 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using News.Application.Abstraction.Interfaces.AutoMapper;
-using News.Application.AutoMapper;
 using System.Reflection;
 
 namespace News.Application.Registrations

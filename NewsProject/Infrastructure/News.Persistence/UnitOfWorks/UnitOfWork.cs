@@ -1,11 +1,12 @@
 ﻿using News.Application.Abstraction.Interfaces.Repositories;
 using News.Application.Abstraction.Interfaces.UnitOfWorks;
+using News.Application.Bases.Interfaces.DI;
 using News.Persistence.Context;
 using News.Persistence.Repositories;
 
 namespace News.Persistence.UnitOfWorks
 {
-    internal class UnitOfWork : IUnitOfWork
+    public class UnitOfWork : IScoped, IUnitOfWork
     {
         private readonly AppDbContext _dbContext;
 

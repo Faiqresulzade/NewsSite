@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using AutoMapper.Internal;
-using News.Application.Bases.Classes.Singleton;
 using NewsMapper = News.Application.Abstraction.Interfaces.AutoMapper.IMapper;
 
 namespace News.Application.AutoMapper
@@ -8,10 +7,11 @@ namespace News.Application.AutoMapper
     /// <summary>
     /// Singleton class responsible for mapping objects between different types using AutoMapper.
     /// </summary>
-    public class Mapper : SingletonBase<Mapper>, NewsMapper
+    public class Mapper :  NewsMapper
     {
         public static List<TypePair> typePairs = new();
         private IMapper _mapperContainer;
+
 
         public TDestination Map<TDestination, TSource>(TSource source, string? ignore = null)
         {
@@ -50,22 +50,16 @@ namespace News.Application.AutoMapper
 
             typePairs.Add(typePair);
 
-            MapperConfiguration config = default;
-            try
+            var config = new MapperConfiguration(cfg =>
             {
-                config = new MapperConfiguration(cfg =>
-               {
-                   foreach (var item in typePairs)
-                       if (ignore is not null)
-                           cfg.CreateMap(item.SourceType, item.DestinationType).MaxDepth(depth).ForMember(ignore, x => x.Ignore()).ReverseMap();
-                       else
-                           cfg.CreateMap(item.SourceType, item.DestinationType).MaxDepth(depth).ReverseMap();
-               });
-            }
-            catch (Exception)
-            {
-            }
-
+                foreach (var item in typePairs)
+                {
+                    if (ignore is not null)
+                        cfg.CreateMap(item.SourceType, item.DestinationType).MaxDepth(depth).ForMember(ignore, x => x.Ignore()).ReverseMap();
+                    else
+                        cfg.CreateMap(item.SourceType, item.DestinationType).MaxDepth(depth).ReverseMap();
+                }
+            });
 
             _mapperContainer = config.CreateMapper();
         }

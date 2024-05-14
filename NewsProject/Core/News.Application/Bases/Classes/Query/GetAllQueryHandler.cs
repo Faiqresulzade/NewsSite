@@ -12,12 +12,12 @@ namespace News.Application.Bases.Classes.Query
     public class GetAllQueryHandler
     {
         private protected readonly IUnitOfWork unitOfWork;
-        private protected readonly Mapper mapper;
+        private protected readonly IMapper mapper;
 
-        public GetAllQueryHandler(IUnitOfWork unitOfWork)
+        public GetAllQueryHandler(IUnitOfWork unitOfWork, IMapper mapper)
         {
             this.unitOfWork = unitOfWork;
-            mapper = Mapper.Instance;
+            this.mapper = mapper;
         }
 
         private protected virtual async Task<IList<TResponse>> GetAllEntity<TResponse, Tentity>()
@@ -25,7 +25,7 @@ namespace News.Application.Bases.Classes.Query
         {
             var categories = await unitOfWork.GetReadRepository<Tentity>().GetAllAsync(n => !n.IsDeleted);
 
-            var mapedData = Mapper.Instance.Map<TResponse, Tentity>(categories);
+            var mapedData = mapper.Map<TResponse, Tentity>(categories);
             return mapedData;
         }
     }

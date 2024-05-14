@@ -99,12 +99,12 @@
         },
         "compile": {
           "ref/netcoreapp3.1/Microsoft.Data.SqlClient.dll": {
-            "related": ".xml;.pdb"
+            "related": ".pdb;.xml"
           }
         },
         "runtime": {
           "lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll": {
-            "related": ".xml;.pdb"
+            "related": ".pdb;.xml"
           }
         },
         "runtimeTargets": {
@@ -518,12 +518,12 @@
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {
-            "related": ".xml;.pdb"
+            "related": ".pdb;.xml"
           }
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {
-            "related": ".xml;.pdb"
+            "related": ".pdb;.xml"
           }
         }
       },
@@ -595,12 +595,12 @@
         },
         "compile": {
           "lib/net6.0/Swashbuckle.AspNetCore.Swagger.dll": {
-            "related": ".xml;.pdb"
+            "related": ".pdb;.xml"
           }
         },
         "runtime": {
           "lib/net6.0/Swashbuckle.AspNetCore.Swagger.dll": {
-            "related": ".xml;.pdb"
+            "related": ".pdb;.xml"
           }
         },
         "frameworkReferences": [
@@ -614,12 +614,12 @@
         },
         "compile": {
           "lib/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
-            "related": ".xml;.pdb"
+            "related": ".pdb;.xml"
           }
         },
         "runtime": {
           "lib/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
-            "related": ".xml;.pdb"
+            "related": ".pdb;.xml"
           }
         }
       },
@@ -627,12 +627,12 @@
         "type": "package",
         "compile": {
           "lib/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
-            "related": ".xml;.pdb"
+            "related": ".pdb;.xml"
           }
         },
         "runtime": {
           "lib/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
-            "related": ".xml;.pdb"
+            "related": ".pdb;.xml"
           }
         },
         "frameworkReferences": [
@@ -2590,19 +2590,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Honor\\.nuget\\packages\\": {}
+    "C:\\Users\\faig.rasulzada\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Presentation\\News.Api\\News.Api.csproj",
+      "projectUniqueName": "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Presentation\\News.Api\\News.Api.csproj",
       "projectName": "News.Api",
-      "projectPath": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Presentation\\News.Api\\News.Api.csproj",
-      "packagesPath": "C:\\Users\\Honor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Presentation\\News.Api\\obj\\",
+      "projectPath": "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Presentation\\News.Api\\News.Api.csproj",
+      "packagesPath": "C:\\Users\\faig.rasulzada\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Presentation\\News.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Honor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\faig.rasulzada\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2616,8 +2616,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Infrastructure\\News.Persistence\\News.Persistence.csproj": {
-              "projectPath": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Infrastructure\\News.Persistence\\News.Persistence.csproj"
+            "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Infrastructure\\News.Persistence\\News.Persistence.csproj": {
+              "projectPath": "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Infrastructure\\News.Persistence\\News.Persistence.csproj"
             }
           }
         }
@@ -2666,7 +2666,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

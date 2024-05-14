@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Core\\News.Application\\News.Application.csproj": {}
+    "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Core\\News.Application\\News.Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Core\\News.Application\\News.Application.csproj": {
+    "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Core\\News.Application\\News.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Core\\News.Application\\News.Application.csproj",
+        "projectUniqueName": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Core\\News.Application\\News.Application.csproj",
         "projectName": "News.Application",
-        "projectPath": "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Core\\News.Application\\News.Application.csproj",
-        "packagesPath": "C:\\Users\\faig.rasulzada\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Core\\News.Application\\obj\\",
+        "projectPath": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Core\\News.Application\\News.Application.csproj",
+        "packagesPath": "C:\\Users\\Honor\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Core\\News.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\faig.rasulzada\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Honor\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Core\\News.Domein\\News.Domain.csproj": {
-                "projectPath": "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Core\\News.Domein\\News.Domain.csproj"
+              "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Core\\News.Domein\\News.Domain.csproj": {
+                "projectPath": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Core\\News.Domein\\News.Domain.csproj"
               }
             }
           }
@@ -73,21 +73,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Core\\News.Domein\\News.Domain.csproj": {
+    "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Core\\News.Domein\\News.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Core\\News.Domein\\News.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Core\\News.Domein\\News.Domain.csproj",
         "projectName": "News.Domain",
-        "projectPath": "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Core\\News.Domein\\News.Domain.csproj",
-        "packagesPath": "C:\\Users\\faig.rasulzada\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Core\\News.Domein\\obj\\",
+        "projectPath": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Core\\News.Domein\\News.Domain.csproj",
+        "packagesPath": "C:\\Users\\Honor\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Core\\News.Domein\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\faig.rasulzada\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Honor\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -128,7 +128,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

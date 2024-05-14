@@ -12,6 +12,9 @@ namespace News.Api.AllRegistrations
             builder.Services.AddApplication();
             builder.Services.AddPersistence(builder.Configuration);
 
+            //builder.Services.Scan();
+            //ServiceCollectionExtensions
+
             RegisterImplementationsOf<IScoped>(builder.Services, ServiceLifetime.Scoped);
             RegisterImplementationsOf<ITransient>(builder.Services, ServiceLifetime.Transient);
 
@@ -29,17 +32,20 @@ namespace News.Api.AllRegistrations
                     Type? interfaceType = type.GetInterfaces().FirstOrDefault(x => typeof(IDependencyInjections).IsAssignableFrom(x));
 
                     if (interfaceType == null)
-                        return;
+                        break;
 
                     if (interfaceType.IsGenericType)
                     {
-                        Type closedGenericType = interfaceType.MakeGenericType(type.GetGenericArguments());
-                        services.Add(new ServiceDescriptor(closedGenericType, type, lifetime));
+                        try
+                        {
+                            Type closedGenericType = interfaceType.MakeGenericType(type.GetGenericArguments());
+                            services.Add(new ServiceDescriptor(closedGenericType, type, lifetime));
+                        }
+                        catch (Exception)
+                        {}
                     }
                     else
-                    {
                         services.Add(new ServiceDescriptor(interfaceType, type, lifetime));
-                    }
                 }
             }
         }

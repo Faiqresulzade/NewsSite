@@ -5,7 +5,7 @@ using News.Domain.Entities;
 
 namespace News.Persistence.Factories
 {
-    public class CategoryFactory : ICategoryFactory,IScoped
+    public class CategoryFactory : IScoped, ICategoryFactory
     {
         public NewsCategory Create(CreateCategoryCommandRequest request) => new NewsCategory(request.Name);
 

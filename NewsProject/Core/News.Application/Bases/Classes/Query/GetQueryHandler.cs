@@ -17,7 +17,7 @@ namespace News.Application.Bases.Classes.Query
         public GetQueryHandler(IUnitOfWork unitOfWork)
         {
             this.unitOfWork = unitOfWork;
-            this.mapper = Mapper.Instance;
+            //this.mapper = Mapper.Instance;
         }
 
         private protected virtual async Task<TResponse> GetEntity<TResponse, Tentity>(int id)

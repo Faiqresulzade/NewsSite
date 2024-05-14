@@ -16,7 +16,7 @@ namespace News.Application.Bases.Classes.Command
         public UpdateCommandHandler(in IUnitOfWork unitOfWork)
         {
             this.unitOfWork = unitOfWork;
-            this.mapper = NewsMapper.Instance;
+            //this.mapper = NewsMapper.Instance;
         }
     }
 }

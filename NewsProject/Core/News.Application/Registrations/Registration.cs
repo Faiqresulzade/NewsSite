@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using News.Application.Abstraction.Interfaces.AutoMapper;
+using News.Application.AutoMapper;
 using System.Reflection;
 
 namespace News.Application.Registrations
@@ -9,7 +11,7 @@ namespace News.Application.Registrations
         {
             var assembly = Assembly.GetExecutingAssembly();
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(assembly));
-            //services.AddSingleton<IMapper, Mapper>();
+            services.AddSingleton<IMapper, Mapper>();
         }
     }
 }

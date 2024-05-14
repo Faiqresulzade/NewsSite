@@ -9,8 +9,8 @@ namespace News.Api.AllRegistrations
     {
         public static void RegisterAllDI(WebApplicationBuilder builder)
         {
-            builder.Services.AddApplication();
             builder.Services.AddPersistence(builder.Configuration);
+            builder.Services.AddApplication();
 
             //builder.Services.Scan();
             //ServiceCollectionExtensions

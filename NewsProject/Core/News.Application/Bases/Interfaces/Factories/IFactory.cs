@@ -2,8 +2,18 @@
 
 namespace News.Application.Abstraction.Interfaces.Factories
 {
-    public interface IFactory<T, Trequest> where T: class, IEntityBase, new()
+    /// <summary>
+    /// Interface for a generic factory that creates instances of type T from request objects of type Trequest.
+    /// </summary>
+    /// <typeparam name="T">The type of object to be created.</typeparam>
+    /// <typeparam name="Trequest">The type of the request object used for creating the object.</typeparam>
+    public interface IFactory<T, Trequest> where T : class, IEntityBase, new()
     {
-        public T Create(Trequest trequest);
+        /// <summary>
+        /// Creates a new instance of type T based on the provided request object.
+        /// </summary>
+        /// <param name="trequest">The request object containing data for creating the object.</param>
+        /// <returns>A newly created instance of type T.</returns>
+        T Create(Trequest trequest);
     }
 }

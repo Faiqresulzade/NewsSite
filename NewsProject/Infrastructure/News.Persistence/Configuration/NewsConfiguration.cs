@@ -1,7 +1,6 @@
 ﻿using Bogus;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using News.Domain.Entities;
 using News.Persistence.Interfaces.Configuration;
 using NewsEntity = News.Domain.Entities.News;
 

@@ -20,9 +20,9 @@ namespace News.Persistence.Repositories
 
         public async Task<T> UpdateAsync(T entity)
         {
-            await Task.Run(() => _table.Update(entity));
-            _dbContext.SaveChanges();
-            //var a = await SaveAsync();
+            _table.Update(entity);
+            await SaveAsync();
+
             return entity;
         }
         public async Task SoftDeleteAsync(T entity)

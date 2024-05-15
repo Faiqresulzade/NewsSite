@@ -22,8 +22,6 @@ namespace News.Application.Features.NewsCategory.Command.UpdateCategory
             Category mapedData = mapper.Map<Category, UpdateCategoryCommandRequest>(request);
 
             var entity = await unitOfWork.GetWriteRepository<Category>().UpdateAsync(mapedData);
-            var a = 5;
-            Console.WriteLine(a);
         }
     }
 }

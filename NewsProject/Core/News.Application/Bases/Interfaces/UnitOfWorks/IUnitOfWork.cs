@@ -10,11 +10,7 @@ namespace News.Application.Abstraction.Interfaces.UnitOfWorks
     public interface IUnitOfWork : IDependencyInjections,IAsyncDisposable
     {
         public IReadRepository<T> GetReadRepository<T>() where T : class, IEntityBase, new();
-        public IWriteRepository<T> GetWriteRepository<T>() where T : class, IEntityBase, new()
-        {
-            SaveAsync();
-            return default;
-        }
+        public IWriteRepository<T> GetWriteRepository<T>() where T : class, IEntityBase, new();
 
         public Task<int> SaveAsync();
         public int Save();

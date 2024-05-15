@@ -16,12 +16,14 @@ namespace News.Application.Features.NewsCategory.Command.UpdateCategory
 
         public async Task Handle(UpdateCategoryCommandRequest request, CancellationToken cancellationToken)
         {
-            Category category =await unitOfWork.GetReadRepository<Category>()
+            Category category = await unitOfWork.GetReadRepository<Category>()
                 .GetAsync(c => c.Id == request.Id && !c.IsDeleted);
 
             Category mapedData = mapper.Map<Category, UpdateCategoryCommandRequest>(request);
 
-            await unitOfWork.GetWriteRepository<Category>().UpdateAsync(mapedData);
+            var entity = await unitOfWork.GetWriteRepository<Category>().UpdateAsync(mapedData);
+            var a = 5;
+            Console.WriteLine(a);
         }
     }
 }

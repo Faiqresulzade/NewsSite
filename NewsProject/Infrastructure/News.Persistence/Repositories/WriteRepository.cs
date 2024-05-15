@@ -5,7 +5,7 @@ using News.Domain.Comman;
 
 namespace News.Persistence.Repositories
 {
-    public class WriteRepository<T> :IScoped, IWriteRepository<T> where T : class, IEntityBase, new()
+    public class WriteRepository<T> : IScoped, IWriteRepository<T> where T : class, IEntityBase, new()
     {
         public WriteRepository(DbContext dbContext) => _dbContext = dbContext;
         private readonly DbContext _dbContext;
@@ -21,7 +21,8 @@ namespace News.Persistence.Repositories
         public async Task<T> UpdateAsync(T entity)
         {
             await Task.Run(() => _table.Update(entity));
-            await SaveAsync();
+            _dbContext.SaveChanges();
+            //var a = await SaveAsync();
             return entity;
         }
         public async Task SoftDeleteAsync(T entity)

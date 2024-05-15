@@ -44,7 +44,7 @@ namespace News.Persistence.Repositories
             if (!enableTracking) queryable = queryable.AsNoTracking();
             if (include is not null) queryable = include(queryable);
 
-            return await queryable.FirstOrDefaultAsync(predicate);
+            return queryable.FirstOrDefault(predicate);
         }
 
         public async Task<int> CountAsync(Expression<Func<T, bool>>? predicate = null)

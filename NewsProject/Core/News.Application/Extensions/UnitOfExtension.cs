@@ -28,6 +28,7 @@ namespace News.Application.Extensions.UnitOfWorks
             Tentity entity = factory.Create(request);
             IWriteRepository<Tentity> repository = unitOfWork.GetWriteRepository<Tentity>();
             await repository.AddAsync(entity);
+            await repository.SaveAsync();
         }
     }
 }

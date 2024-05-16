@@ -1,4 +1,5 @@
 using News.Api.AllRegistrations;
+using News.Application.Registrations;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +23,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.AddAplication();
 
 app.UseAuthorization();
 

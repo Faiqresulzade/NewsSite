@@ -191,3 +191,8 @@ C:\Users\faig.rasulzada\Desktop\News\NewsProject\Presentation\News.Api\obj\Debug
 C:\Users\faig.rasulzada\Desktop\News\NewsProject\Presentation\News.Api\obj\Debug\net6.0\News.Api.pdb
 C:\Users\faig.rasulzada\Desktop\News\NewsProject\Presentation\News.Api\obj\Debug\net6.0\News.Api.genruntimeconfig.cache
 C:\Users\faig.rasulzada\Desktop\News\NewsProject\Presentation\News.Api\obj\Debug\net6.0\ref\News.Api.dll
+C:\Users\faig.rasulzada\Desktop\News\NewsProject\Presentation\News.Api\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\faig.rasulzada\Desktop\News\NewsProject\Presentation\News.Api\bin\Debug\net6.0\SendGrid.dll
+C:\Users\faig.rasulzada\Desktop\News\NewsProject\Presentation\News.Api\bin\Debug\net6.0\StarkbankEcdsa.dll
+C:\Users\faig.rasulzada\Desktop\News\NewsProject\Presentation\News.Api\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\faig.rasulzada\Desktop\News\NewsProject\Presentation\News.Api\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll

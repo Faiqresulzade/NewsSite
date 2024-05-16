@@ -23,7 +23,7 @@ namespace News.Persistence.Repositories
             if (orderBy is not null)
                 return await orderBy(queryable).ToListAsync();
 
-            return await queryable.ToListAsync();
+            return queryable.ToList();
         }
 
         public async Task<IList<T>> GetAllByPagingAsync(Expression<Func<T, bool>>? predicate = null, Func<IQueryable<T>, IIncludableQueryable<T, object>>? include = null, Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null, bool enableTracking = false, int currentPage = 1, int pageSize = 3)

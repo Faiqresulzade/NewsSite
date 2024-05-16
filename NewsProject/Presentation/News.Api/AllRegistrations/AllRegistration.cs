@@ -9,15 +9,11 @@ namespace News.Api.AllRegistrations
     {
         public static void RegisterAllDI(WebApplicationBuilder builder)
         {
-            builder.Services.AddPersistence(builder.Configuration);
-            builder.Services.AddApplication();
-
-            //builder.Services.Scan();
-            //ServiceCollectionExtensions
-
             RegisterImplementationsOf<IScoped>(builder.Services, ServiceLifetime.Scoped);
             RegisterImplementationsOf<ITransient>(builder.Services, ServiceLifetime.Transient);
 
+            builder.Services.AddPersistence(builder.Configuration);
+            builder.Services.AddApplication();
         }
 
         private static void RegisterImplementationsOf<TInterface>(IServiceCollection services, ServiceLifetime lifetime)
@@ -25,14 +21,17 @@ namespace News.Api.AllRegistrations
             foreach (Assembly assembly in AssemblyHelper.GetProjectAssemblies())
             {
                 var typesToRegister = assembly.GetTypes()
-                    .Where(t => typeof(TInterface).IsAssignableFrom(t));
+                    .Where(t => typeof(TInterface).IsAssignableFrom(t) && t != typeof(TInterface));
 
                 foreach (Type type in typesToRegister)
                 {
                     Type? interfaceType = type.GetInterfaces().FirstOrDefault(x => typeof(IDependencyInjections).IsAssignableFrom(x));
 
                     if (interfaceType == null)
-                        break;
+                    {
+                        services.Add(new ServiceDescriptor(type, type, lifetime));
+                        continue;
+                    }
 
                     if (interfaceType.IsGenericType)
                     {
@@ -42,7 +41,7 @@ namespace News.Api.AllRegistrations
                             services.Add(new ServiceDescriptor(closedGenericType, type, lifetime));
                         }
                         catch (Exception)
-                        {}
+                        { }
                     }
                     else
                         services.Add(new ServiceDescriptor(interfaceType, type, lifetime));

@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "OjNPQnUoVp8g7d+dOGvMUP+7NzUv4OaTXEqqGqyRzjlomsCp2YetvwYmTgd+67HbdclABs34KUJZMemchzGqPQ==",
+  "dgSpecHash": "aRnkm6F7vcknsXx6L0OSGXrngvScEC4JMzfUpejGBSlFHl1/YLokfBwSGBQuaeaxvkfKSFJFK+W7dEdnUG+WQA==",
   "success": true,
   "projectFilePath": "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Core\\News.Application\\News.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\faig.rasulzada\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
+    "C:\\Users\\faig.rasulzada\\.nuget\\packages\\fluentvalidation\\11.9.1\\fluentvalidation.11.9.1.nupkg.sha512",
+    "C:\\Users\\faig.rasulzada\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.9.1\\fluentvalidation.dependencyinjectionextensions.11.9.1.nupkg.sha512",
     "C:\\Users\\faig.rasulzada\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
     "C:\\Users\\faig.rasulzada\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\faig.rasulzada\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",

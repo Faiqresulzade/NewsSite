@@ -1,4 +1,5 @@
-﻿using News.Application.Abstraction.Interfaces.UnitOfWorks;
+﻿using MediatR;
+using News.Application.Abstraction.Interfaces.UnitOfWorks;
 using News.Domain.Comman;
 
 namespace News.Application.Bases.Classes.Command
@@ -14,7 +15,7 @@ namespace News.Application.Bases.Classes.Command
 
         public DeleteCommandHandler(in IUnitOfWork unitOfWork) => this.unitOfWork = unitOfWork;
 
-        private protected async virtual Task Delete<Tentity>(int id) where Tentity : EntityBase, IEntityBase, new()
+        private protected async virtual Task<Unit> Delete<Tentity>(int id) where Tentity : EntityBase, IEntityBase, new()
         {
             Tentity entity = await unitOfWork.GetReadRepository<Tentity>()
               .GetAsync(c => c.Id == id && !c.IsDeleted);
@@ -22,6 +23,7 @@ namespace News.Application.Bases.Classes.Command
             entity.IsDeleted = true;
 
             await unitOfWork.GetWriteRepository<Tentity>().UpdateAsync(entity);
+            return Unit.Value;
         }
     }
 }

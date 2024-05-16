@@ -26,6 +26,8 @@ namespace News.Application.Bases.Classes.Query
             var categories = await unitOfWork.GetReadRepository<Tentity>().GetAllAsync(n => !n.IsDeleted);
 
             var mapedData = mapper.Map<TResponse, Tentity>(categories);
+
+            //throw new Exception("Salammm");
             return mapedData;
         }
     }

@@ -9,11 +9,11 @@ namespace News.Application.Features.NewsCategory.Command.DeleteCategory
     /// Handler for deleting a news category, responsible for processing the deletion request and interacting with the data layer.
     /// </summary>
 
-    internal class DeleteCategoryCommandHandler : DeleteCommandHandler, IRequestHandler<DeleteCategoryCommandRequest>
+    internal class DeleteCategoryCommandHandler : DeleteCommandHandler, IRequestHandler<DeleteCategoryCommandRequest,Unit>
     {
         public DeleteCategoryCommandHandler(IUnitOfWork unitOfWork) : base(unitOfWork) { }
 
-        public async Task Handle(DeleteCategoryCommandRequest request, CancellationToken cancellationToken)
+        public async Task<Unit> Handle(DeleteCategoryCommandRequest request, CancellationToken cancellationToken)
           => await base.Delete<Category>(request.Id);
 
     }

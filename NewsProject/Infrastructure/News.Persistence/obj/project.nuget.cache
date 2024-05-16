@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "CFYpgN8/kSwnuFw/hmuBIoNGuws9QZ06Et56fTn5FnEZAG+jQnY4vmv78JDr/et7KYE4y1K4kyRMG3RbadKWyQ==",
+  "dgSpecHash": "xNTcapmpxoOopK/e1RrwksNCPFY/kG+dWPGXl1R5Cz7Ro7/nXBOeZBXCwit81btNwNdlog/AVNqrA9wuvmuYsQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Infrastructure\\News.Persistence\\News.Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\faig.rasulzada\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\faig.rasulzada\\.nuget\\packages\\bogus\\35.5.0\\bogus.35.5.0.nupkg.sha512",
+    "C:\\Users\\faig.rasulzada\\.nuget\\packages\\fluentvalidation\\11.9.1\\fluentvalidation.11.9.1.nupkg.sha512",
+    "C:\\Users\\faig.rasulzada\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.9.1\\fluentvalidation.dependencyinjectionextensions.11.9.1.nupkg.sha512",
     "C:\\Users\\faig.rasulzada\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\faig.rasulzada\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
     "C:\\Users\\faig.rasulzada\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",

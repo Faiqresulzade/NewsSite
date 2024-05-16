@@ -20,15 +20,16 @@ namespace News.Application.Extensions.UnitOfWorks
         /// <param name="unitOfWork">The unit of work instance.</param>
         /// <param name="factory">The factory instance used to create the entity.</param>
         /// <param name="request">The request instance used to create the entity.</param>
-        public static async Task AddAsync<Tentity, Tfactory, Trequest>(this IUnitOfWork unitOfWork, Tfactory factory, Trequest request)
+        public static async Task<Unit> AddAsync<Tentity, Tfactory, Trequest>(this IUnitOfWork unitOfWork, Tfactory factory, Trequest request, IWriteRepository<Tentity> repository = default)
             where Tentity : class, IEntityBase, new()
             where Tfactory : IFactory<Tentity, Trequest>
-            where Trequest : IRequest
+            where Trequest : IRequest<Unit>
         {
             Tentity entity = factory.Create(request);
-            IWriteRepository<Tentity> repository = unitOfWork.GetWriteRepository<Tentity>();
+            repository ??= unitOfWork.GetWriteRepository<Tentity>();
             await repository.AddAsync(entity);
             await repository.SaveAsync();
+            return Unit.Value;
         }
     }
 }

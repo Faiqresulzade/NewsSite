@@ -27,7 +27,6 @@ namespace News.Application.Bases.Classes.Query
 
             var mapedData = mapper.Map<TResponse, Tentity>(categories);
 
-            //throw new Exception("Salammm");
             return mapedData;
         }
     }

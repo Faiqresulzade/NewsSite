@@ -3,6 +3,11 @@ using MediatR;
 
 namespace News.Application.Beheviors
 {
+    /// <summary>
+    /// Provides a behavior for handling FluentValidation within MediatR pipelines.
+    /// </summary>
+    /// <typeparam name="Trequest">The type of the request.</typeparam>
+    /// <typeparam name="Tresponse">The type of the response.</typeparam>
     public class FluentValidationBehevior<Trequest, Tresponse> : IPipelineBehavior<Trequest, Tresponse>
         where Trequest : IRequest<Tresponse>
     {

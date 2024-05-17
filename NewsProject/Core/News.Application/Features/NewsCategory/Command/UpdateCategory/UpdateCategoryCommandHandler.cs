@@ -3,7 +3,6 @@ using News.Application.Abstraction.Interfaces.Repositories;
 using News.Application.Abstraction.Interfaces.UnitOfWorks;
 using News.Application.Bases.Classes.Command;
 using News.Application.Features.NewsCategory.Rules;
-using System.Data;
 using Category = News.Domain.Entities.NewsCategory;
 
 namespace News.Application.Features.NewsCategory.Command.UpdateCategory
@@ -32,7 +31,9 @@ namespace News.Application.Features.NewsCategory.Command.UpdateCategory
             if (await _rules.RestoreDeletedCategoryAsync(categories, request.Name, unitOfWork, writeRepository))
                 return default;
 
-            Category mapedData = mapper.Map<Category, UpdateCategoryCommandRequest>(request);
+            // Previously, a mapper was used to convert the request to a Category. 
+            // Now, we use an implicit conversion.
+            Category mapedData = request;
 
             await unitOfWork.GetWriteRepository<Category>().UpdateAsync(mapedData);
 

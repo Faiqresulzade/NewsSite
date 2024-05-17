@@ -1,6 +1,5 @@
 ﻿using News.Application.Abstraction.Interfaces.AutoMapper;
 using News.Application.Abstraction.Interfaces.UnitOfWorks;
-using News.Application.AutoMapper;
 using News.Domain.Comman;
 
 namespace News.Application.Bases.Classes.Query
@@ -20,12 +19,12 @@ namespace News.Application.Bases.Classes.Query
             //this.mapper = Mapper.Instance;
         }
 
-        private protected virtual async Task<TResponse> GetEntity<TResponse, Tentity>(int id)
+        private protected virtual async Task<TResponse> GetEntity<TResponse, Tentity>(int id, Tentity entity = null)
          where Tentity : EntityBase, IEntityBase, new()
         {
-            var category = await unitOfWork.GetReadRepository<Tentity>().GetAsync(n => !n.IsDeleted && n.Id == id);
+            entity ??= await unitOfWork.GetReadRepository<Tentity>().GetAsync(n => !n.IsDeleted && n.Id == id);
 
-            var mapedData = mapper.Map<TResponse, Tentity>(category);
+            var mapedData = mapper.Map<TResponse, Tentity>(entity);
             return mapedData;
         }
     }

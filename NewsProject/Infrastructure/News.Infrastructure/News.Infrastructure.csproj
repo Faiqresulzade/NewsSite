@@ -7,6 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\Core\News.Application\News.Application.csproj" />
     <ProjectReference Include="..\..\Core\News.Domein\News.Domain.csproj" />
     <ProjectReference Include="..\News.Persistence\News.Persistence.csproj" />

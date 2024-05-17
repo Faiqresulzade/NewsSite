@@ -16,6 +16,7 @@ builder.Configuration
 
 AllRegistration.RegisterAllDI(builder);
 
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())

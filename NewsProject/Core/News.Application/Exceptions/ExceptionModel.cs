@@ -4,12 +4,11 @@ namespace News.Application.Exceptions
 {
     public class ExceptionModel : ErrorStatusCode
     {
-        public IEnumerable<string> Errors => _errors;
-        private IEnumerable<string> _errors;
+        public IEnumerable<string> Errors { get; init; }
 
         public ExceptionModel(IEnumerable<string> errors, int statusCode)
         {
-            _errors = errors;
+            Errors = errors;
             StatusCode = statusCode;
         }
 

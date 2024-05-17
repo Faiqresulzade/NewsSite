@@ -22,6 +22,109 @@ namespace News.Persistence.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("RoleId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetRoleClaims", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<int>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserClaims", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<int>", b =>
+                {
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ProviderKey")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ProviderDisplayName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("LoginProvider", "ProviderKey");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserLogins", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<int>", b =>
+                {
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RoleId")
+                        .HasColumnType("int");
+
+                    b.HasKey("UserId", "RoleId");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetUserRoles", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<int>", b =>
+                {
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Value")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("UserId", "LoginProvider", "Name");
+
+                    b.ToTable("AspNetUserTokens", (string)null);
+                });
+
             modelBuilder.Entity("News.Domain.Entities.News", b =>
                 {
                     b.Property<int>("Id")
@@ -70,50 +173,50 @@ namespace News.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            AuthorName = "Braun, Hackett and Blanda",
-                            CategoryId = 1,
-                            CreatedAt = new DateTime(2024, 4, 19, 23, 59, 54, 436, DateTimeKind.Local).AddTicks(3285),
-                            Description = "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-                            ImagePath = "Awesome Wooden Chicken",
+                            AuthorName = "Cremin and Sons",
+                            CategoryId = 2,
+                            CreatedAt = new DateTime(2024, 5, 17, 11, 49, 3, 799, DateTimeKind.Local).AddTicks(7644),
+                            Description = "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
+                            ImagePath = "Handmade Frozen Towels",
                             IsDeleted = false,
                             ReadCount = 0,
-                            Title = "Handmade Steel Towels"
+                            Title = "Rustic Steel Chicken"
                         },
                         new
                         {
                             Id = 2,
-                            AuthorName = "Langworth and Sons",
+                            AuthorName = "Willms, Mohr and Swaniawski",
                             CategoryId = 2,
-                            CreatedAt = new DateTime(2024, 4, 19, 23, 59, 54, 436, DateTimeKind.Local).AddTicks(3570),
-                            Description = "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
-                            ImagePath = "Unbranded Wooden Sausages",
+                            CreatedAt = new DateTime(2024, 5, 17, 11, 49, 3, 799, DateTimeKind.Local).AddTicks(7878),
+                            Description = "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
+                            ImagePath = "Rustic Granite Pants",
                             IsDeleted = false,
                             ReadCount = 5,
-                            Title = "Ergonomic Cotton Towels"
+                            Title = "Gorgeous Concrete Bacon"
                         },
                         new
                         {
                             Id = 3,
-                            AuthorName = "Altenwerth - Haag",
+                            AuthorName = "Emard Inc",
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2024, 4, 19, 23, 59, 54, 436, DateTimeKind.Local).AddTicks(3888),
-                            Description = "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
-                            ImagePath = "Unbranded Soft Gloves",
+                            CreatedAt = new DateTime(2024, 5, 17, 11, 49, 3, 799, DateTimeKind.Local).AddTicks(8016),
+                            Description = "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
+                            ImagePath = "Handmade Cotton Gloves",
                             IsDeleted = false,
                             ReadCount = 10,
-                            Title = "Sleek Wooden Chair"
+                            Title = "Sleek Metal Chips"
                         },
                         new
                         {
                             Id = 4,
-                            AuthorName = "Auer LLC",
-                            CategoryId = 2,
-                            CreatedAt = new DateTime(2024, 4, 19, 23, 59, 54, 436, DateTimeKind.Local).AddTicks(4100),
-                            Description = "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
-                            ImagePath = "Intelligent Metal Towels",
+                            AuthorName = "Cronin - Hudson",
+                            CategoryId = 1,
+                            CreatedAt = new DateTime(2024, 5, 17, 11, 49, 3, 799, DateTimeKind.Local).AddTicks(8154),
+                            Description = "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
+                            ImagePath = "Intelligent Fresh Bacon",
                             IsDeleted = false,
                             ReadCount = 15,
-                            Title = "Sleek Metal Salad"
+                            Title = "Practical Steel Sausages"
                         });
                 });
 
@@ -144,38 +247,201 @@ namespace News.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2024, 4, 19, 23, 59, 54, 433, DateTimeKind.Local).AddTicks(7775),
+                            CreatedAt = new DateTime(2024, 5, 17, 11, 49, 3, 798, DateTimeKind.Local).AddTicks(1884),
                             IsDeleted = false,
-                            Name = "Music"
+                            Name = "Shoes"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2024, 4, 19, 23, 59, 54, 433, DateTimeKind.Local).AddTicks(7842),
+                            CreatedAt = new DateTime(2024, 5, 17, 11, 49, 3, 798, DateTimeKind.Local).AddTicks(1928),
+                            IsDeleted = false,
+                            Name = "Sports"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreatedAt = new DateTime(2024, 5, 17, 11, 49, 3, 798, DateTimeKind.Local).AddTicks(1934),
                             IsDeleted = false,
                             Name = "Toys"
                         },
                         new
                         {
-                            Id = 3,
-                            CreatedAt = new DateTime(2024, 4, 19, 23, 59, 54, 433, DateTimeKind.Local).AddTicks(7852),
-                            IsDeleted = false,
-                            Name = "Music"
-                        },
-                        new
-                        {
                             Id = 4,
-                            CreatedAt = new DateTime(2024, 4, 19, 23, 59, 54, 433, DateTimeKind.Local).AddTicks(7861),
+                            CreatedAt = new DateTime(2024, 5, 17, 11, 49, 3, 798, DateTimeKind.Local).AddTicks(1939),
                             IsDeleted = false,
                             Name = "Movies"
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2024, 4, 19, 23, 59, 54, 433, DateTimeKind.Local).AddTicks(7870),
+                            CreatedAt = new DateTime(2024, 5, 17, 11, 49, 3, 798, DateTimeKind.Local).AddTicks(1943),
                             IsDeleted = false,
                             Name = "Kids"
                         });
+                });
+
+            modelBuilder.Entity("News.Domain.Entities.Role", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("NormalizedName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedName")
+                        .IsUnique()
+                        .HasDatabaseName("RoleNameIndex")
+                        .HasFilter("[NormalizedName] IS NOT NULL");
+
+                    b.ToTable("AspNetRoles", (string)null);
+                });
+
+            modelBuilder.Entity("News.Domain.Entities.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("RefreshToken")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("RefreshTokenExpiryTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Surname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedEmail")
+                        .HasDatabaseName("EmailIndex");
+
+                    b.HasIndex("NormalizedUserName")
+                        .IsUnique()
+                        .HasDatabaseName("UserNameIndex")
+                        .HasFilter("[NormalizedUserName] IS NOT NULL");
+
+                    b.ToTable("AspNetUsers", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
+                {
+                    b.HasOne("News.Domain.Entities.Role", null)
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<int>", b =>
+                {
+                    b.HasOne("News.Domain.Entities.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<int>", b =>
+                {
+                    b.HasOne("News.Domain.Entities.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<int>", b =>
+                {
+                    b.HasOne("News.Domain.Entities.Role", null)
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("News.Domain.Entities.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<int>", b =>
+                {
+                    b.HasOne("News.Domain.Entities.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("News.Domain.Entities.News", b =>

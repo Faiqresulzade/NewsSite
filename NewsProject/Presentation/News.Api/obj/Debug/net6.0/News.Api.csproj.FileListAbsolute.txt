@@ -196,3 +196,17 @@ C:\Users\faig.rasulzada\Desktop\News\NewsProject\Presentation\News.Api\bin\Debug
 C:\Users\faig.rasulzada\Desktop\News\NewsProject\Presentation\News.Api\bin\Debug\net6.0\StarkbankEcdsa.dll
 C:\Users\faig.rasulzada\Desktop\News\NewsProject\Presentation\News.Api\bin\Debug\net6.0\FluentValidation.dll
 C:\Users\faig.rasulzada\Desktop\News\NewsProject\Presentation\News.Api\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\faig.rasulzada\Desktop\News\NewsProject\Presentation\News.Api\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\faig.rasulzada\Desktop\News\NewsProject\Presentation\News.Api\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\faig.rasulzada\Desktop\News\NewsProject\Presentation\News.Api\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\faig.rasulzada\Desktop\News\NewsProject\Presentation\News.Api\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\faig.rasulzada\Desktop\News\NewsProject\Presentation\News.Api\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\faig.rasulzada\Desktop\News\NewsProject\Presentation\News.Api\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\faig.rasulzada\Desktop\News\NewsProject\Presentation\News.Api\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\faig.rasulzada\Desktop\News\NewsProject\Presentation\News.Api\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\faig.rasulzada\Desktop\News\NewsProject\Presentation\News.Api\bin\Debug\net6.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\faig.rasulzada\Desktop\News\NewsProject\Presentation\News.Api\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\faig.rasulzada\Desktop\News\NewsProject\Presentation\News.Api\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\faig.rasulzada\Desktop\News\NewsProject\Presentation\News.Api\bin\Debug\net6.0\News.Infrastructure.dll
+C:\Users\faig.rasulzada\Desktop\News\NewsProject\Presentation\News.Api\bin\Debug\net6.0\News.Infrastructure.pdb
+C:\Users\faig.rasulzada\Desktop\News\NewsProject\Presentation\News.Api\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

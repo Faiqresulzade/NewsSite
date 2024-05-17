@@ -1,11 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using News.Domain.Entities;
 using System.Reflection;
 using NewsEntity = News.Domain.Entities.News;
 
 namespace News.Persistence.Context
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext : IdentityDbContext<User, Role, int>
     {
         public AppDbContext() { }
         public AppDbContext(DbContextOptions options) : base(options) { }

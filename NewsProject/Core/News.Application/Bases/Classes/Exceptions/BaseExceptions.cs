@@ -1,5 +1,4 @@
-﻿
-namespace News.Application.Bases.Classes.Exceptions
+﻿namespace News.Application.Bases.Classes.Exceptions
 {
     public abstract class BaseExceptions : ApplicationException
     {

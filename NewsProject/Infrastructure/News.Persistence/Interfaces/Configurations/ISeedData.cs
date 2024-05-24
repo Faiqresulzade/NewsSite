@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using News.Domain.Comman;
-using NewsEntity = News.Domain.Entities.News;
 
 namespace News.Persistence.Interfaces.Configuration
 {

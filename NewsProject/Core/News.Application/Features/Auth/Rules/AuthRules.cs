@@ -13,5 +13,13 @@ namespace News.Application.Features.Auth.Rules
 
             return Task.CompletedTask;
         }
+
+        public Task EmailorPasswordShouldNotBeInvalid(User? user, bool checkPassword)
+        {
+            if (user is null || !checkPassword)
+                throw new EmailorPasswordShouldNotBeInvalidException();
+
+            return Task.CompletedTask;
+        }
     }
 }

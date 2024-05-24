@@ -15,11 +15,10 @@ namespace News.Application.Registrations
         {
             var assembly = Assembly.GetExecutingAssembly();
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(assembly));
-
             services.AddValidatorsFromAssembly(assembly);
-            ValidatorOptions.Global.LanguageManager.Culture = new CultureInfo("az");
-
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(FluentValidationBehevior<,>));
+
+            ValidatorOptions.Global.LanguageManager.Culture = new CultureInfo("az");
 
         }
 
@@ -27,6 +26,5 @@ namespace News.Application.Registrations
         {
             app.UseMiddleware<ExceptionMiddleware>();
         }
-
     }
 }

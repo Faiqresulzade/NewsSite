@@ -1,5 +1,6 @@
 ﻿using News.Application.Abstraction.Interfaces.AutoMapper;
 using News.Application.Abstraction.Interfaces.UnitOfWorks;
+using News.Application.AutoMapper;
 using News.Domain.Comman;
 
 namespace News.Application.Bases.Classes.Query
@@ -16,10 +17,10 @@ namespace News.Application.Bases.Classes.Query
         public GetQueryHandler(IUnitOfWork unitOfWork)
         {
             this.unitOfWork = unitOfWork;
-            //this.mapper = Mapper.Instance;
+            this.mapper = Mapper.Instance;
         }
 
-        private protected virtual async Task<TResponse> GetEntity<TResponse, Tentity>(int id, Tentity entity = null)
+        private protected virtual async Task<TResponse> GetEntity<TResponse, Tentity>(int id, Tentity? entity = default)
          where Tentity : EntityBase, IEntityBase, new()
         {
             entity ??= await unitOfWork.GetReadRepository<Tentity>().GetAsync(n => !n.IsDeleted && n.Id == id);

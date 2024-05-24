@@ -4,6 +4,6 @@ namespace News.Application.Features.Auth.Exceptions
 {
     public class UserAlreadyExistException : BaseExceptions
     {
-        public UserAlreadyExistException() : base("Belə bir istifadəçı artıq mövcuddur") { }
+        public UserAlreadyExistException() : base("Belə bir istifadəçı artıq mövcuddur!") { }
     }
 }

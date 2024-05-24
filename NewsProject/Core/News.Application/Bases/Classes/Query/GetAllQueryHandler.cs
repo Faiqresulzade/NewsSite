@@ -23,9 +23,9 @@ namespace News.Application.Bases.Classes.Query
         private protected virtual async Task<IList<TResponse>> GetAllEntity<TResponse, Tentity>()
            where Tentity : EntityBase, IEntityBase, new()
         {
-            var categories = await unitOfWork.GetReadRepository<Tentity>().GetAllAsync(n => !n.IsDeleted);
+            var entities = await unitOfWork.GetReadRepository<Tentity>().GetAllAsync(n => !n.IsDeleted);
 
-            var mapedData = mapper.Map<TResponse, Tentity>(categories);
+            var mapedData = mapper.Map<TResponse, Tentity>(entities);
 
             return mapedData;
         }

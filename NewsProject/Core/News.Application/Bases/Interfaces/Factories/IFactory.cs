@@ -14,6 +14,6 @@ namespace News.Application.Abstraction.Interfaces.Factories
         /// </summary>
         /// <param name="trequest">The request object containing data for creating the object.</param>
         /// <returns>A newly created instance of type T.</returns>
-        T Create(Trequest trequest);
+        //T Create(Trequest trequest);
     }
 }

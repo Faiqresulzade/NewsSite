@@ -16,10 +16,8 @@ namespace News.Application.Features.NewsCategory.Command.UpdateCategory
         private readonly NewsCategoryRules _rules;
 
         public UpdateCategoryCommandHandler(IUnitOfWork unitOfWork, NewsCategoryRules rules)
-        : base(unitOfWork)
-        {
+        : base(unitOfWork) =>
             _rules = rules;
-        }
 
         public async Task<Unit> Handle(UpdateCategoryCommandRequest request, CancellationToken cancellationToken)
         {

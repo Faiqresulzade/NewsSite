@@ -31,7 +31,7 @@ namespace News.Infrastructure.Tokens
                 new Claim(JwtRegisteredClaimNames.Email,user.Email)
             };
 
-            foreach (var role in roles)
+            foreach (string role in roles)
                 claims.Add(new Claim(ClaimTypes.Role, role));
 
             SymmetricSecurityKey key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_tokenSettings.Secret));
@@ -41,8 +41,7 @@ namespace News.Infrastructure.Tokens
                 audience: _tokenSettings.Audience,
                 expires: DateTime.Now.AddMinutes(_tokenSettings.TokenValidityInMunitues),
                 claims: claims,
-                signingCredentials: new SigningCredentials(key, SecurityAlgorithms.HmacSha256)
-                );
+                signingCredentials: new SigningCredentials(key, SecurityAlgorithms.HmacSha256));
 
             await _userManager.AddClaimsAsync(user, claims);
 
@@ -73,13 +72,15 @@ namespace News.Infrastructure.Tokens
             JwtSecurityTokenHandler tokenHandler = new();
             var principal = tokenHandler.ValidateToken(token, tokenValidationParametrs, out SecurityToken securityToken);
 
-            if (securityToken is not JwtSecurityToken jwtSecurityToken || !jwtSecurityToken.Header.Alg.
-                Equals(SecurityAlgorithms.HmacSha256, StringComparison.InvariantCultureIgnoreCase))
-            {
+            if (IsValidToken(securityToken))
                 throw new SecurityTokenException("Token tapılmadı");
-            }
 
             return principal;
         }
+
+        private bool IsValidToken(SecurityToken securityToken)
+        => securityToken is not JwtSecurityToken jwtSecurityToken || 
+           !jwtSecurityToken.Header.Alg.Equals(SecurityAlgorithms.HmacSha256, 
+           StringComparison.InvariantCultureIgnoreCase);
     }
 }

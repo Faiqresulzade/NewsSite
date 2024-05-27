@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using News.Api.Bases.Classes;
 using News.Api.Bases.Interfaces;
@@ -20,15 +21,15 @@ namespace News.Api.Controllers
         public async Task<IActionResult> GetAll()
           => Ok(await mediator.Send(new GetAllCategoriesQueryRequest()));
 
-        [HttpPost]
+        [HttpPost, Authorize]
         public async Task<IActionResult> Create(CreateCategoryCommandRequest request)
           => await ExecuteCommand<IActionResult>(() => mediator.Send(request), () => Ok());
 
-        [HttpPost]
+        [HttpPost, Authorize]
         public async Task<IActionResult> Update(UpdateCategoryCommandRequest request)
           => await ExecuteCommand<IActionResult>(() => mediator.Send(request), () => Ok());
 
-        [HttpPost]
+        [HttpPost, Authorize]
         public async Task<IActionResult> Delete(DeleteCategoryCommandRequest request)
           => await ExecuteCommand<IActionResult>(() => mediator.Send(request), () => Ok());
 

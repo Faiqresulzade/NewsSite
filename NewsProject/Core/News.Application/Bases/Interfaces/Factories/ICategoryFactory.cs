@@ -14,6 +14,5 @@ namespace News.Application.Abstraction.Interfaces.Factories
         /// </summary>
         /// <param name="request">The request object containing data for creating the category.</param>
         /// <returns>A newly created NewsCategory instance.</returns>
-       public NewsCategory Create(CreateCategoryCommandRequest request);
     }
 }

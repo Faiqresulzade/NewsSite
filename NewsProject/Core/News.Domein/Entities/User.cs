@@ -3,7 +3,7 @@ using News.Domain.Comman;
 
 namespace News.Domain.Entities
 {
-    public class User : IdentityUser<int>, IEntityBase
+    public sealed class User : IdentityUser<int>, IEntityBase
     {
         public string Name { get; set; }
         public string Surname { get; set; }

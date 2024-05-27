@@ -7,7 +7,7 @@ namespace News.Persistence.Factories
 {
     public class CategoryFactory : IScoped, ICategoryFactory
     {
-        public NewsCategory Create(CreateCategoryCommandRequest request) => new NewsCategory(request.Name);
+        public async Task<NewsCategory> Create(CreateCategoryCommandRequest request) => new NewsCategory(request.Name);
 
     }
 }

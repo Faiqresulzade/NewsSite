@@ -1,10 +1,10 @@
 ﻿using MediatR;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.Configuration;
-using News.Application.Bases.Interfaces.Tokens;
-using News.Application.Features.Auth.Rules;
 using News.Domain.Entities;
+using Microsoft.AspNetCore.Identity;
 using System.IdentityModel.Tokens.Jwt;
+using Microsoft.Extensions.Configuration;
+using News.Application.Features.Auth.Rules;
+using News.Application.Bases.Interfaces.Tokens;
 
 namespace News.Application.Features.Auth.Command.Login
 {
@@ -23,10 +23,9 @@ namespace News.Application.Features.Auth.Command.Login
         {
             User user = await _userManager.FindByEmailAsync(request.Mail);
             bool isvalidPassword = await _userManager.CheckPasswordAsync(user, request.Password);
+            _authRules.EmailorPasswordShouldNotBeInvalid(user, isvalidPassword);
 
-            await _authRules.EmailorPasswordShouldNotBeInvalid(user, isvalidPassword);
             IList<string> roles = await _userManager.GetRolesAsync(user);
-
             JwtSecurityToken token = await _tokenService.CreateToken(user, roles);
             string refreshToken = _tokenService.GenerateRefreshToken();
 

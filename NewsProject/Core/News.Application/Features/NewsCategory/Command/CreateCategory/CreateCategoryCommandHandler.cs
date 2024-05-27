@@ -3,7 +3,6 @@ using News.Application.Abstraction.Interfaces.Factories;
 using News.Application.Abstraction.Interfaces.Repositories;
 using News.Application.Abstraction.Interfaces.UnitOfWorks;
 using News.Application.Bases.Classes.Command;
-using News.Application.Extensions.UnitOfWorks;
 using News.Application.Features.NewsCategory.Rules;
 using Category = News.Domain.Entities.NewsCategory;
 
@@ -23,7 +22,6 @@ namespace News.Application.Features.NewsCategory.Command.CreateCategory
             _rules = rules;
         }
 
-
         public async Task<Unit> Handle(CreateCategoryCommandRequest request, CancellationToken cancellationToken)
         {
             IList<Category> categories = await unitOfWork.GetReadRepository<Category>().GetAllAsync();
@@ -33,7 +31,7 @@ namespace News.Application.Features.NewsCategory.Command.CreateCategory
             if (await _rules.RestoreDeletedCategoryAsync(categories, request.Name, unitOfWork, writeRepository))
                 return default;
 
-            await unitOfWork.AddAsync<Category, ICategoryFactory, CreateCategoryCommandRequest>(factory, request);
+            await base.AddAsync<Category, ICategoryFactory, CreateCategoryCommandRequest>(unitOfWork, factory, request);
             return default;
         }
     }

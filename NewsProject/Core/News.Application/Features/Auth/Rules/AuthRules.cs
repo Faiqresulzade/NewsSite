@@ -1,25 +1,22 @@
-﻿using News.Application.Bases.Classes.Rules;
+﻿using News.Domain.Entities;
+using News.Application.Bases.Classes.Rules;
 using News.Application.Bases.Interfaces.DI;
 using News.Application.Features.Auth.Exceptions;
-using News.Domain.Entities;
 
 namespace News.Application.Features.Auth.Rules
 {
     public class AuthRules : BaseRules, ITransient
     {
-        public Task UserSholdNotBeExist(User? user)
+        public void UserSholdNotBeExist(User? user)
         {
-            if (user is not null) throw new UserAlreadyExistException();
-
-            return Task.CompletedTask;
+            if (user is not null)
+                throw new UserAlreadyExistException();
         }
 
-        public Task EmailorPasswordShouldNotBeInvalid(User? user, bool checkPassword)
+        public void EmailorPasswordShouldNotBeInvalid(User? user, bool checkPassword)
         {
             if (user is null || !checkPassword)
                 throw new EmailorPasswordShouldNotBeInvalidException();
-
-            return Task.CompletedTask;
         }
     }
 }

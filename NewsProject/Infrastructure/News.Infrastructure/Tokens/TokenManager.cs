@@ -1,11 +1,12 @@
-﻿using Microsoft.AspNetCore.Identity;
-using News.Application.Bases.Interfaces.Tokens;
-using News.Domain.Entities;
+﻿using News.Domain.Entities;
+using Microsoft.AspNetCore.Identity;
 using System.IdentityModel.Tokens.Jwt;
+using News.Application.Bases.Interfaces.DI;
+using News.Application.Bases.Interfaces.Tokens;
 
 namespace News.Infrastructure.Tokens
 {
-    public class TokenManager : ITokenManager
+    public class TokenManager : IScoped, ITokenManager
     {
         private readonly UserManager<User> _userManager;
 
@@ -19,14 +20,10 @@ namespace News.Infrastructure.Tokens
             user.RefreshToken = refreshToken;
             user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(refreshTokenValidityInDaysInt);
 
-            var updateTasks = new List<Task>
-            {
-                _userManager.UpdateAsync(user),
-                _userManager.UpdateSecurityStampAsync(user),
-                _userManager.SetAuthenticationTokenAsync(user, "default", "AccessToken", new JwtSecurityTokenHandler().WriteToken(token))
-            };
+            await _userManager.UpdateAsync(user);
+            await _userManager.UpdateSecurityStampAsync(user);
+            await _userManager.SetAuthenticationTokenAsync(user, "default", "AccessToken", new JwtSecurityTokenHandler().WriteToken(token));
 
-            await Task.WhenAll(updateTasks);
         }
     }
 }

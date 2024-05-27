@@ -8,13 +8,21 @@ namespace News.Persistence.Factories
 {
     public class UserFactory : IScoped, IUserFactory
     {
-        public async Task<User> CreateUser(RegisterCommandRequest request, UserManager<User> userManager, RoleManager<Role> roleManager, string userRole)
+        private readonly UserManager<User> _userManager;
+        private readonly RoleManager<Role> _roleManager;
+
+        public UserFactory(UserManager<User> userManager,RoleManager<Role> roleManager)
+        {
+            _userManager = userManager;
+            _roleManager = roleManager;
+        }
+        public async Task<User> Create(RegisterCommandRequest request)
         {
             User user = request;
 
-            IdentityResult result = await userManager.CreateAsync(user, request.Password);
+            IdentityResult result = await _userManager.CreateAsync(user, request.Password);
             if (result.Succeeded)
-                await CreateRole(user, userManager, roleManager, userRole);
+                await CreateRole(user, _userManager, _roleManager, "user");
 
             return user;
         }

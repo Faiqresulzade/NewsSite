@@ -205,12 +205,12 @@
         },
         "compile": {
           "ref/netcoreapp3.1/Microsoft.Data.SqlClient.dll": {
-            "related": ".pdb;.xml"
+            "related": ".xml;.pdb"
           }
         },
         "runtime": {
           "lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll": {
-            "related": ".pdb;.xml"
+            "related": ".xml;.pdb"
           }
         },
         "runtimeTargets": {
@@ -757,12 +757,12 @@
         },
         "compile": {
           "lib/netstandard2.0/SendGrid.dll": {
-            "related": ".pdb;.xml"
+            "related": ".xml;.pdb"
           }
         },
         "runtime": {
           "lib/netstandard2.0/SendGrid.dll": {
-            "related": ".pdb;.xml"
+            "related": ".xml;.pdb"
           }
         }
       },
@@ -2613,19 +2613,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\faig.rasulzada\\.nuget\\packages\\": {}
+    "C:\\Users\\Honor\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Infrastructure\\News.Infrastructure\\News.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Infrastructure\\News.Infrastructure\\News.Infrastructure.csproj",
       "projectName": "News.Infrastructure",
-      "projectPath": "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Infrastructure\\News.Infrastructure\\News.Infrastructure.csproj",
-      "packagesPath": "C:\\Users\\faig.rasulzada\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Infrastructure\\News.Infrastructure\\obj\\",
+      "projectPath": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Infrastructure\\News.Infrastructure\\News.Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\Honor\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Infrastructure\\News.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\faig.rasulzada\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Honor\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2639,14 +2639,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Core\\News.Application\\News.Application.csproj": {
-              "projectPath": "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Core\\News.Application\\News.Application.csproj"
+            "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Core\\News.Application\\News.Application.csproj": {
+              "projectPath": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Core\\News.Application\\News.Application.csproj"
             },
-            "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Core\\News.Domein\\News.Domain.csproj": {
-              "projectPath": "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Core\\News.Domein\\News.Domain.csproj"
+            "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Core\\News.Domein\\News.Domain.csproj": {
+              "projectPath": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Core\\News.Domein\\News.Domain.csproj"
             },
-            "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Infrastructure\\News.Persistence\\News.Persistence.csproj": {
-              "projectPath": "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Infrastructure\\News.Persistence\\News.Persistence.csproj"
+            "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Infrastructure\\News.Persistence\\News.Persistence.csproj": {
+              "projectPath": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Infrastructure\\News.Persistence\\News.Persistence.csproj"
             }
           }
         }
@@ -2686,7 +2686,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

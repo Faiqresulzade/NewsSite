@@ -17,7 +17,7 @@ namespace News.Application.Features.NewsCategory.Command.CreateCategory
     {
         private readonly INewsCategoryRules _rules;
 
-        public static event Action<IList<Category>, string,IUnitOfWork, IWriteRepository<Category>>? OnCategoryCreate;
+        public static event Action<CreateCategoryCommandRequest, IList<Category>, IUnitOfWork, IWriteRepository<Category>>? OnCategoryCreate;
 
 
         public CreateCategoryCommandHandler(IUnitOfWork unitOfWork, ICategoryFactory factory, INewsCategoryRules rules)
@@ -35,7 +35,7 @@ namespace News.Application.Features.NewsCategory.Command.CreateCategory
             if (await _rules.RestoreDeletedCategoryAsync(categories, request.Name, unitOfWork, writeRepository))
                 return default;
 
-            OnCategoryCreate?.Invoke(categories,request.Name,unitOfWork,writeRepository);
+            OnCategoryCreate?.Invoke(categories, request.Name, unitOfWork, writeRepository);
 
             await base.AddAsync<Category, ICategoryFactory, CreateCategoryCommandRequest>(unitOfWork, factory, request);
             return default;

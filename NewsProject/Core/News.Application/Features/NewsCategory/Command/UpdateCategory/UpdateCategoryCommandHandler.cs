@@ -14,27 +14,16 @@ namespace News.Application.Features.NewsCategory.Command.UpdateCategory
 
     internal class UpdateCategoryCommandHandler : UpdateCommandHandler, IRequestHandler<UpdateCategoryCommandRequest, Unit>
     {
-        private readonly INewsCategoryRules _rules;
-
         public static event Action<UpdateCategoryCommandRequest, IList<Category>, IUnitOfWork, IWriteRepository<Category>>? OnCategoryUpdate;
 
 
-        public UpdateCategoryCommandHandler(IUnitOfWork unitOfWork, INewsCategoryRules rules)
-        : base(unitOfWork)
-        {
-            _rules = rules;
-
-        }
+        public UpdateCategoryCommandHandler(IUnitOfWork unitOfWork)
+        : base(unitOfWork) { }
 
         public async Task<Unit> Handle(UpdateCategoryCommandRequest request, CancellationToken cancellationToken)
         {
             IList<Category> categories = await unitOfWork.GetReadRepository<Category>().GetAllAsync();
             IWriteRepository<Category> writeRepository = unitOfWork.GetWriteRepository<Category>();
-
-            //_rules.FindCategory(categories, request.Id);
-            //await _rules.CategoryNameMustNotBeSame(categories, request.Name);
-            //if (await _rules.RestoreDeletedCategoryAsync(categories, request.Name, unitOfWork, writeRepository))
-            //    return default;
 
             OnCategoryUpdate?.Invoke(request, categories, unitOfWork, writeRepository);
 

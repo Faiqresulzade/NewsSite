@@ -2,6 +2,7 @@
 using News.Application.Abstraction.Interfaces.UnitOfWorks;
 using News.Application.Bases.Interfaces.DI;
 using News.Application.Bases.Interfaces.Rules;
+using News.Application.Features.NewsCategory.Command.CreateCategory;
 using News.Application.Features.NewsCategory.Command.UpdateCategory;
 using News.Application.Features.NewsCategory.Exceptions;
 using Category = News.Domain.Entities.NewsCategory;
@@ -13,18 +14,6 @@ namespace News.Application.Features.NewsCategory.Rules
     /// </summary>
     public class NewsCategoryRules : ITransient, INewsCategoryRules
     {
-        public void SubscribeEventMethod()
-        {
-            UpdateCategoryCommandHandler.OnCategoryUpdate += InvokeEventMethod;
-        }
-
-        private void InvokeEventMethod(UpdateCategoryCommandRequest request, IList<Category> categories, IUnitOfWork unitOfWork, IWriteRepository<Category> writeRepository)
-        {
-            FindCategory(categories, request.Id);
-            CategoryNameMustNotBeSame(categories, request.Name).Wait();
-            if (RestoreDeletedCategoryAsync(categories, request.Name, unitOfWork, writeRepository).Result)
-                return;
-        }
 
         /// <summary>
         /// Ensures that the category name is not the same as an existing category name.
@@ -81,14 +70,6 @@ namespace News.Application.Features.NewsCategory.Rules
 
             throw new CategoryNotFoundException();
         }
-
-        private void UnsubscribeEventMethod()
-        {
-            UpdateCategoryCommandHandler.OnCategoryUpdate -= InvokeEventMethod;
-        }
-
-        ~NewsCategoryRules()
-        => UnsubscribeEventMethod();
 
     }
 }

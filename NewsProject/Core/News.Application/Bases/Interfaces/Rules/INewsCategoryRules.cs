@@ -10,7 +10,5 @@ namespace News.Application.Bases.Interfaces.Rules
         Task CategoryNameMustNotBeSame(IList<Category> categories, string newsName);
         Task<bool> RestoreDeletedCategoryAsync(IList<Category> categories, string newsName, IUnitOfWork unitOfWork, IWriteRepository<Category> writeRepository);
         Category FindCategory(IList<Category> categories, int requestId);
-        void SubscribeEventMethod();
-
     }
 }

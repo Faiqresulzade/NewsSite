@@ -6,8 +6,7 @@ using News.Application.Beheviors;
 using News.Application.Exceptions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
-using News.Application.Bases.Interfaces.Rules;
-using System;
+using News.Application.Features.NewsCategory.EventHandler;
 
 namespace News.Application.Registrations
 {
@@ -24,7 +23,6 @@ namespace News.Application.Registrations
 
             ServiceProvider serviceProvider = services.BuildServiceProvider();
             RegisterEventMethod(serviceProvider);
-
         }
 
         public static void AddAplication(this IApplicationBuilder app)
@@ -34,8 +32,8 @@ namespace News.Application.Registrations
 
         private static void RegisterEventMethod(ServiceProvider serviceProvider)
         {
-            var rules = serviceProvider.GetService<INewsCategoryRules>();
-            rules?.SubscribeEventMethod();
+            var rules = serviceProvider.GetService<CategoryEventHandler>();
+            rules?.SubscribeToEvents();
         }
     }
 }

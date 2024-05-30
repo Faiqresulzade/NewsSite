@@ -9,6 +9,10 @@
 
   <ItemGroup>
     <Folder Include="Features\Auth\Queries\" />
+    <Folder Include="Features\NewsModel\Command\RemoveNews\" />
+    <Folder Include="Features\NewsModel\Command\UpdateNews\" />
+    <Folder Include="Features\NewsModel\Exceptions\" />
+    <Folder Include="Features\NewsModel\Queries\" />
     <Folder Include="Features\Products\Command\" />
   </ItemGroup>
 

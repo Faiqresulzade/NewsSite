@@ -5,18 +5,19 @@ using System.IdentityModel.Tokens.Jwt;
 using Microsoft.Extensions.Configuration;
 using News.Application.Features.Auth.Rules;
 using News.Application.Bases.Interfaces.Tokens;
+using News.Application.Bases.Interfaces.Rules;
 
 namespace News.Application.Features.Auth.Command.Login
 {
     public class LoginCommandHandler : IRequestHandler<LoginCommandRequest, LoginCommandResponse>
     {
         private readonly UserManager<User> _userManager;
-        private readonly AuthRules _authRules;
+        private readonly IAuthRules _authRules;
         private readonly ITokenSrvice _tokenService;
         private readonly ITokenManager _tokenManager;
         private readonly IConfiguration _configuration;
 
-        public LoginCommandHandler(UserManager<User> userManager, AuthRules authRules, ITokenSrvice tokenService, ITokenManager tokenManager, IConfiguration configuration)
+        public LoginCommandHandler(UserManager<User> userManager, IAuthRules authRules, ITokenSrvice tokenService, ITokenManager tokenManager, IConfiguration configuration)
          => (_userManager, _authRules, _tokenService, _tokenManager, _configuration) = (userManager, authRules, tokenService, tokenManager, configuration);
 
         public async Task<LoginCommandResponse> Handle(LoginCommandRequest request, CancellationToken cancellationToken)

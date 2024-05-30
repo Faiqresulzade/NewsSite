@@ -1,10 +1,11 @@
 ﻿using MediatR;
-using News.Application.Abstraction.Interfaces.Factories;
-using News.Application.Abstraction.Interfaces.Repositories;
-using News.Application.Abstraction.Interfaces.UnitOfWorks;
 using News.Application.Bases.Classes.Command;
-using News.Application.Features.NewsCategory.Rules;
+using News.Application.Abstraction.Interfaces.Factories;
+using News.Application.Abstraction.Interfaces.UnitOfWorks;
+using News.Application.Abstraction.Interfaces.Repositories;
 using Category = News.Domain.Entities.NewsCategory;
+using News.Application.Bases.Interfaces.Rules;
+using News.Application.Features.NewsCategory.Command.UpdateCategory;
 
 namespace News.Application.Features.NewsCategory.Command.CreateCategory
 {
@@ -14,9 +15,12 @@ namespace News.Application.Features.NewsCategory.Command.CreateCategory
 
     public class CreateCategoryCommandHandler : CreateCommandHandler<ICategoryFactory>, IRequestHandler<CreateCategoryCommandRequest, Unit>
     {
-        private readonly NewsCategoryRules _rules;
+        private readonly INewsCategoryRules _rules;
 
-        public CreateCategoryCommandHandler(IUnitOfWork unitOfWork, ICategoryFactory factory, NewsCategoryRules rules)
+        public static event Action<IList<Category>, string,IUnitOfWork, IWriteRepository<Category>>? OnCategoryCreate;
+
+
+        public CreateCategoryCommandHandler(IUnitOfWork unitOfWork, ICategoryFactory factory, INewsCategoryRules rules)
         : base(unitOfWork, factory)
         {
             _rules = rules;
@@ -30,6 +34,8 @@ namespace News.Application.Features.NewsCategory.Command.CreateCategory
             await _rules.CategoryNameMustNotBeSame(categories, request.Name);
             if (await _rules.RestoreDeletedCategoryAsync(categories, request.Name, unitOfWork, writeRepository))
                 return default;
+
+            OnCategoryCreate?.Invoke(categories,request.Name,unitOfWork,writeRepository);
 
             await base.AddAsync<Category, ICategoryFactory, CreateCategoryCommandRequest>(unitOfWork, factory, request);
             return default;

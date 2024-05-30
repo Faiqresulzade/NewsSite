@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using News.Application.Abstraction.Interfaces.UnitOfWorks;
 using News.Application.Bases.Classes.Query;
+using News.Application.Bases.Interfaces.Rules;
 using News.Application.Features.NewsCategory.Rules;
 using Category = News.Domain.Entities.NewsCategory;
 
@@ -12,9 +13,9 @@ namespace News.Application.Features.NewsCategory.Queries.GetCategoryById
 
     public class GetCategoryQueryHandler : GetQueryHandler, IRequestHandler<GetCategoryQueryRequest, GetCategoryQueryResponse>
     {
-        private readonly NewsCategoryRules _rules;
+        private readonly INewsCategoryRules _rules;
 
-        public GetCategoryQueryHandler(IUnitOfWork unitOfWork, NewsCategoryRules rules) : base(unitOfWork)
+        public GetCategoryQueryHandler(IUnitOfWork unitOfWork, INewsCategoryRules rules) : base(unitOfWork)
         {
             _rules = rules;
         }

@@ -25,7 +25,7 @@ namespace News.Api.Controllers
         public async Task<IActionResult> Create(CreateCategoryCommandRequest request)
           => await ExecuteCommand<IActionResult>(() => mediator.Send(request), () => Ok());
 
-        [HttpPost, Authorize]
+        [HttpPost]
         public async Task<IActionResult> Update(UpdateCategoryCommandRequest request)
           => await ExecuteCommand<IActionResult>(() => mediator.Send(request), () => Ok());
 

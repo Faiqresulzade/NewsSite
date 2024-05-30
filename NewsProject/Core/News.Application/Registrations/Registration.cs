@@ -1,11 +1,13 @@
-﻿using FluentValidation;
-using MediatR;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
+﻿using MediatR;
+using FluentValidation;
+using System.Reflection;
+using System.Globalization;
 using News.Application.Beheviors;
 using News.Application.Exceptions;
-using System.Globalization;
-using System.Reflection;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using News.Application.Bases.Interfaces.Rules;
+using System;
 
 namespace News.Application.Registrations
 {
@@ -20,11 +22,20 @@ namespace News.Application.Registrations
 
             ValidatorOptions.Global.LanguageManager.Culture = new CultureInfo("az");
 
+            ServiceProvider serviceProvider = services.BuildServiceProvider();
+            RegisterEventMethod(serviceProvider);
+
         }
 
         public static void AddAplication(this IApplicationBuilder app)
         {
             app.UseMiddleware<ExceptionMiddleware>();
+        }
+
+        private static void RegisterEventMethod(ServiceProvider serviceProvider)
+        {
+            var rules = serviceProvider.GetService<INewsCategoryRules>();
+            rules?.SubscribeEventMethod();
         }
     }
 }

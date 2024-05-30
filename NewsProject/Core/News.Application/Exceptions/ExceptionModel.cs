@@ -2,7 +2,7 @@
 
 namespace News.Application.Exceptions
 {
-    public class ExceptionModel : ErrorStatusCode
+    public sealed class ExceptionModel : ErrorStatusCode
     {
         public IEnumerable<string> Errors { get; init; }
 

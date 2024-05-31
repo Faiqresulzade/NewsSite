@@ -11,22 +11,24 @@ namespace News.Application.Features.Auth.Command.Register
 {
     public class RegisterCommandHandler : CreateCommandHandler<IUserFactory>, IRequestHandler<RegisterCommandRequest, Unit>
     {
-        private readonly IAuthRules _authRules;
         private readonly UserManager<User> _userManager;
 
         private const string _userRole = "user";
 
-        public RegisterCommandHandler(IUnitOfWork unitOfWork, IUserFactory factory, IAuthRules authRules, UserManager<User> userManager) : base(unitOfWork, factory)
-         => (_authRules, _userManager) = (authRules, userManager);
+        public static event Action<User>? OnUserRegister;
+
+        public RegisterCommandHandler(IUnitOfWork unitOfWork, IUserFactory factory, UserManager<User> userManager) : base(unitOfWork, factory)
+         => _userManager = userManager;
 
         public async Task<Unit> Handle(RegisterCommandRequest request, CancellationToken cancellationToken)
         {
-            _authRules.UserSholdNotBeExist(await _userManager.FindByEmailAsync(request.Email));
+            OnUserRegister?.Invoke(await _userManager.FindByEmailAsync(request.Email));
+
             return await this.AddAsync<User, IUserFactory, RegisterCommandRequest>(unitOfWork, factory, request);
         }
 
         protected async override Task<Unit> AddAsync<Tentity, Tfactory, Trequest>
-            (IUnitOfWork unitOfWork, Tfactory factory, Trequest request, IWriteRepository<Tentity>? repository = default)
+        (IUnitOfWork unitOfWork, Tfactory factory, Trequest request, IWriteRepository<Tentity>? repository = default)
         {
             await factory.Create(request);
             return default;

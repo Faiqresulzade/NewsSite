@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using News.Application.Bases.Classes.EventHandler;
 using News.Application.Features.NewsCategory.EventHandler;
+using News.Application.Features.Auth.EventHandler;
 
 namespace News.Application.Registrations
 {
@@ -35,9 +36,11 @@ namespace News.Application.Registrations
         {
             var baseEvent = serviceProvider.GetService<BaseEventHandler>();
             var categoryEvent = serviceProvider.GetService<CategoryEventHandler>();
+            var authEventHandler = serviceProvider.GetService<AuthEventHandler>();
 
-            categoryEvent?.SubscribeToEvents();
             baseEvent?.SubscribeEventHandler();
+            categoryEvent?.SubscribeToEvents();
+            authEventHandler?.SubscribeToEvents();
         }
     }
 }

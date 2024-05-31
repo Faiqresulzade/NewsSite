@@ -23,8 +23,8 @@ namespace News.Application.Utilities.Helpers
         {
             var path = Path.Combine(webRootPath, "assets/media", fileName);
 
-            if (System.IO.File.Exists(path))
-                System.IO.File.Delete(path);
+            if (File.Exists(path))
+                File.Delete(path);
         }
 
         public bool IsImage(IFormFile file) => file.ContentType.Contains("image/");

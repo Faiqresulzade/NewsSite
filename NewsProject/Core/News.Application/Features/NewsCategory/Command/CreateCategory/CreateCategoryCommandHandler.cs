@@ -1,11 +1,10 @@
 ﻿using MediatR;
 using News.Application.Bases.Classes.Command;
+using News.Application.Bases.Interfaces.Rules;
 using News.Application.Abstraction.Interfaces.Factories;
 using News.Application.Abstraction.Interfaces.UnitOfWorks;
 using News.Application.Abstraction.Interfaces.Repositories;
 using Category = News.Domain.Entities.NewsCategory;
-using News.Application.Bases.Interfaces.Rules;
-using News.Application.Features.NewsCategory.Command.UpdateCategory;
 
 namespace News.Application.Features.NewsCategory.Command.CreateCategory
 {
@@ -15,27 +14,17 @@ namespace News.Application.Features.NewsCategory.Command.CreateCategory
 
     public class CreateCategoryCommandHandler : CreateCommandHandler<ICategoryFactory>, IRequestHandler<CreateCategoryCommandRequest, Unit>
     {
-        private readonly INewsCategoryRules _rules;
-
         public static event Action<CreateCategoryCommandRequest, IList<Category>, IUnitOfWork, IWriteRepository<Category>>? OnCategoryCreate;
 
-
         public CreateCategoryCommandHandler(IUnitOfWork unitOfWork, ICategoryFactory factory, INewsCategoryRules rules)
-        : base(unitOfWork, factory)
-        {
-            _rules = rules;
-        }
+        : base(unitOfWork, factory) { }
 
         public async Task<Unit> Handle(CreateCategoryCommandRequest request, CancellationToken cancellationToken)
         {
             IList<Category> categories = await unitOfWork.GetReadRepository<Category>().GetAllAsync();
             IWriteRepository<Category> writeRepository = unitOfWork.GetWriteRepository<Category>();
 
-            await _rules.CategoryNameMustNotBeSame(categories, request.Name);
-            if (await _rules.RestoreDeletedCategoryAsync(categories, request.Name, unitOfWork, writeRepository))
-                return default;
-
-            OnCategoryCreate?.Invoke(categories, request.Name, unitOfWork, writeRepository);
+            OnCategoryCreate?.Invoke(request, categories, unitOfWork, writeRepository);
 
             await base.AddAsync<Category, ICategoryFactory, CreateCategoryCommandRequest>(unitOfWork, factory, request);
             return default;

@@ -13,17 +13,15 @@ namespace News.Application.Features.NewsCategory.Queries.GetCategoryById
 
     public class GetCategoryQueryHandler : GetQueryHandler, IRequestHandler<GetCategoryQueryRequest, GetCategoryQueryResponse>
     {
-        private readonly INewsCategoryRules _rules;
+        public static event Func<IList<Category>,int, Category>? OnCategoryGet;
 
-        public GetCategoryQueryHandler(IUnitOfWork unitOfWork, INewsCategoryRules rules) : base(unitOfWork)
-        {
-            _rules = rules;
-        }
+        public GetCategoryQueryHandler(IUnitOfWork unitOfWork) : base(unitOfWork) { }
 
         async Task<GetCategoryQueryResponse> IRequestHandler<GetCategoryQueryRequest, GetCategoryQueryResponse>.Handle(GetCategoryQueryRequest request, CancellationToken cancellationToken)
         {
             IList<Category> categories = await unitOfWork.GetReadRepository<Category>().GetAllAsync();
-            Category category = _rules.FindCategory(categories, request.Id);
+
+            Category? category = OnCategoryGet?.Invoke(categories, request.Id);
 
             return await base.GetEntity<GetCategoryQueryResponse, Category>(request.Id, category);
         }

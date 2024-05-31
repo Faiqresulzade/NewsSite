@@ -2,8 +2,6 @@
 using News.Application.Abstraction.Interfaces.Repositories;
 using News.Application.Abstraction.Interfaces.UnitOfWorks;
 using News.Application.Bases.Classes.Command;
-using News.Application.Bases.Interfaces.Rules;
-using News.Application.Features.NewsCategory.Rules;
 using Category = News.Domain.Entities.NewsCategory;
 
 namespace News.Application.Features.NewsCategory.Command.UpdateCategory
@@ -15,7 +13,6 @@ namespace News.Application.Features.NewsCategory.Command.UpdateCategory
     internal class UpdateCategoryCommandHandler : UpdateCommandHandler, IRequestHandler<UpdateCategoryCommandRequest, Unit>
     {
         public static event Action<UpdateCategoryCommandRequest, IList<Category>, IUnitOfWork, IWriteRepository<Category>>? OnCategoryUpdate;
-
 
         public UpdateCategoryCommandHandler(IUnitOfWork unitOfWork)
         : base(unitOfWork) { }
@@ -35,7 +32,5 @@ namespace News.Application.Features.NewsCategory.Command.UpdateCategory
 
             return default;
         }
-
-
     }
 }

@@ -33,7 +33,7 @@ namespace News.Application.Bases.Classes.Command
             await repository.AddAsync(entity);
             await repository.SaveAsync();
 
-            return Unit.Value;
+            return default;
         }
     }
 }

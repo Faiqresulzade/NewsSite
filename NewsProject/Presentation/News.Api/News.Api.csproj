@@ -26,4 +26,8 @@
 		<ProjectReference Include="..\..\Infrastructure\News.Persistence\News.Persistence.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="wwwroot\assets\media\" />
+	</ItemGroup>
+
 </Project>

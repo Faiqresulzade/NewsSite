@@ -5,8 +5,8 @@ namespace News.Application.Bases.Interfaces.Helpers
 {
     public interface IFileHelper : ISingletonBase<IFileHelper>
     {
-        Task<string> Upload(IFormFile file, string webRootPath);
-        void Delete(string webRootPath, string fileName);
+        Task<string> Upload(IFormFile file);
+        void Delete(string fileName);
         bool IsImage(IFormFile file);
         bool CheckSize(IFormFile file, int size);
         bool IsPdf(IFormFile file);

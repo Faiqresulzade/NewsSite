@@ -17,6 +17,5 @@ namespace News.Application.Features.NewsCategory.Command.DeleteCategory
 
         public async Task<Unit> Handle(DeleteCategoryCommandRequest request, CancellationToken cancellationToken)
           => await base.Delete<Category>(request.Id);
-
     }
 }

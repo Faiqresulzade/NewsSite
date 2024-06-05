@@ -9,6 +9,10 @@ using Microsoft.Extensions.DependencyInjection;
 using News.Application.Bases.Classes.EventHandler;
 using News.Application.Features.NewsCategory.EventHandler;
 using News.Application.Features.Auth.EventHandler;
+using News.Application.Features.NewsModel.EventHandler;
+using News.Application.Bases.Interfaces.Rules;
+using News.Domain.Comman;
+using News.Application.Bases.Classes.Rules;
 
 namespace News.Application.Registrations
 {
@@ -19,13 +23,16 @@ namespace News.Application.Registrations
             var assembly = Assembly.GetExecutingAssembly();
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(assembly));
             services.AddValidatorsFromAssembly(assembly);
+
+            services.AddTransient(typeof(IBaseRule<>), typeof(BaseRules<>));
+
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(FluentValidationBehevior<,>));
 
             ValidatorOptions.Global.LanguageManager.Culture = new CultureInfo("az");
 
             ServiceProvider serviceProvider = services.BuildServiceProvider();
             RegisterEventMethod(serviceProvider);
-        } 
+        }
 
         public static void AddAplication(this IApplicationBuilder app)
         {
@@ -36,11 +43,13 @@ namespace News.Application.Registrations
         {
             var baseEvent = serviceProvider.GetService<BaseEventHandler>();
             var categoryEvent = serviceProvider.GetService<CategoryEventHandler>();
+            var newsEvent = serviceProvider.GetService<NewsEventHandler>();
             var authEventHandler = serviceProvider.GetService<AuthEventHandler>();
 
             baseEvent?.SubscribeEventHandler();
             categoryEvent?.SubscribeToEvents();
             authEventHandler?.SubscribeToEvents();
+            newsEvent?.SubscripeToEvent();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using MediatR;
-using Microsoft.AspNetCore.Mvc;
 using News.Api.Bases.Classes;
+using Microsoft.AspNetCore.Mvc;
 using News.Application.Features.Auth.Command.Login;
 using News.Application.Features.Auth.Command.Register;
 
@@ -12,13 +12,9 @@ namespace News.Api.Controllers
     {
         public AuthController(IMediator mediatr) : base(mediatr) { }
 
-
         [HttpPost]
         public async Task<IActionResult> Register(RegisterCommandRequest request)
-        {
-            await mediator.Send(request);
-            return StatusCode(StatusCodes.Status201Created);
-        }
+        => await ExecuteCommand<IActionResult>(() => mediator.Send(request), () => StatusCode(StatusCodes.Status201Created));
 
         [HttpPost]
         public async Task<IActionResult> Login(LoginCommandRequest request)

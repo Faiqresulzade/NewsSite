@@ -17,13 +17,13 @@ namespace News.Domain.Entities
 
         public News() { }
 
-        public News(string authorName, string title, string description, int readCount, string imagePath, int categoryId)
+        public News(string authorName, string title, string description, string imagePath, int categoryId)
         {
             CategoryId = categoryId;
             AuthorName = authorName;
             Title = title;
             Description = description;
-            ReadCount = readCount;
+            //ReadCount = readCount;
             ImagePath = imagePath;
         }
     }

@@ -28,7 +28,7 @@ namespace News.Application.Bases.Classes.Command
             entity.IsDeleted = true;
 
             await unitOfWork.GetWriteRepository<Tentity>().UpdateAsync(entity);
-            return Unit.Value;
+            return default;
         }
     }
 }

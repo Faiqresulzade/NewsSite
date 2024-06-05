@@ -1,10 +1,11 @@
 ﻿using News.Domain.Comman;
 using News.Application.Bases.Classes.Command;
 using News.Application.Bases.Interfaces.Rules;
+using News.Application.Bases.Interfaces.DI;
 
 namespace News.Application.Bases.Classes.EventHandler
 {
-    internal abstract class BaseEventHandler
+    public class BaseEventHandler : ITransient
     {
         private readonly IBaseRule<EntityBase> _rule;
 

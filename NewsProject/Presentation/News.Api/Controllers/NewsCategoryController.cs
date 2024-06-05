@@ -1,8 +1,8 @@
 ﻿using MediatR;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
 using News.Api.Bases.Classes;
+using Microsoft.AspNetCore.Mvc;
 using News.Api.Bases.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using News.Application.Features.NewsCategory.Command.CreateCategory;
 using News.Application.Features.NewsCategory.Command.DeleteCategory;
 using News.Application.Features.NewsCategory.Command.UpdateCategory;
@@ -14,12 +14,14 @@ namespace News.Api.Controllers
     public class NewsCategoryController : BaseController,
         IReadable, IRemoveable<DeleteCategoryCommandRequest>,
         IUpdateable<UpdateCategoryCommandRequest>, ICreatable<CreateCategoryCommandRequest>
+
     {
         public NewsCategoryController(IMediator mediator) : base(mediator) { }
 
         [HttpGet]
         public async Task<IActionResult> GetAll()
           => Ok(await mediator.Send(new GetAllCategoriesQueryRequest()));
+
 
         [HttpPost, Authorize]
         public async Task<IActionResult> Create(CreateCategoryCommandRequest request)

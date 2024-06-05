@@ -2,16 +2,26 @@
 using Microsoft.AspNetCore.Http;
 using News.Application.Bases.Classes.Singleton;
 using News.Application.Bases.Interfaces.Helpers;
+using Microsoft.AspNetCore.Hosting;
 
 namespace News.Application.Utilities.Helpers
 {
     public class FileHelper : SingletonBase<FileHelper>, IFileHelper
     {
-        public async Task<string> Upload(IFormFile file, string webRootPath)
+        private readonly IHostingEnvironment _hostingEnvironment;
+
+        public FileHelper() { }
+
+        public FileHelper(IHostingEnvironment hostingEnvironment)
+        {
+            _hostingEnvironment = hostingEnvironment;
+        }
+
+        public async Task<string> Upload(IFormFile file)
         {
             string fileName = $"{Guid.NewGuid()}_{file.FileName}";
 
-            string path = Path.Combine(webRootPath, "assets/media", fileName);
+            string path = Path.Combine(_hostingEnvironment.WebRootPath, "assets/media", fileName);
 
             using (FileStream fileStream = new FileStream(path, FileMode.Create, FileAccess.ReadWrite))
                 await file.CopyToAsync(fileStream);
@@ -19,9 +29,9 @@ namespace News.Application.Utilities.Helpers
             return fileName;
         }
 
-        public void Delete(string webRootPath, string fileName)
+        public void Delete(string fileName)
         {
-            var path = Path.Combine(webRootPath, "assets/media", fileName);
+            var path = Path.Combine(_hostingEnvironment.WebRootPath, "assets/media", fileName);
 
             if (File.Exists(path))
                 File.Delete(path);

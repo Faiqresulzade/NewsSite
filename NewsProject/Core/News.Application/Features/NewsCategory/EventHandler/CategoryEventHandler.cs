@@ -6,10 +6,11 @@ using News.Application.Features.NewsCategory.Command.UpdateCategory;
 using Category = News.Domain.Entities.NewsCategory;
 using News.Application.Features.NewsCategory.Queries.GetCategoryById;
 using MediatR;
+using News.Application.Bases.Interfaces.DI;
 
 namespace News.Application.Features.NewsCategory.EventHandler
 {
-    public class CategoryEventHandler
+    public class CategoryEventHandler : ITransient
     {
         private readonly INewsCategoryRules _rules;
 

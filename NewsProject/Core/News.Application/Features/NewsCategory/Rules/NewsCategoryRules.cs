@@ -1,5 +1,6 @@
 ﻿using News.Application.Abstraction.Interfaces.Repositories;
 using News.Application.Abstraction.Interfaces.UnitOfWorks;
+using News.Application.Bases.Classes.Rules;
 using News.Application.Bases.Interfaces.DI;
 using News.Application.Bases.Interfaces.Rules;
 using News.Application.Features.NewsCategory.Command.CreateCategory;
@@ -12,7 +13,7 @@ namespace News.Application.Features.NewsCategory.Rules
     /// <summary>
     /// Provides business rules related to news categories.
     /// </summary>
-    public class NewsCategoryRules : ITransient, INewsCategoryRules
+    public class NewsCategoryRules : BaseRules<Category>, ITransient, INewsCategoryRules
     {
 
         /// <summary>
@@ -60,15 +61,7 @@ namespace News.Application.Features.NewsCategory.Rules
         {
             Category? category = categories.FirstOrDefault(c => c.Id == requestId && !c.IsDeleted);
 
-            return EntityNotFound(category);
-        }
-
-        public Category EntityNotFound(Category? category)
-        {
-            if (category is not null)
-                return category;
-
-            throw new CategoryNotFoundException();
+            return base.EntityNotFound(category);
         }
 
     }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "re0m3Xgjo7RM9DS0gD7jfTwIrAy2x3wDafm7GT3AgZIiTEA5F6g3rcWEmTbZyPDBZ0GqsOvxhvqkndpwPobOUA==",
+  "dgSpecHash": "T0KXVH5ONQGAmp+VDbmz8Dxwq0vPlDGmDVXFJlOIn+Fawqpcow0zUQi8LJzL2DMvAn4zRMRgtHKw+BgyCsriuw==",
   "success": true,
   "projectFilePath": "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Presentation\\News.Api\\News.Api.csproj",
   "expectedPackageFiles": [
@@ -41,10 +41,10 @@
     "C:\\Users\\faig.rasulzada\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\2.2.0\\microsoft.extensions.configuration.fileextensions.2.2.0.nupkg.sha512",
     "C:\\Users\\faig.rasulzada\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.1\\microsoft.extensions.dependencyinjection.6.0.1.nupkg.sha512",
     "C:\\Users\\faig.rasulzada\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
-    "C:\\Users\\faig.rasulzada\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\2.2.0\\microsoft.extensions.fileproviders.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\faig.rasulzada\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\6.0.0\\microsoft.extensions.fileproviders.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\faig.rasulzada\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\2.2.0\\microsoft.extensions.fileproviders.physical.2.2.0.nupkg.sha512",
     "C:\\Users\\faig.rasulzada\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\2.2.0\\microsoft.extensions.filesystemglobbing.2.2.0.nupkg.sha512",
-    "C:\\Users\\faig.rasulzada\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\2.2.0\\microsoft.extensions.hosting.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\faig.rasulzada\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\6.0.0\\microsoft.extensions.hosting.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\faig.rasulzada\\.nuget\\packages\\microsoft.extensions.identity.core\\6.0.29\\microsoft.extensions.identity.core.6.0.29.nupkg.sha512",
     "C:\\Users\\faig.rasulzada\\.nuget\\packages\\microsoft.extensions.identity.stores\\6.0.29\\microsoft.extensions.identity.stores.6.0.29.nupkg.sha512",
     "C:\\Users\\faig.rasulzada\\.nuget\\packages\\microsoft.extensions.logging\\6.0.0\\microsoft.extensions.logging.6.0.0.nupkg.sha512",

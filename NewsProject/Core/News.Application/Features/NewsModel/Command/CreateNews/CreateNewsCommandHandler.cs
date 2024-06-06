@@ -5,12 +5,11 @@ using News.Application.Bases.Interfaces.Factories;
 using News.Application.Abstraction.Interfaces.UnitOfWorks;
 using Category = News.Domain.Entities.NewsCategory;
 using NewsEntity = News.Domain.Entities.News;
-using News.Application.Bases.Interfaces.Helpers;
 using News.Application.Utilities.Helpers;
 
 namespace News.Application.Features.NewsModel.Command.CreateNews
 {
-    public class CreateNewsCommandHandler : CreateCommandHandler<INewsFactory>, IRequestHandler<CreateNewsCommandRequest, Unit>
+    internal class CreateNewsCommandHandler : CreateCommandHandler<INewsFactory>, IRequestHandler<CreateNewsCommandRequest, Unit>
     {
         private readonly ICategoryService _categoryService;
 
@@ -26,7 +25,7 @@ namespace News.Application.Features.NewsModel.Command.CreateNews
             _ = OnNewsCreate?.Invoke(request, categories);
             await FileHelper.Instance.Upload(request.NewsImage);
 
-            await base.AddAsync<NewsEntity, INewsFactory, CreateNewsCommandRequest>(unitOfWork, factory, request);
+           await base.AddAsync<NewsEntity, INewsFactory, CreateNewsCommandRequest>(unitOfWork, factory, request);
 
             return default;
         }

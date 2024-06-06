@@ -9,7 +9,6 @@
 
   <ItemGroup>
     <Folder Include="Features\Auth\Queries\" />
-    <Folder Include="Features\NewsModel\Queries\" />
     <Folder Include="Features\Products\Command\" />
   </ItemGroup>
 
@@ -21,6 +20,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.29" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="6.0.0" />
     <PackageReference Include="SendGrid" Version="9.29.3" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.5.2" />
   </ItemGroup>

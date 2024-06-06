@@ -22,7 +22,7 @@ namespace News.Application.Bases.Classes.Command
             this.factory = factory;
         }
 
-        protected virtual async Task<Unit> AddAsync<Tentity, Tfactory, Trequest>(IUnitOfWork unitOfWork, Tfactory factory, Trequest request, IWriteRepository<Tentity> repository = default)
+        protected virtual async Task<Tentity> AddAsync<Tentity, Tfactory, Trequest>(IUnitOfWork unitOfWork, Tfactory factory, Trequest request, IWriteRepository<Tentity> repository = default)
           where Tentity : class, IEntityBase, new()
           where Tfactory : IFactory<Tentity, Trequest>
           where Trequest : IRequest<Unit>
@@ -33,7 +33,7 @@ namespace News.Application.Bases.Classes.Command
             await repository.AddAsync(entity);
             await repository.SaveAsync();
 
-            return default;
+            return entity;
         }
     }
 }

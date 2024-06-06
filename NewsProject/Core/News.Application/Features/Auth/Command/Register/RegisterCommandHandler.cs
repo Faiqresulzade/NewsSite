@@ -4,12 +4,11 @@ using Microsoft.AspNetCore.Identity;
 using News.Application.Bases.Classes.Command;
 using News.Application.Bases.Interfaces.Factories;
 using News.Application.Abstraction.Interfaces.UnitOfWorks;
-using News.Application.Bases.Interfaces.Rules;
 using News.Application.Abstraction.Interfaces.Repositories;
 
 namespace News.Application.Features.Auth.Command.Register
 {
-    public class RegisterCommandHandler : CreateCommandHandler<IUserFactory>, IRequestHandler<RegisterCommandRequest, Unit>
+    internal class RegisterCommandHandler : CreateCommandHandler<IUserFactory>, IRequestHandler<RegisterCommandRequest, Unit>
     {
         private readonly UserManager<User> _userManager;
 
@@ -23,15 +22,12 @@ namespace News.Application.Features.Auth.Command.Register
         public async Task<Unit> Handle(RegisterCommandRequest request, CancellationToken cancellationToken)
         {
             OnUserRegister?.Invoke(await _userManager.FindByEmailAsync(request.Email));
-
-            return await this.AddAsync<User, IUserFactory, RegisterCommandRequest>(unitOfWork, factory, request);
-        }
-
-        protected async override Task<Unit> AddAsync<Tentity, Tfactory, Trequest>
-        (IUnitOfWork unitOfWork, Tfactory factory, Trequest request, IWriteRepository<Tentity>? repository = default)
-        {
-            await factory.Create(request);
+            await this.AddAsync<User, IUserFactory, RegisterCommandRequest>(unitOfWork, factory, request);
             return default;
         }
+
+        protected async override Task<Tentity> AddAsync<Tentity, Tfactory, Trequest>
+        (IUnitOfWork unitOfWork, Tfactory factory, Trequest request, IWriteRepository<Tentity>? repository = default)
+          => await factory.Create(request);
     }
 }

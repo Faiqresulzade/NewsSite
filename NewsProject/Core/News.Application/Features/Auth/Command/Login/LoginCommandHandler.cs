@@ -4,11 +4,10 @@ using Microsoft.AspNetCore.Identity;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.Extensions.Configuration;
 using News.Application.Bases.Interfaces.Tokens;
-using News.Application.Bases.Interfaces.Rules;
 
 namespace News.Application.Features.Auth.Command.Login
 {
-    public class LoginCommandHandler : IRequestHandler<LoginCommandRequest, LoginCommandResponse>
+    internal class LoginCommandHandler : IRequestHandler<LoginCommandRequest, LoginCommandResponse>
     {
         public static event Action<User, bool>? OnUserLogin;
 

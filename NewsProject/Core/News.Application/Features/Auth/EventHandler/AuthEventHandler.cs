@@ -2,10 +2,11 @@
 using News.Application.Bases.Interfaces.Rules;
 using News.Application.Features.Auth.Command.Login;
 using News.Application.Features.Auth.Command.Register;
+using News.Application.Bases.Interfaces.DI;
 
 namespace News.Application.Features.Auth.EventHandler
 {
-    public class AuthEventHandler
+    public class AuthEventHandler : ITransient
     {
         private readonly IAuthRules _authRules;
 
@@ -20,7 +21,7 @@ namespace News.Application.Features.Auth.EventHandler
 
         private void OnUserRegister(User user)
         {
-           _authRules.UserSholdNotBeExist(user);
+            _authRules.UserSholdNotBeExist(user);
         }
 
         private void OnUserLogin(User user, bool isvalidPassword)

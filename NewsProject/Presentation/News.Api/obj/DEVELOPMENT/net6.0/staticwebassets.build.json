@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2/QO2GtXusO8UYfJiOqlAnAK74Ajnv9Q+F1VuUzqmZ8=",
+  "Hash": "FUUMmi745yWXcKxehoCPbKwd6obaHjNA08gVl7ExbX8=",
   "Source": "News.Api",
   "BasePath": "_content/News.Api",
   "Mode": "Default",
@@ -15,5 +15,57 @@
       "Pattern": "**"
     }
   ],
-  "Assets": []
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Presentation\\News.Api\\wwwroot\\assets\\media\\412c5f68-e987-4382-be83-94549bc00ee3_ev edit_ev_BaseColor.png",
+      "SourceId": "News.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Presentation\\News.Api\\wwwroot\\",
+      "BasePath": "_content/News.Api",
+      "RelativePath": "assets/media/412c5f68-e987-4382-be83-94549bc00ee3_ev edit_ev_BaseColor.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\media\\412c5f68-e987-4382-be83-94549bc00ee3_ev edit_ev_BaseColor.png"
+    },
+    {
+      "Identity": "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Presentation\\News.Api\\wwwroot\\assets\\media\\545a6f15-bad4-4d77-8337-0e286ce9b5c1_tapsiriq_panosu.png",
+      "SourceId": "News.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Presentation\\News.Api\\wwwroot\\",
+      "BasePath": "_content/News.Api",
+      "RelativePath": "assets/media/545a6f15-bad4-4d77-8337-0e286ce9b5c1_tapsiriq_panosu.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\media\\545a6f15-bad4-4d77-8337-0e286ce9b5c1_tapsiriq_panosu.png"
+    },
+    {
+      "Identity": "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Presentation\\News.Api\\wwwroot\\assets\\media\\cfff7edb-197c-4176-b602-98c951e98f7c_ev edit_ev_BaseColor.png",
+      "SourceId": "News.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\faig.rasulzada\\Desktop\\News\\NewsProject\\Presentation\\News.Api\\wwwroot\\",
+      "BasePath": "_content/News.Api",
+      "RelativePath": "assets/media/cfff7edb-197c-4176-b602-98c951e98f7c_ev edit_ev_BaseColor.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\media\\cfff7edb-197c-4176-b602-98c951e98f7c_ev edit_ev_BaseColor.png"
+    }
+  ]
 }

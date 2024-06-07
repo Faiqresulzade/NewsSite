@@ -8,7 +8,7 @@ namespace News.Application.Bases.Classes.Command
     /// Base class for command handlers responsible for updating entities, providing access to a unit of work and a mapper for object mapping.
     /// </summary>
 
-    internal abstract class UpdateCommandHandler
+    internal abstract class UpdateCommandHandler<TRequest, TEntity>
     {
         private protected readonly IUnitOfWork unitOfWork;
         private protected readonly INewsMapper mapper;
@@ -18,5 +18,7 @@ namespace News.Application.Bases.Classes.Command
             this.unitOfWork = unitOfWork;
             this.mapper = NewsMapper.Instance;
         }
+
+        private protected abstract TEntity UpdateEntityProperties(TRequest request, TEntity entity);
     }
 }

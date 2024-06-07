@@ -25,15 +25,12 @@ namespace News.Application.Utilities.Helpers
                 await file.CopyToAsync(fileStream);
             }
 
-            return fileName;
+            return path;
         }
 
-        public void Delete(string fileName)
+        public void Delete(string filePath)
         {
-            string path = Path.Combine(_hostingEnvironment.ContentRootPath, "wwwroot", "assets/media", fileName);
-
-            if (File.Exists(path))
-                File.Delete(path);
+            if (File.Exists(filePath)) File.Delete(filePath);
         }
 
         public bool IsImage(IFormFile file) => file.ContentType.Contains("image/");

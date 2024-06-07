@@ -13,7 +13,7 @@ namespace News.Application.Features.NewsCategory.Command.CreateCategory
     /// Handler for creating a news category, responsible for processing the creation request and interacting with the data layer.
     /// </summary>
 
-    internal class CreateCategoryCommandHandler : CreateCommandHandler<ICategoryFactory>, IRequestHandler<CreateCategoryCommandRequest, Unit>
+    internal class CreateCategoryCommandHandler : CreateCommandHandler<Category,ICategoryFactory, CreateCategoryCommandRequest>, IRequestHandler<CreateCategoryCommandRequest, Unit>
     {
         public static event Action<CreateCategoryCommandRequest, IList<Category>, IUnitOfWork, IWriteRepository<Category>>? OnCategoryCreate;
 
@@ -32,7 +32,7 @@ namespace News.Application.Features.NewsCategory.Command.CreateCategory
 
             OnCategoryCreate?.Invoke(request, categories, unitOfWork, writeRepository);
 
-            await base.AddAsync<Category, ICategoryFactory, CreateCategoryCommandRequest>(unitOfWork, factory, request);
+            await base.AddAsync(unitOfWork, factory, request);
             return default;
         }
     }

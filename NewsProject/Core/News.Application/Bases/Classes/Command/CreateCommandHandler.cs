@@ -11,7 +11,10 @@ namespace News.Application.Bases.Classes.Command
     /// providing access to a unit of work and a factory for entity creation.
     /// </summary>
 
-    public abstract class CreateCommandHandler<Tfactory>
+    public abstract class CreateCommandHandler<Tentity, Tfactory, Trequest>
+    where Tentity : class, IEntityBase, new()
+    where Tfactory : IFactory<Tentity, Trequest>
+    where Trequest : IRequest<Unit>
     {
         private protected readonly IUnitOfWork unitOfWork;
         private protected readonly Tfactory factory;
@@ -22,10 +25,7 @@ namespace News.Application.Bases.Classes.Command
             this.factory = factory;
         }
 
-        protected virtual async Task<Tentity> AddAsync<Tentity, Tfactory, Trequest>(IUnitOfWork unitOfWork, Tfactory factory, Trequest request, IWriteRepository<Tentity> repository = default)
-          where Tentity : class, IEntityBase, new()
-          where Tfactory : IFactory<Tentity, Trequest>
-          where Trequest : IRequest<Unit>
+        protected virtual async Task<Tentity> AddAsync(IUnitOfWork unitOfWork, Tfactory factory, Trequest request, IWriteRepository<Tentity> repository = default)
         {
             Tentity entity = await factory.Create(request);
             repository ??= unitOfWork.GetWriteRepository<Tentity>();

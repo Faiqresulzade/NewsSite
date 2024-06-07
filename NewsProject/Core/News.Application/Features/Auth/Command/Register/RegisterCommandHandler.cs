@@ -8,7 +8,7 @@ using News.Application.Abstraction.Interfaces.Repositories;
 
 namespace News.Application.Features.Auth.Command.Register
 {
-    internal class RegisterCommandHandler : CreateCommandHandler<IUserFactory>, IRequestHandler<RegisterCommandRequest, Unit>
+    internal class RegisterCommandHandler : CreateCommandHandler<User, IUserFactory, RegisterCommandRequest>, IRequestHandler<RegisterCommandRequest, Unit>
     {
         private readonly UserManager<User> _userManager;
 
@@ -22,12 +22,12 @@ namespace News.Application.Features.Auth.Command.Register
         public async Task<Unit> Handle(RegisterCommandRequest request, CancellationToken cancellationToken)
         {
             OnUserRegister?.Invoke(await _userManager.FindByEmailAsync(request.Email));
-            await this.AddAsync<User, IUserFactory, RegisterCommandRequest>(unitOfWork, factory, request);
+            await this.AddAsync(unitOfWork, factory, request);
             return default;
         }
 
-        protected async override Task<Tentity> AddAsync<Tentity, Tfactory, Trequest>
-        (IUnitOfWork unitOfWork, Tfactory factory, Trequest request, IWriteRepository<Tentity>? repository = default)
-          => await factory.Create(request);
+        protected async override Task<User> AddAsync
+        (IUnitOfWork unitOfWork, IUserFactory factory, RegisterCommandRequest request, IWriteRepository<User>? repository = default)
+        => await factory.Create(request);
     }
 }

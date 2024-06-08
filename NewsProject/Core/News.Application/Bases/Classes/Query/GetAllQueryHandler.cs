@@ -1,7 +1,7 @@
-﻿using News.Application.Abstraction.Interfaces.AutoMapper;
-using News.Application.Abstraction.Interfaces.UnitOfWorks;
+﻿using News.Domain.Comman;
 using News.Application.AutoMapper;
-using News.Domain.Comman;
+using News.Application.Abstraction.Interfaces.AutoMapper;
+using News.Application.Abstraction.Interfaces.UnitOfWorks;
 
 namespace News.Application.Bases.Classes.Query
 {
@@ -24,7 +24,6 @@ namespace News.Application.Bases.Classes.Query
            where Tentity : EntityBase, IEntityBase, new()
         {
             var entities = await unitOfWork.GetReadRepository<Tentity>().GetAllAsync(n => !n.IsDeleted);
-
             var mapedData = mapper.Map<TResponse, Tentity>(entities);
 
             return mapedData;

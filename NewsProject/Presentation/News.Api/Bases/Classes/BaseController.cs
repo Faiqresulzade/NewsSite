@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace News.Api.Bases.Classes
 {
+    //custom security. controller-a  dusmeden role-lari yoxlamaq lazimdir .[authorize] yazmadan
     public abstract class BaseController : ControllerBase
     {
         private protected readonly IMediator mediator;

@@ -2,6 +2,9 @@
 using News.Application.Abstraction.Interfaces.UnitOfWorks;
 using News.Application.Bases.Classes.Rules;
 using News.Application.Bases.Interfaces.DI;
+using News.Application.Bases.Interfaces.Rules;
+using News.Application.Features.NewsCategory.Command.CreateCategory;
+using News.Application.Features.NewsCategory.Command.UpdateCategory;
 using News.Application.Features.NewsCategory.Exceptions;
 using Category = News.Domain.Entities.NewsCategory;
 
@@ -10,8 +13,9 @@ namespace News.Application.Features.NewsCategory.Rules
     /// <summary>
     /// Provides business rules related to news categories.
     /// </summary>
-    public class NewsCategoryRules : BaseRules, ITransient
+    public class NewsCategoryRules : BaseRules<Category>, ITransient, INewsCategoryRules
     {
+
         /// <summary>
         /// Ensures that the category name is not the same as an existing category name.
         /// </summary>
@@ -57,10 +61,8 @@ namespace News.Application.Features.NewsCategory.Rules
         {
             Category? category = categories.FirstOrDefault(c => c.Id == requestId && !c.IsDeleted);
 
-            if (category is not null)
-                return category;
-
-            throw new CategoryNotFoundException();
+            return base.EntityNotFound(category);
         }
+
     }
 }

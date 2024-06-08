@@ -2,7 +2,7 @@
 
 namespace News.Application.Features.NewsCategory.Queries.GetAllCategories
 {
-    public class GetAllCategoriesQueryRequest : IRequest<IList<GetAllCategoriesQueryResponse>>
+    public record GetAllCategoriesQueryRequest : IRequest<IList<GetAllCategoriesQueryResponse>>
     {
     }
 }

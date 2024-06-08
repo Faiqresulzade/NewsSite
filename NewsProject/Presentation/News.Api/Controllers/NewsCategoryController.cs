@@ -1,11 +1,12 @@
 ﻿using MediatR;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
 using News.Api.Bases.Classes;
+using Microsoft.AspNetCore.Mvc;
 using News.Api.Bases.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using News.Application.Features.NewsCategory.Command.CreateCategory;
 using News.Application.Features.NewsCategory.Command.DeleteCategory;
 using News.Application.Features.NewsCategory.Command.UpdateCategory;
+using News.Application.Features.NewsCategory.Queries.GetCategoryById;
 using News.Application.Features.NewsCategory.Queries.GetAllCategories;
 
 namespace News.Api.Controllers
@@ -13,7 +14,9 @@ namespace News.Api.Controllers
     [Route("api/[controller]/[action]"), ApiController]
     public class NewsCategoryController : BaseController,
         IReadable, IRemoveable<DeleteCategoryCommandRequest>,
-        IUpdateable<UpdateCategoryCommandRequest>, ICreatable<CreateCategoryCommandRequest>
+        IUpdateable<UpdateCategoryCommandRequest>, ICreatable<CreateCategoryCommandRequest>,
+        IGetEntityById<GetCategoryQueryRequest, GetCategoryQueryResponse>
+
     {
         public NewsCategoryController(IMediator mediator) : base(mediator) { }
 
@@ -21,16 +24,21 @@ namespace News.Api.Controllers
         public async Task<IActionResult> GetAll()
           => Ok(await mediator.Send(new GetAllCategoriesQueryRequest()));
 
-        [HttpPost, Authorize]
-        public async Task<IActionResult> Create(CreateCategoryCommandRequest request)
-          => await ExecuteCommand<IActionResult>(() => mediator.Send(request), () => Ok());
+        [HttpGet]
+        public async Task<IActionResult> GetById([FromRoute] GetCategoryQueryRequest request)
+          => Ok(await mediator.Send(request));
 
-        [HttpPost, Authorize]
+
+        [HttpPost]
+        public async Task<IActionResult> Create(CreateCategoryCommandRequest request)
+          => await ExecuteCommand<IActionResult>(() => mediator.Send(request), () => StatusCode(StatusCodes.Status201Created));
+
+        [HttpPost]
         public async Task<IActionResult> Update(UpdateCategoryCommandRequest request)
           => await ExecuteCommand<IActionResult>(() => mediator.Send(request), () => Ok());
 
-        [HttpPost, Authorize]
-        public async Task<IActionResult> Delete(DeleteCategoryCommandRequest request)
+        [HttpPost]
+        public async Task<IActionResult> Delete([FromRoute] DeleteCategoryCommandRequest request)
           => await ExecuteCommand<IActionResult>(() => mediator.Send(request), () => Ok());
 
     }

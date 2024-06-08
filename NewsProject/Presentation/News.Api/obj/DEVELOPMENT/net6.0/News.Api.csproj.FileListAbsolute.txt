@@ -196,3 +196,4 @@ C:\Users\Honor\Desktop\News\NewsProject\Presentation\News.Api\obj\DEVELOPMENT\ne
 C:\Users\Honor\Desktop\News\NewsProject\Presentation\News.Api\obj\DEVELOPMENT\net6.0\News.Api.csproj.CopyComplete
 C:\Users\Honor\Desktop\News\NewsProject\Presentation\News.Api\obj\DEVELOPMENT\net6.0\News.Api.genruntimeconfig.cache
 C:\Users\Honor\Desktop\News\NewsProject\Presentation\News.Api\obj\DEVELOPMENT\net6.0\ref\News.Api.dll
+C:\Users\faig.rasulzada\Desktop\News\NewsProject\Presentation\News.Api\bin\DEVELOPMENT\net6.0\News.Api.staticwebassets.runtime.json

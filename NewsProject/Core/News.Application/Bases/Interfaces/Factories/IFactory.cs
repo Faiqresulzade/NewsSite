@@ -7,7 +7,7 @@ namespace News.Application.Abstraction.Interfaces.Factories
     /// </summary>
     /// <typeparam name="T">The type of object to be created.</typeparam>
     /// <typeparam name="Trequest">The type of the request object used for creating the object.</typeparam>
-    public interface IFactory<T, Trequest> where T : class, IEntityBase, new()
+    public interface IFactory<Tentity, Trequest> where Tentity : class, IEntityBase, new()
     {
         /// <summary>
         /// Creates a new instance of type T based on the provided request object.
@@ -16,6 +16,6 @@ namespace News.Application.Abstraction.Interfaces.Factories
         /// <returns>A newly created instance of type T.</returns>
         //T Create(Trequest trequest);
 
-        public Task<T> Create(Trequest trequest);
+        public Task<Tentity> Create(Trequest trequest);
     }
 }

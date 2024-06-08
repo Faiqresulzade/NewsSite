@@ -9,7 +9,7 @@ namespace News.Application.Features.NewsCategory.Queries.GetAllCategories
     /// Handler for retrieving all news categories, responsible for processing the request and interacting with the data layer to fetch all categories.
     /// </summary>
 
-    public class GetAllCategoriesQueryHandler : GetAllQueryHandler, IRequestHandler<GetAllCategoriesQueryRequest, IList<GetAllCategoriesQueryResponse>>
+    internal class GetAllCategoriesQueryHandler : GetAllQueryHandler, IRequestHandler<GetAllCategoriesQueryRequest, IList<GetAllCategoriesQueryResponse>>
     {
         public GetAllCategoriesQueryHandler(IUnitOfWork unitOfWork) : base(unitOfWork) { }
 

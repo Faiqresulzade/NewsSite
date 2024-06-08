@@ -2,7 +2,6 @@
 using News.Application.Abstraction.Interfaces.Repositories;
 using News.Application.Abstraction.Interfaces.UnitOfWorks;
 using News.Application.Bases.Classes.Command;
-using News.Application.Bases.Interfaces.Services;
 using Category = News.Domain.Entities.NewsCategory;
 
 namespace News.Application.Features.NewsCategory.Command.UpdateCategory
@@ -14,21 +13,16 @@ namespace News.Application.Features.NewsCategory.Command.UpdateCategory
     {
         public static event Action<UpdateCategoryCommandRequest, IList<Category>, IUnitOfWork, IWriteRepository<Category>>? OnCategoryUpdate;
 
-        private readonly ICategoryService _categoryService;
-
-        public UpdateCategoryCommandHandler(IUnitOfWork unitOfWork, ICategoryService categoryService)
-        : base(unitOfWork)
-        {
-            _categoryService = categoryService;
-        }
+        public UpdateCategoryCommandHandler(IUnitOfWork unitOfWork)
+        : base(unitOfWork) { }
 
         public async Task<Unit> Handle(UpdateCategoryCommandRequest request, CancellationToken cancellationToken)
         {
-            IList<Category> categories = await _categoryService.GetAllCategory();
+            IList<Category> categories = await unitOfWork.GetReadRepository<Category>().GetAllAsync(x => !x.IsDeleted);
             IWriteRepository<Category> writeRepository = unitOfWork.GetWriteRepository<Category>();
 
             OnCategoryUpdate?.Invoke(request, categories, unitOfWork, writeRepository);
-            
+
             await unitOfWork.GetWriteRepository<Category>().UpdateAsync(UpdateEntityProperties(request));
 
             return default;

@@ -21,24 +21,20 @@ namespace News.Api.Controllers
         public async Task<IActionResult> GetAll()
         => Ok(await mediator.Send(new GetAllNewsQueryRequest()));
 
-        //categoryname is null
         [HttpGet("{Id}")]
         public async Task<IActionResult> GetById([FromRoute] GetNewsByIdQueryRequest request)
-        {
-            var a = await mediator.Send(request);
-            return Ok(a);
-        }
+        => Ok(await mediator.Send(request));
 
         [HttpPost]
         public async Task<IActionResult> Create([FromForm] CreateNewsCommandRequest request)
-        => await ExecuteCommand<IActionResult>(() => mediator.Send(request), () => Ok());
+        => await ExecuteCommand<IActionResult>(async () => await mediator.Send(request), () => Ok());
 
-        [HttpPost("{Id}")]
+        [HttpDelete("{Id}")]
         public async Task<IActionResult> Delete([FromRoute] RemoveNewsCommandRequest request)
-        => await ExecuteCommand<IActionResult>(() => mediator.Send(request), () => Ok());
+        => await ExecuteCommand<IActionResult>(async () => await mediator.Send(request), () => Ok());
 
-        [HttpPost("{Id}")]
-        public async Task<IActionResult> Update(UpdateNewsCommandRequest request)
-         => await ExecuteCommand<IActionResult>(() => mediator.Send(request), () => Ok());
+        [HttpPut]
+        public async Task<IActionResult> Update([FromForm] UpdateNewsCommandRequest request)
+        => await ExecuteCommand<IActionResult>(async () => await mediator.Send(request), () => Ok());
     }
 }

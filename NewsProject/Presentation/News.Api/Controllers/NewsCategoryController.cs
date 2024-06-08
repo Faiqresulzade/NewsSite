@@ -16,7 +16,6 @@ namespace News.Api.Controllers
         IReadable, IRemoveable<DeleteCategoryCommandRequest>,
         IUpdateable<UpdateCategoryCommandRequest>, ICreatable<CreateCategoryCommandRequest>,
         IGetEntityById<GetCategoryQueryRequest, GetCategoryQueryResponse>
-
     {
         public NewsCategoryController(IMediator mediator) : base(mediator) { }
 
@@ -28,16 +27,15 @@ namespace News.Api.Controllers
         public async Task<IActionResult> GetById([FromRoute] GetCategoryQueryRequest request)
           => Ok(await mediator.Send(request));
 
-
         [HttpPost]
-        public async Task<IActionResult> Create(CreateCategoryCommandRequest request)
+        public async Task<IActionResult> Create([FromForm]CreateCategoryCommandRequest request)
           => await ExecuteCommand<IActionResult>(() => mediator.Send(request), () => StatusCode(StatusCodes.Status201Created));
 
-        [HttpPost]
-        public async Task<IActionResult> Update(UpdateCategoryCommandRequest request)
+        [HttpPut]
+        public async Task<IActionResult> Update([FromForm]UpdateCategoryCommandRequest request)
           => await ExecuteCommand<IActionResult>(() => mediator.Send(request), () => Ok());
 
-        [HttpPost]
+        [HttpDelete]
         public async Task<IActionResult> Delete([FromRoute] DeleteCategoryCommandRequest request)
           => await ExecuteCommand<IActionResult>(() => mediator.Send(request), () => Ok());
 

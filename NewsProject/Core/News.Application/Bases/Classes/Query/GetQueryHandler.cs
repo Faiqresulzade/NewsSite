@@ -20,12 +20,15 @@ namespace News.Application.Bases.Classes.Query
             this.mapper = Mapper.Instance;
         }
 
-        private protected virtual async Task<TResponse> GetEntity<TResponse, Tentity>(int id, Tentity? entity = default)
-         where Tentity : EntityBase, IEntityBase, new()
+        private protected virtual async Task<TResponse> GetEntity<TResponse, Tentity>
+        (int id, Tentity? entity = default, Action<TResponse> customMap = default)
+        where Tentity : EntityBase, IEntityBase, new()
         {
             entity ??= await unitOfWork.GetReadRepository<Tentity>().GetAsync(n => !n.IsDeleted && n.Id == id);
 
             var mapedData = mapper.Map<TResponse, Tentity>(entity);
+            customMap?.Invoke(mapedData);
+
             return mapedData;
         }
     }

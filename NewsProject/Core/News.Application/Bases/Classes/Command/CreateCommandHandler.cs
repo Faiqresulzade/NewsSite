@@ -1,5 +1,4 @@
-﻿using MediatR;
-using News.Application.Abstraction.Interfaces.Factories;
+﻿using News.Application.Abstraction.Interfaces.Factories;
 using News.Application.Abstraction.Interfaces.Repositories;
 using News.Application.Abstraction.Interfaces.UnitOfWorks;
 using News.Domain.Comman;
@@ -10,11 +9,10 @@ namespace News.Application.Bases.Classes.Command
     /// Base class for command handlers responsible for creating entities,
     /// providing access to a unit of work and a factory for entity creation.
     /// </summary>
-
     public abstract class CreateCommandHandler<Tentity, Tfactory, Trequest>
-    where Tentity : class, IEntityBase, new()
+    where Tentity :class, IEntityBase, new()
     where Tfactory : IFactory<Tentity, Trequest>
-    where Trequest : IRequest<Unit>
+        //where Trequest : IRequest<Unit>
     {
         private protected readonly IUnitOfWork unitOfWork;
         private protected readonly Tfactory factory;
@@ -31,8 +29,6 @@ namespace News.Application.Bases.Classes.Command
             repository ??= unitOfWork.GetWriteRepository<Tentity>();
 
             await repository.AddAsync(entity);
-            await repository.SaveAsync();
-
             return entity;
         }
     }

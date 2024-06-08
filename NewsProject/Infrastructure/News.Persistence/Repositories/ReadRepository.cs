@@ -20,6 +20,7 @@ namespace News.Persistence.Repositories
             if (!enableTracking) queryable = queryable.AsNoTracking();
             if (include is not null) queryable = include(queryable);
             if (predicate is not null) queryable = queryable.Where(predicate);
+            else queryable = queryable.Where(x => !x.IsDeleted);
             if (orderBy is not null)
                 return await orderBy(queryable).ToListAsync();
 

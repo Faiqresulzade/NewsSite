@@ -12,17 +12,5 @@ namespace News.Application.Features.NewsModel.Command.UpdateNews
         public string Description { get; set; }
         public int CategoryId { get; set; }
         public IFormFile? NewsImage { get; set; }
-
-        //public static implicit operator NewsEntity(UpdateNewsCommandRequest request)
-        //{
-        //    return new NewsEntity()
-        //    {
-        //        Id = request.Id,
-        //        AuthorName = request.AuthorName,
-        //        Title = request.Title,
-        //        Description = request.Description,
-        //        CategoryId = request.CategoryId,
-        //    };
-        //}
     }
 }

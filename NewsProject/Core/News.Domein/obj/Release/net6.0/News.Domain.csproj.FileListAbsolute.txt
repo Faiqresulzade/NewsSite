@@ -9,3 +9,4 @@ C:\Users\Honor\Desktop\News\NewsProject\Core\News.Domein\obj\Release\net6.0\News
 C:\Users\Honor\Desktop\News\NewsProject\Core\News.Domein\obj\Release\net6.0\refint\News.Domain.dll
 C:\Users\Honor\Desktop\News\NewsProject\Core\News.Domein\obj\Release\net6.0\News.Domain.pdb
 C:\Users\Honor\Desktop\News\NewsProject\Core\News.Domein\obj\Release\net6.0\ref\News.Domain.dll
+C:\Users\Honor\Desktop\News\NewsProject\Core\News.Domein\obj\Release\net6.0\News.Domain.csproj.AssemblyReference.cache

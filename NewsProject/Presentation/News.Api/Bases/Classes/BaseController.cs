@@ -10,10 +10,10 @@ namespace News.Api.Bases.Classes
 
         public BaseController(IMediator mediator) => this.mediator = mediator;
 
-        private protected virtual async Task<IActionResult> ExecuteCommand<T>(Action action, Func<T> returnMethod)
+        private protected virtual async Task<IActionResult> ExecuteCommand<T>(Func<Task> action, Func<T> returnMethod)
              where T : IActionResult
         {
-            action?.Invoke();
+            await action?.Invoke();
             return returnMethod.Invoke();
         }
     }

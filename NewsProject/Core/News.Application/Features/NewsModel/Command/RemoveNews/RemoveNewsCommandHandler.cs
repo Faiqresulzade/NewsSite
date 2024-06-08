@@ -9,7 +9,7 @@ namespace News.Application.Features.NewsModel.Command.RemoveNews
 {
     internal class RemoveNewsCommandHandler : DeleteCommandHandler, IRequestHandler<RemoveNewsCommandRequest, Unit>
     {
-        public RemoveNewsCommandHandler(IUnitOfWork unitOfWork, INewsCategoryRules rules) : base(unitOfWork, (IBaseRule<EntityBase>)rules) { }
+        public RemoveNewsCommandHandler(IUnitOfWork unitOfWork) : base(unitOfWork) { }
 
         public async Task<Unit> Handle(RemoveNewsCommandRequest request, CancellationToken cancellationToken)
         => await base.Delete<NewsEntity>(request.Id);

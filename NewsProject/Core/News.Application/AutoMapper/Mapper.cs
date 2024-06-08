@@ -13,7 +13,6 @@ namespace News.Application.AutoMapper
         public static List<TypePair> typePairs = new();
         private IMapper _mapperContainer;
 
-
         public TDestination Map<TDestination, TSource>(TSource source, string? ignore = null)
         {
             Config<TDestination, TSource>(5, ignore);

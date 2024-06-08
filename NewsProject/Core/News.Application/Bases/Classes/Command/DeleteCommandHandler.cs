@@ -15,7 +15,7 @@ namespace News.Application.Bases.Classes.Command
         public static event Action<EntityBase>? OnEntityDelete;
         private protected readonly IUnitOfWork unitOfWork;
 
-        public DeleteCommandHandler(in IUnitOfWork unitOfWork, IBaseRule<EntityBase> rules)
+        public DeleteCommandHandler(in IUnitOfWork unitOfWork)
         => this.unitOfWork = unitOfWork;
 
         private protected async virtual Task<Unit> Delete<Tentity>(int id) where Tentity : EntityBase, IEntityBase, new()

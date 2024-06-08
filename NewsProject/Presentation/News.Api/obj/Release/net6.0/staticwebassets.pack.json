@@ -1,0 +1,49 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Presentation\\News.Api\\wwwroot\\assets\\media\\01ce5d61-befd-4e62-bbf6-56d545a94db5_snip.healthbar .png",
+      "PackagePath": "staticwebassets\\assets\\media\\01ce5d61-befd-4e62-bbf6-56d545a94db5_snip.healthbar .png"
+    },
+    {
+      "Id": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Presentation\\News.Api\\wwwroot\\assets\\media\\412c5f68-e987-4382-be83-94549bc00ee3_ev edit_ev_BaseColor.png",
+      "PackagePath": "staticwebassets\\assets\\media\\412c5f68-e987-4382-be83-94549bc00ee3_ev edit_ev_BaseColor.png"
+    },
+    {
+      "Id": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Presentation\\News.Api\\wwwroot\\assets\\media\\545a6f15-bad4-4d77-8337-0e286ce9b5c1_tapsiriq_panosu.png",
+      "PackagePath": "staticwebassets\\assets\\media\\545a6f15-bad4-4d77-8337-0e286ce9b5c1_tapsiriq_panosu.png"
+    },
+    {
+      "Id": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Presentation\\News.Api\\wwwroot\\assets\\media\\679e89b5-114e-49a5-8d42-49a5144c7203_ev edit_ev_BaseColor.png",
+      "PackagePath": "staticwebassets\\assets\\media\\679e89b5-114e-49a5-8d42-49a5144c7203_ev edit_ev_BaseColor.png"
+    },
+    {
+      "Id": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Presentation\\News.Api\\wwwroot\\assets\\media\\84040f86-036d-4199-96f1-e0589e6d1523_ev edit_ev_BaseColor.png",
+      "PackagePath": "staticwebassets\\assets\\media\\84040f86-036d-4199-96f1-e0589e6d1523_ev edit_ev_BaseColor.png"
+    },
+    {
+      "Id": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Presentation\\News.Api\\wwwroot\\assets\\media\\9103bf95-f8a8-4374-8612-0a2912314846_snip.healthbar .png",
+      "PackagePath": "staticwebassets\\assets\\media\\9103bf95-f8a8-4374-8612-0a2912314846_snip.healthbar .png"
+    },
+    {
+      "Id": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Presentation\\News.Api\\wwwroot\\assets\\media\\cfff7edb-197c-4176-b602-98c951e98f7c_ev edit_ev_BaseColor.png",
+      "PackagePath": "staticwebassets\\assets\\media\\cfff7edb-197c-4176-b602-98c951e98f7c_ev edit_ev_BaseColor.png"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.News.Api.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.build.News.Api.props",
+      "PackagePath": "build\\News.Api.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.News.Api.props",
+      "PackagePath": "buildMultiTargeting\\News.Api.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.buildTransitive.News.Api.props",
+      "PackagePath": "buildTransitive\\News.Api.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,6 +1,6 @@
 ﻿namespace News.Application.Features.NewsModel.Queries.GetNewsById
 {
-    public class GetNewsByIdQueryResponse
+    public record GetNewsByIdQueryResponse
     {
         public string AuthorName { get; set; }
         public string Title { get; set; }

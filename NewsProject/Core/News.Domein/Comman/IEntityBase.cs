@@ -2,5 +2,6 @@
 {
     public interface IEntityBase
     {
+        public bool IsDeleted { get; set; }
     }
 }

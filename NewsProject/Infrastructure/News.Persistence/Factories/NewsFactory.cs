@@ -1,13 +1,19 @@
-﻿using News.Application.Bases.Interfaces.DI;
+﻿using MediatR;
+using News.Application.DTOs.News;
+using News.Application.Bases.Interfaces.DI;
 using News.Application.Bases.Interfaces.Factories;
-using News.Application.Features.NewsModel.Command.CreateNews;
 using NewsEntity = News.Domain.Entities.News;
+using News.Application.Utilities.Helpers;
 
 namespace News.Persistence.Factories
 {
     public class NewsFactory : IScoped, INewsFactory
     {
-        public async Task<NewsEntity> Create(CreateNewsCommandRequest trequest)
-        => new NewsEntity(trequest.AuthorName, trequest.Title, trequest.Description, trequest.CategoryId);
+        public async Task<NewsEntity> Create(NewsCreateDto trequest)
+        {
+            return new NewsEntity(trequest.AuthorName,
+                   trequest.Title, trequest.Description, trequest.CategoryId,
+                  await FileHelper.Instance.Upload(trequest.NewsImage));
+        }
     }
 }

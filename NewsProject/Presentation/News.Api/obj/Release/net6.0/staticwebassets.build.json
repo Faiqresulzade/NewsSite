@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "/iV6Pb0/Kj9XuDsmZTYS5brkSbLiRrisS33hihJBCcU=",
+  "Hash": "PVM5+cJZerhjtIRf75YbBGZHweYtALZMUVCFwF/mkJ4=",
   "Source": "News.Api",
   "BasePath": "_content/News.Api",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "News.Api\\wwwroot",
+      "Source": "News.Api",
+      "ContentRoot": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Presentation\\News.Api\\wwwroot\\",
+      "BasePath": "_content/News.Api",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }

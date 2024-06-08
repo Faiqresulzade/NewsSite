@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "ftN35/GUY6hyk3CjducOWUbjSISUe3L4BNj4gQ9Hn4U=",
+  "Source": "News.Api",
+  "BasePath": "_content/News.Api",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "News.Api\\wwwroot",
+      "Source": "News.Api",
+      "ContentRoot": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Presentation\\News.Api\\wwwroot\\",
+      "BasePath": "_content/News.Api",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}

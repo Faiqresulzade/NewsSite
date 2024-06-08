@@ -9,5 +9,6 @@ namespace News.Domain.Entities
         public string Surname { get; set; }
         public string? RefreshToken { get; set; }
         public DateTime? RefreshTokenExpiryTime { get; set; }
+        public bool IsDeleted { get; set; }
     }
 }

@@ -13,7 +13,7 @@ namespace News.Application.Features.NewsCategory.Command.DeleteCategory
 
     internal class DeleteCategoryCommandHandler : DeleteCommandHandler, IRequestHandler<DeleteCategoryCommandRequest, Unit>
     {
-        public DeleteCategoryCommandHandler(IUnitOfWork unitOfWork, INewsCategoryRules rules) : base(unitOfWork, (IBaseRule<EntityBase>)rules) { }
+        public DeleteCategoryCommandHandler(IUnitOfWork unitOfWork) : base(unitOfWork) { }
 
         public async Task<Unit> Handle(DeleteCategoryCommandRequest request, CancellationToken cancellationToken)
           => await base.Delete<Category>(request.Id);

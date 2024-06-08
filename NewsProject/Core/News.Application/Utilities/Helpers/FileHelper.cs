@@ -18,14 +18,14 @@ namespace News.Application.Utilities.Helpers
         {
             string fileName = $"{Guid.NewGuid()}_{file.FileName}";
 
-            string path = Path.Combine(_hostingEnvironment.ContentRootPath, "wwwroot", "assets/media", fileName);
+            string path = Path.Combine(_hostingEnvironment.ContentRootPath, "wwwroot", "assets", "media", fileName);
 
             using (FileStream fileStream = new FileStream(path, FileMode.Create, FileAccess.ReadWrite))
             {
                 await file.CopyToAsync(fileStream);
             }
 
-            return path;
+            return Path.Combine("wwwroot", "assets", "media", fileName);
         }
 
         public void Delete(string filePath)

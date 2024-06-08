@@ -7,8 +7,14 @@ using Microsoft.OpenApi.Models;
 
 namespace News.Api.AllRegistrations
 {
+    /// <summary>
+    /// Class responsible for registering all dependencies and Swagger configuration.
+    /// </summary>
     public static class AllRegistration
     {
+        /// <summary>
+        /// Registers all dependencies in the service collection.
+        /// </summary>
         public static void RegisterAllDI(WebApplicationBuilder builder)
         {
             RegisterImplementationsOf<IScoped>(builder.Services, ServiceLifetime.Scoped);
@@ -20,6 +26,10 @@ namespace News.Api.AllRegistrations
             builder.Services.AddInfrastructure(builder.Configuration);
         }
 
+        /// <summary>
+        /// Adds Swagger configuration to the service collection.
+        /// </summary>
+        /// <param name="services">The service collection to add Swagger configuration.</param>
         public static void AddSwagger(this IServiceCollection services)
         {
             services.AddSwaggerGen(c =>
@@ -51,6 +61,12 @@ namespace News.Api.AllRegistrations
             });
         }
 
+        /// <summary>
+        /// Registers implementations of the specified interface types in the service collection.
+        /// </summary>
+        /// <typeparam name="TInterface">The interface type to be registered.</typeparam>
+        /// <param name="services">The service collection to register the implementations.</param>
+        /// <param name="lifetime">The service lifetime of the registered implementations.</param>
         private static void RegisterImplementationsOf<TInterface>(IServiceCollection services, ServiceLifetime lifetime)
         {
             foreach (Assembly assembly in AssemblyHelper.GetProjectAssemblies())
@@ -84,8 +100,16 @@ namespace News.Api.AllRegistrations
             }
         }
 
+        /// <summary>
+        /// Helper class for working with assemblies.
+        /// </summary>
         private static class AssemblyHelper
         {
+
+            /// <summary>
+            /// Gets the assemblies that belong to the project.
+            /// </summary>
+            /// <returns>An array of project assemblies.</returns>
             public static Assembly[] GetProjectAssemblies()
             {
                 Assembly[] allAssemblies = AppDomain.CurrentDomain.GetAssemblies();

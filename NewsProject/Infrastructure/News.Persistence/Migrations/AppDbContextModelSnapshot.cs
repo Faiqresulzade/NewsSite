@@ -173,50 +173,50 @@ namespace News.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            AuthorName = "Cremin and Sons",
-                            CategoryId = 2,
-                            CreatedAt = new DateTime(2024, 5, 17, 11, 49, 3, 799, DateTimeKind.Local).AddTicks(7644),
-                            Description = "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
-                            ImagePath = "Handmade Frozen Towels",
+                            AuthorName = "Abernathy - Kris",
+                            CategoryId = 1,
+                            CreatedAt = new DateTime(2024, 6, 8, 19, 8, 9, 901, DateTimeKind.Local).AddTicks(5089),
+                            Description = "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
+                            ImagePath = "Rustic Soft Cheese",
                             IsDeleted = false,
                             ReadCount = 0,
-                            Title = "Rustic Steel Chicken"
+                            Title = "Handmade Cotton Chair"
                         },
                         new
                         {
                             Id = 2,
-                            AuthorName = "Willms, Mohr and Swaniawski",
-                            CategoryId = 2,
-                            CreatedAt = new DateTime(2024, 5, 17, 11, 49, 3, 799, DateTimeKind.Local).AddTicks(7878),
-                            Description = "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
-                            ImagePath = "Rustic Granite Pants",
+                            AuthorName = "Beatty - Kerluke",
+                            CategoryId = 1,
+                            CreatedAt = new DateTime(2024, 6, 8, 19, 8, 9, 901, DateTimeKind.Local).AddTicks(5548),
+                            Description = "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+                            ImagePath = "Handcrafted Cotton Pizza",
                             IsDeleted = false,
                             ReadCount = 5,
-                            Title = "Gorgeous Concrete Bacon"
+                            Title = "Small Granite Keyboard"
                         },
                         new
                         {
                             Id = 3,
-                            AuthorName = "Emard Inc",
+                            AuthorName = "Barton Inc",
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2024, 5, 17, 11, 49, 3, 799, DateTimeKind.Local).AddTicks(8016),
-                            Description = "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
-                            ImagePath = "Handmade Cotton Gloves",
+                            CreatedAt = new DateTime(2024, 6, 8, 19, 8, 9, 901, DateTimeKind.Local).AddTicks(6281),
+                            Description = "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
+                            ImagePath = "Licensed Soft Cheese",
                             IsDeleted = false,
                             ReadCount = 10,
-                            Title = "Sleek Metal Chips"
+                            Title = "Licensed Wooden Computer"
                         },
                         new
                         {
                             Id = 4,
-                            AuthorName = "Cronin - Hudson",
+                            AuthorName = "Veum, Pollich and Schmeler",
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2024, 5, 17, 11, 49, 3, 799, DateTimeKind.Local).AddTicks(8154),
-                            Description = "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
-                            ImagePath = "Intelligent Fresh Bacon",
+                            CreatedAt = new DateTime(2024, 6, 8, 19, 8, 9, 901, DateTimeKind.Local).AddTicks(6798),
+                            Description = "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
+                            ImagePath = "Intelligent Granite Salad",
                             IsDeleted = false,
                             ReadCount = 15,
-                            Title = "Practical Steel Sausages"
+                            Title = "Intelligent Granite Keyboard"
                         });
                 });
 
@@ -247,37 +247,37 @@ namespace News.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2024, 5, 17, 11, 49, 3, 798, DateTimeKind.Local).AddTicks(1884),
+                            CreatedAt = new DateTime(2024, 6, 8, 19, 8, 9, 898, DateTimeKind.Local).AddTicks(5358),
                             IsDeleted = false,
                             Name = "Shoes"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2024, 5, 17, 11, 49, 3, 798, DateTimeKind.Local).AddTicks(1928),
+                            CreatedAt = new DateTime(2024, 6, 8, 19, 8, 9, 898, DateTimeKind.Local).AddTicks(5469),
                             IsDeleted = false,
-                            Name = "Sports"
+                            Name = "Baby"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2024, 5, 17, 11, 49, 3, 798, DateTimeKind.Local).AddTicks(1934),
+                            CreatedAt = new DateTime(2024, 6, 8, 19, 8, 9, 898, DateTimeKind.Local).AddTicks(5483),
                             IsDeleted = false,
                             Name = "Toys"
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2024, 5, 17, 11, 49, 3, 798, DateTimeKind.Local).AddTicks(1939),
+                            CreatedAt = new DateTime(2024, 6, 8, 19, 8, 9, 898, DateTimeKind.Local).AddTicks(5496),
                             IsDeleted = false,
-                            Name = "Movies"
+                            Name = "Tools"
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2024, 5, 17, 11, 49, 3, 798, DateTimeKind.Local).AddTicks(1943),
+                            CreatedAt = new DateTime(2024, 6, 8, 19, 8, 9, 898, DateTimeKind.Local).AddTicks(5507),
                             IsDeleted = false,
-                            Name = "Kids"
+                            Name = "Toys"
                         });
                 });
 

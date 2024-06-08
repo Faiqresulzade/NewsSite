@@ -2,7 +2,7 @@
 
 namespace News.Application.Features.NewsCategory.Exceptions
 {
-    public class CategoryNameMustNotBeSameException : BaseExceptions
+    public sealed class CategoryNameMustNotBeSameException : BaseExceptions
     {
         public CategoryNameMustNotBeSameException() : base("Bu adda kateqoriya var! ") { }
     }

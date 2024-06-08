@@ -11,10 +11,7 @@ using News.Application.Features.NewsCategory.EventHandler;
 using News.Application.Features.Auth.EventHandler;
 using News.Application.Features.NewsModel.EventHandler;
 using News.Application.Bases.Interfaces.Rules;
-using News.Domain.Comman;
 using News.Application.Bases.Classes.Rules;
-using Microsoft.Extensions.Hosting;
-using News.Application.Utilities.Helpers;
 
 namespace News.Application.Registrations
 {
@@ -27,9 +24,7 @@ namespace News.Application.Registrations
             services.AddValidatorsFromAssembly(assembly);
 
             services.AddTransient(typeof(IBaseRule<>), typeof(BaseRules<>));
-
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(FluentValidationBehevior<,>));
-
 
             ValidatorOptions.Global.LanguageManager.Culture = new CultureInfo("az");
 
@@ -40,7 +35,6 @@ namespace News.Application.Registrations
         public static void AddAplication(this IApplicationBuilder app)
         {
             app.UseMiddleware<ExceptionMiddleware>();
-
         }
 
         private static void RegisterEventMethod(ServiceProvider serviceProvider)

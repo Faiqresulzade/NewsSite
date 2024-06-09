@@ -2,6 +2,6 @@
 {
     public class EntityNotFoundException : BaseExceptions
     {
-        public EntityNotFoundException() : base("Bele element mövcud deyil") { }
+        public EntityNotFoundException(string entityName) : base($"Bele {entityName} mövcud deyil") { }
     }
 }

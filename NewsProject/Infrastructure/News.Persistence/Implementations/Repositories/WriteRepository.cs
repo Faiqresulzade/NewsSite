@@ -26,6 +26,7 @@ namespace News.Persistence.Implementations.Repositories
 
         public async Task AddAsync(T entity)
         {
+            entity.CreatedAt = DateTime.Now;
             await _table.AddAsync(entity);
             await SaveAsync();
         }

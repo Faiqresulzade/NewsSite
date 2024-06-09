@@ -12,6 +12,8 @@ using News.Application.Features.Auth.EventHandler;
 using News.Application.Features.NewsModel.EventHandler;
 using News.Application.Bases.Interfaces.Rules;
 using News.Application.Bases.Classes.Rules;
+using Microsoft.Extensions.Hosting;
+using News.Application.Utilities.Helpers;
 
 namespace News.Application.Registrations
 {

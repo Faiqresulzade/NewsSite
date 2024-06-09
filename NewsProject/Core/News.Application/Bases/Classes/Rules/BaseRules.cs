@@ -10,7 +10,7 @@ namespace News.Application.Bases.Classes.Rules
             if (entity is not null)
                 return entity;
 
-            throw new EntityNotFoundException();
+            throw new EntityNotFoundException(typeof(Tentity).Name);
         }
     }
 }

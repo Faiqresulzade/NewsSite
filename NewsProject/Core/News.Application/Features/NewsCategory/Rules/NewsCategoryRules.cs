@@ -3,8 +3,6 @@ using News.Application.Abstraction.Interfaces.UnitOfWorks;
 using News.Application.Bases.Classes.Rules;
 using News.Application.Bases.Interfaces.DI;
 using News.Application.Bases.Interfaces.Rules;
-using News.Application.Features.NewsCategory.Command.CreateCategory;
-using News.Application.Features.NewsCategory.Command.UpdateCategory;
 using News.Application.Features.NewsCategory.Exceptions;
 using Category = News.Domain.Entities.NewsCategory;
 
@@ -56,13 +54,12 @@ namespace News.Application.Features.NewsCategory.Rules
         /// <param name="categories">The list of existing categories.</param>
         /// <param name="requestId">The ID of the category to find.</param>
         /// <returns>The found category.</returns>
-        /// <exception cref="CategoryNotFoundException">Thrown when the category is not found.</exception>
+        /// <exception cref="EntityNotFoundException">Thrown when the category is not found.</exception>
         public Category FindCategory(IList<Category> categories, int requestId)
         {
             Category? category = categories.FirstOrDefault(c => c.Id == requestId && !c.IsDeleted);
 
             return base.EntityNotFound(category);
         }
-
     }
 }

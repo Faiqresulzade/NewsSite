@@ -20,6 +20,7 @@ AllRegistration.RegisterAllDI(builder);
 var app = builder.Build();
 
 FileHelper.Configure(app.Services.GetRequiredService<IHostEnvironment>());
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

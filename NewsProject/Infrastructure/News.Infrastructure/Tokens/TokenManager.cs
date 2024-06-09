@@ -9,6 +9,8 @@ namespace News.Infrastructure.Tokens
     public class TokenManager : IScoped, ITokenManager
     {
         private readonly UserManager<User> _userManager;
+        private const string _loginProvider = "default";
+        private const string _tokenName = "AccessToken";
 
         public TokenManager(UserManager<User> userManager)
           => _userManager = userManager;
@@ -22,7 +24,7 @@ namespace News.Infrastructure.Tokens
 
             await _userManager.UpdateAsync(user);
             await _userManager.UpdateSecurityStampAsync(user);
-            await _userManager.SetAuthenticationTokenAsync(user, "default", "AccessToken", new JwtSecurityTokenHandler().WriteToken(token));
+            await _userManager.SetAuthenticationTokenAsync(user, _loginProvider, _tokenName, new JwtSecurityTokenHandler().WriteToken(token));
 
         }
     }

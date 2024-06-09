@@ -72,13 +72,13 @@ namespace News.Api.AllRegistrations
             foreach (Assembly assembly in AssemblyHelper.GetProjectAssemblies())
             {
                 var typesToRegister = assembly.GetTypes()
-                    .Where(t => typeof(TInterface).IsAssignableFrom(t) && t != typeof(TInterface));
+                    .Where(type => typeof(TInterface).IsAssignableFrom(type) && type != typeof(TInterface));
 
                 foreach (Type type in typesToRegister)
                 {
                     Type? interfaceType = type.GetInterfaces().FirstOrDefault(x => typeof(IDependencyInjections).IsAssignableFrom(x));
 
-                    if (interfaceType == null)
+                    if (interfaceType is null)
                     {
                         services.Add(new ServiceDescriptor(type, type, lifetime));
                         continue;
@@ -105,6 +105,7 @@ namespace News.Api.AllRegistrations
         /// </summary>
         private static class AssemblyHelper
         {
+            private const string projectAssemblyPrefix = "News";
 
             /// <summary>
             /// Gets the assemblies that belong to the project.
@@ -113,8 +114,6 @@ namespace News.Api.AllRegistrations
             public static Assembly[] GetProjectAssemblies()
             {
                 Assembly[] allAssemblies = AppDomain.CurrentDomain.GetAssemblies();
-
-                string projectAssemblyPrefix = "News";
 
                 Assembly[] projectAssemblies = allAssemblies
                     .Where(assembly => assembly.FullName.StartsWith(projectAssemblyPrefix))

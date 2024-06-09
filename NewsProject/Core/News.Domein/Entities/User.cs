@@ -10,5 +10,6 @@ namespace News.Domain.Entities
         public string? RefreshToken { get; set; }
         public DateTime? RefreshTokenExpiryTime { get; set; }
         public bool IsDeleted { get; set; }
+        public DateTime CreatedAt { get; set; }
     }
 }

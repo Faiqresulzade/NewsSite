@@ -2,9 +2,9 @@
 using News.Application.Abstraction.Interfaces.UnitOfWorks;
 using News.Application.Bases.Interfaces.DI;
 using News.Persistence.Context;
-using News.Persistence.Repositories;
+using News.Persistence.Implementations.Repositories;
 
-namespace News.Persistence.UnitOfWorks
+namespace News.Persistence.Implementations.UnitOfWorks
 {
     public class UnitOfWork : IScoped, IUnitOfWork
     {

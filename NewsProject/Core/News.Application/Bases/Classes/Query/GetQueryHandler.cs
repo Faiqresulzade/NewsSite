@@ -9,7 +9,8 @@ namespace News.Application.Bases.Classes.Query
     /// Base class for query handlers responsible for retrieving a single entity by its ID, providing access to a unit of work and a mapper for object mapping.
     /// </summary>
 
-    public class GetQueryHandler
+    public class GetQueryHandler<TResponse, Tentity>
+        where Tentity : EntityBase, IEntityBase, new()
     {
         private protected readonly IUnitOfWork unitOfWork;
         private protected readonly IMapper mapper;
@@ -20,9 +21,8 @@ namespace News.Application.Bases.Classes.Query
             this.mapper = Mapper.Instance;
         }
 
-        private protected virtual async Task<TResponse> GetEntity<TResponse, Tentity>
+        private protected virtual async Task<TResponse> GetEntity
         (int id, Tentity? entity = default, Action<TResponse> customMap = default)
-        where Tentity : EntityBase, IEntityBase, new()
         {
             entity ??= await unitOfWork.GetReadRepository<Tentity>().GetAsync(n => !n.IsDeleted && n.Id == id);
 

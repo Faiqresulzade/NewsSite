@@ -7,9 +7,9 @@ using News.Application.Abstraction.Interfaces.UnitOfWorks;
 using News.Application.Bases.Interfaces.DI;
 using News.Domain.Entities;
 using News.Persistence.Context;
-using News.Persistence.Factories;
-using News.Persistence.Repositories;
-using News.Persistence.UnitOfWorks;
+using News.Persistence.Implementations.Factories;
+using News.Persistence.Implementations.Repositories;
+using News.Persistence.Implementations.UnitOfWorks;
 using System.Reflection;
 
 namespace News.Persistence.Registrations
@@ -20,6 +20,8 @@ namespace News.Persistence.Registrations
         {
             services.AddDbContext<AppDbContext>(x => x.UseSqlServer(configuration.GetConnectionString("Default")));
             services.Add(new ServiceDescriptor(typeof(IReadRepository<>), typeof(ReadRepository<>), ServiceLifetime.Scoped));
+            services.AddMemoryCache();
+            services.AddHttpContextAccessor();
 
             services.AddScoped(typeof(IReadRepository<>), typeof(ReadRepository<>));
             services.AddScoped(typeof(IWriteRepository<>), typeof(WriteRepository<>));

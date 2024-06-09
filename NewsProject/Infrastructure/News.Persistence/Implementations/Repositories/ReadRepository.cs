@@ -5,7 +5,7 @@ using News.Application.Bases.Interfaces.DI;
 using News.Domain.Comman;
 using System.Linq.Expressions;
 
-namespace News.Persistence.Repositories
+namespace News.Persistence.Implementations.Repositories
 {
     public class ReadRepository<T> : IScoped, IReadRepository<T> where T : class, IEntityBase, new()
     {

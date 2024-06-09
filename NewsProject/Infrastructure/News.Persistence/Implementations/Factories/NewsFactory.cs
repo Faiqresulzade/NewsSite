@@ -5,7 +5,7 @@ using News.Application.Bases.Interfaces.Factories;
 using NewsEntity = News.Domain.Entities.News;
 using News.Application.Utilities.Helpers;
 
-namespace News.Persistence.Factories
+namespace News.Persistence.Implementations.Factories
 {
     public class NewsFactory : IScoped, INewsFactory
     {

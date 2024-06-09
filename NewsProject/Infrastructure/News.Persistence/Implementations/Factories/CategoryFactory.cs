@@ -3,7 +3,7 @@ using News.Application.Bases.Interfaces.DI;
 using News.Application.Abstraction.Interfaces.Factories;
 using News.Application.Features.NewsCategory.Command.CreateCategory;
 
-namespace News.Persistence.Factories
+namespace News.Persistence.Implementations.Factories
 {
     public class CategoryFactory : IScoped, ICategoryFactory
     {

@@ -3,7 +3,7 @@ using News.Application.Abstraction.Interfaces.Repositories;
 using News.Application.Bases.Interfaces.DI;
 using News.Domain.Comman;
 
-namespace News.Persistence.Repositories
+namespace News.Persistence.Implementations.Repositories
 {
     public class WriteRepository<T> : IScoped, IWriteRepository<T> where T : class, IEntityBase, new()
     {

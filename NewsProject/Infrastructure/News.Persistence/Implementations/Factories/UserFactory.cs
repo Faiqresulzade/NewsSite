@@ -4,14 +4,14 @@ using News.Application.Bases.Interfaces.Factories;
 using News.Application.Features.Auth.Command.Register;
 using News.Domain.Entities;
 
-namespace News.Persistence.Factories
+namespace News.Persistence.Implementations.Factories
 {
     public class UserFactory : IScoped, IUserFactory
     {
         private readonly UserManager<User> _userManager;
         private readonly RoleManager<Role> _roleManager;
 
-        public UserFactory(UserManager<User> userManager,RoleManager<Role> roleManager)
+        public UserFactory(UserManager<User> userManager, RoleManager<Role> roleManager)
         {
             _userManager = userManager;
             _roleManager = roleManager;

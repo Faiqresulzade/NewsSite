@@ -2,9 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using News.Domain.Entities;
-using News.Persistence.Interfaces.Configuration;
+using News.Persistence.Bases.Interfaces.Configurations;
 
-namespace News.Persistence.Configuration
+namespace News.Persistence.Implementations.Configuration
 {
     /// <summary>
     /// Configuration class for the <see cref="NewsCategory"/> entity.
@@ -34,7 +34,7 @@ namespace News.Persistence.Configuration
         /// </summary>
         /// <param name="builder"></param>
         /// <param name="count"></param>
-        public void AddSeedData(EntityTypeBuilder<NewsCategory> builder,in int count)
+        public void AddSeedData(EntityTypeBuilder<NewsCategory> builder, in int count)
         {
             Faker faker = new Faker();
             for (int i = 0; i < count; i++)

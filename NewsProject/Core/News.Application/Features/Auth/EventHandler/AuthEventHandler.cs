@@ -2,11 +2,13 @@
 using News.Application.Bases.Interfaces.Rules;
 using News.Application.Features.Auth.Command.Login;
 using News.Application.Features.Auth.Command.Register;
-using News.Application.Bases.Interfaces.DI;
+using ServicesRegisterPlugin.Atributes;
 
 namespace News.Application.Features.Auth.EventHandler
 {
-    public class AuthEventHandler : ITransient
+
+    [Transient()]
+    public class AuthEventHandler 
     {
         private readonly IAuthRules _authRules;
 

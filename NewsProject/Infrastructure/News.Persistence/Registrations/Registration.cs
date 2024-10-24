@@ -4,7 +4,6 @@ using Microsoft.Extensions.DependencyInjection;
 using News.Application.Abstraction.Interfaces.Factories;
 using News.Application.Abstraction.Interfaces.Repositories;
 using News.Application.Abstraction.Interfaces.UnitOfWorks;
-using News.Application.Bases.Interfaces.DI;
 using News.Domain.Entities;
 using News.Persistence.Context;
 using News.Persistence.Implementations.Factories;

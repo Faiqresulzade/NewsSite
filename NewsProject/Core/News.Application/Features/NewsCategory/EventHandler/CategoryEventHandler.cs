@@ -1,15 +1,16 @@
-﻿using News.Application.Bases.Interfaces.DI;
-using News.Application.Bases.Interfaces.Rules;
+﻿using News.Application.Abstraction.Interfaces.Repositories;
 using News.Application.Abstraction.Interfaces.UnitOfWorks;
-using News.Application.Abstraction.Interfaces.Repositories;
+using News.Application.Bases.Interfaces.Rules;
 using News.Application.Features.NewsCategory.Command.CreateCategory;
 using News.Application.Features.NewsCategory.Command.UpdateCategory;
 using News.Application.Features.NewsCategory.Queries.GetCategoryById;
+using ServicesRegisterPlugin.Atributes;
 using Category = News.Domain.Entities.NewsCategory;
 
 namespace News.Application.Features.NewsCategory.EventHandler
 {
-    public class CategoryEventHandler : ITransient
+    [Transient()]
+    public class CategoryEventHandler 
     {
         private readonly INewsCategoryRules _rules;
 

@@ -1,13 +1,14 @@
 ﻿using Microsoft.AspNetCore.Http;
 using News.Application.Abstraction.Interfaces.UnitOfWorks;
-using News.Application.Bases.Interfaces.DI;
 using News.Application.Bases.Interfaces.Services.News;
 using News.Application.Utilities.Helpers;
+using ServicesRegisterPlugin.Atributes;
 using NewsEntity = News.Domain.Entities.News;
 
 namespace News.Persistence.Implementations.Services
 {
-    public class NewsService : IScoped, IReadCountİncrementable
+    [Scoped(nameof(IReadCountİncrementable))]
+    public class NewsService : IReadCountİncrementable
     {
         private readonly IHttpContextAccessor _httpContextAccessor;
         private const string _newsCookieKey = "NewsRead_";

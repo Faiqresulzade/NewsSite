@@ -1,12 +1,13 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using News.Application.Bases.Interfaces.DI;
 using News.Application.Bases.Interfaces.Factories;
 using News.Application.Features.Auth.Command.Register;
 using News.Domain.Entities;
+using ServicesRegisterPlugin.Atributes;
 
 namespace News.Persistence.Implementations.Factories
 {
-    public class UserFactory : IScoped, IUserFactory
+    [Scoped(nameof(IUserFactory))]
+    public class UserFactory : IUserFactory
     {
         private readonly UserManager<User> _userManager;
         private readonly RoleManager<Role> _roleManager;

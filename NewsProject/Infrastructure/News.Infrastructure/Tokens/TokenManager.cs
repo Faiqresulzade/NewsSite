@@ -1,12 +1,13 @@
 ﻿using News.Domain.Entities;
 using Microsoft.AspNetCore.Identity;
 using System.IdentityModel.Tokens.Jwt;
-using News.Application.Bases.Interfaces.DI;
 using News.Application.Bases.Interfaces.Tokens;
+using ServicesRegisterPlugin.Atributes;
 
 namespace News.Infrastructure.Tokens
 {
-    public class TokenManager : IScoped, ITokenManager
+    [Scoped(nameof(ITokenManager))]
+    public class TokenManager : ITokenManager
     {
         private readonly UserManager<User> _userManager;
         private const string _loginProvider = "default";

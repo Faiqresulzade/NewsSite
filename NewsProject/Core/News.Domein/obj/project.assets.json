@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {
+    "net8.0": {
       "Microsoft.AspNetCore.Cryptography.Internal/6.0.29": {
         "type": "package",
         "compile": {
@@ -814,36 +814,38 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net6.0": [
+    "net8.0": [
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.29"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Honor\\.nuget\\packages\\": {}
+    "C:\\Users\\fbrasulzade\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Core\\News.Domein\\News.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\fbrasulzade\\Desktop\\NewsSite\\NewsProject\\Core\\News.Domein\\News.Domain.csproj",
       "projectName": "News.Domain",
-      "projectPath": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Core\\News.Domein\\News.Domain.csproj",
-      "packagesPath": "C:\\Users\\Honor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Honor\\Desktop\\News\\NewsProject\\Core\\News.Domein\\obj\\",
+      "projectPath": "C:\\Users\\fbrasulzade\\Desktop\\NewsSite\\NewsProject\\Core\\News.Domein\\News.Domain.csproj",
+      "packagesPath": "C:\\Users\\fbrasulzade\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\fbrasulzade\\Desktop\\NewsSite\\NewsProject\\Core\\News.Domein\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Honor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\fbrasulzade\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0"
+        "net8.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://gitlab.xalqbank.az/api/v4/projects/278/packages/nuget/index.json": {}
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "projectReferences": {}
         }
       },
@@ -851,11 +853,16 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
-      "net6.0": {
-        "targetAlias": "net6.0",
+      "net8.0": {
+        "targetAlias": "net8.0",
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
             "target": "Package",
@@ -878,7 +885,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

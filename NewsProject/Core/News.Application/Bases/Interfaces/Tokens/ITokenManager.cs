@@ -1,6 +1,5 @@
 ﻿using News.Domain.Entities;
 using System.IdentityModel.Tokens.Jwt;
-using News.Application.Bases.Interfaces.DI;
 
 namespace News.Application.Bases.Interfaces.Tokens
 {
@@ -8,7 +7,7 @@ namespace News.Application.Bases.Interfaces.Tokens
     /// Interface for managing token-related operations.
     /// Inherits from IDependencyInjections to support dependency injection.
     /// </summary>
-    public interface ITokenManager : IDependencyInjections
+    public interface ITokenManager 
     {
         /// <summary>
         /// Updates the user's token information.

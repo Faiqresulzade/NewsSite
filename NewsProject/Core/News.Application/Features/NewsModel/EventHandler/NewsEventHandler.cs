@@ -1,15 +1,16 @@
-﻿using News.Application.Bases.Interfaces.DI;
-using News.Application.Bases.Interfaces.Rules;
+﻿using News.Application.Bases.Interfaces.Rules;
 using News.Application.Features.NewsModel.Command.CreateNews;
 using News.Application.Features.NewsModel.Command.UpdateNews;
 using News.Application.Features.NewsModel.Queries.GetNewsById;
 using News.Domain.Entities;
+using ServicesRegisterPlugin.Atributes;
 using Category = News.Domain.Entities.NewsCategory;
 using NewsEntity = News.Domain.Entities.News;
 
 namespace News.Application.Features.NewsModel.EventHandler
 {
-    public class NewsEventHandler : ITransient
+    [Transient()]
+    public class NewsEventHandler
     {
         private readonly INewsRules _newsRules;
         private readonly INewsCategoryRules _newsCategoryRules;

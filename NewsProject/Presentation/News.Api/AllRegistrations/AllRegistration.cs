@@ -1,9 +1,9 @@
 ﻿using News.Persistence.Registrations;
 using News.Application.Registrations;
 using News.Infrastructure.Registrations;
-using News.Application.Bases.Interfaces.DI;
 using System.Reflection;
 using Microsoft.OpenApi.Models;
+using ServicesRegisterPlugin.Extensions;
 
 namespace News.Api.AllRegistrations
 {
@@ -17,8 +17,10 @@ namespace News.Api.AllRegistrations
         /// </summary>
         public static void RegisterAllDI(WebApplicationBuilder builder)
         {
-            RegisterImplementationsOf<IScoped>(builder.Services, ServiceLifetime.Scoped);
-            RegisterImplementationsOf<ITransient>(builder.Services, ServiceLifetime.Transient);
+            builder.Services.RegisterServices(configure =>
+            {
+                configure.AssemblyPrefix = "News";
+            });
 
             builder.Services.AddSwagger();
             builder.Services.AddPersistence(builder.Configuration);
@@ -67,60 +69,6 @@ namespace News.Api.AllRegistrations
         /// <typeparam name="TInterface">The interface type to be registered.</typeparam>
         /// <param name="services">The service collection to register the implementations.</param>
         /// <param name="lifetime">The service lifetime of the registered implementations.</param>
-        private static void RegisterImplementationsOf<TInterface>(IServiceCollection services, ServiceLifetime lifetime)
-        {
-            foreach (Assembly assembly in AssemblyHelper.GetProjectAssemblies())
-            {
-                var typesToRegister = assembly.GetTypes()
-                    .Where(type => typeof(TInterface).IsAssignableFrom(type) && type != typeof(TInterface));
 
-                foreach (Type type in typesToRegister)
-                {
-                    Type? interfaceType = type.GetInterfaces().FirstOrDefault(x => typeof(IDependencyInjections).IsAssignableFrom(x));
-
-                    if (interfaceType is null)
-                    {
-                        services.Add(new ServiceDescriptor(type, type, lifetime));
-                        continue;
-                    }
-
-                    if (interfaceType.IsGenericType)
-                    {
-                        try
-                        {
-                            Type closedGenericType = interfaceType.MakeGenericType(type.GetGenericArguments());
-                            services.Add(new ServiceDescriptor(closedGenericType, type, lifetime));
-                        }
-                        catch (Exception)
-                        { }
-                    }
-                    else
-                        services.Add(new ServiceDescriptor(interfaceType, type, lifetime));
-                }
-            }
-        }
-
-        /// <summary>
-        /// Helper class for working with assemblies.
-        /// </summary>
-        private static class AssemblyHelper
-        {
-            private const string projectAssemblyPrefix = "News";
-
-            /// <summary>
-            /// Gets the assemblies that belong to the project.
-            /// </summary>
-            /// <returns>An array of project assemblies.</returns>
-            public static Assembly[] GetProjectAssemblies()
-            {
-                Assembly[] allAssemblies = AppDomain.CurrentDomain.GetAssemblies();
-
-                Assembly[] projectAssemblies = allAssemblies
-                    .Where(assembly => assembly.FullName.StartsWith(projectAssemblyPrefix))
-                    .ToArray();
-
-                return projectAssemblies;
-            }
-        }
     }
 }

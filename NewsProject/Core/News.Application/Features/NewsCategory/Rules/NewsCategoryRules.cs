@@ -1,9 +1,9 @@
 ﻿using News.Application.Abstraction.Interfaces.Repositories;
 using News.Application.Abstraction.Interfaces.UnitOfWorks;
 using News.Application.Bases.Classes.Rules;
-using News.Application.Bases.Interfaces.DI;
 using News.Application.Bases.Interfaces.Rules;
 using News.Application.Features.NewsCategory.Exceptions;
+using ServicesRegisterPlugin.Atributes;
 using Category = News.Domain.Entities.NewsCategory;
 
 namespace News.Application.Features.NewsCategory.Rules
@@ -11,7 +11,8 @@ namespace News.Application.Features.NewsCategory.Rules
     /// <summary>
     /// Provides business rules related to news categories.
     /// </summary>
-    public class NewsCategoryRules : BaseRules<Category>, ITransient, INewsCategoryRules
+    [Transient(nameof(INewsCategoryRules))]
+    public class NewsCategoryRules : BaseRules<Category>, INewsCategoryRules
     {
 
         /// <summary>

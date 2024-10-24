@@ -1,19 +1,18 @@
-﻿using MediatR;
-using FluentValidation;
-using System.Reflection;
-using System.Globalization;
-using News.Application.Beheviors;
-using News.Application.Exceptions;
+﻿using FluentValidation;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using News.Application.Bases.Classes.EventHandler;
-using News.Application.Features.NewsCategory.EventHandler;
-using News.Application.Features.Auth.EventHandler;
-using News.Application.Features.NewsModel.EventHandler;
-using News.Application.Bases.Interfaces.Rules;
 using News.Application.Bases.Classes.Rules;
-using Microsoft.Extensions.Hosting;
-using News.Application.Utilities.Helpers;
+using News.Application.Bases.Interfaces.Rules;
+using News.Application.Beheviors;
+using News.Application.Exceptions;
+using News.Application.Features.Auth.EventHandler;
+using News.Application.Features.NewsCategory.EventHandler;
+using News.Application.Features.NewsModel.EventHandler;
+using System.Globalization;
+using System.Reflection;
+
 
 namespace News.Application.Registrations
 {

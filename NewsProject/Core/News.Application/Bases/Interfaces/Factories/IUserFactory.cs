@@ -1,6 +1,5 @@
 ﻿using News.Domain.Entities;
 using Microsoft.AspNetCore.Identity;
-using News.Application.Bases.Interfaces.DI;
 using News.Application.Features.Auth.Command.Register;
 using News.Application.Abstraction.Interfaces.Factories;
 
@@ -11,7 +10,7 @@ namespace News.Application.Bases.Interfaces.Factories
     /// Inherits from IDependencyInjections and IFactory to support dependency injection and
     /// user creation based on RegisterCommandRequest.
     /// </summary>  
-    public interface IUserFactory : IDependencyInjections, IFactory<User, RegisterCommandRequest>
+    public interface IUserFactory : IFactory<User, RegisterCommandRequest>
     {
         /// <summary>
         /// Creates and assigns a role to a user.

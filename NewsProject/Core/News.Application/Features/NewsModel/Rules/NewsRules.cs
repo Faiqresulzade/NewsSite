@@ -5,11 +5,12 @@ using News.Application.Bases.Interfaces.Rules;
 using News.Application.Features.NewsModel.Command.UpdateNews;
 using News.Application.Features.NewsModel.Exceptions;
 using NewsEntity = News.Domain.Entities.News;
-using News.Application.Bases.Interfaces.DI;
+using ServicesRegisterPlugin.Atributes;
 
 namespace News.Application.Features.NewsModel.Rules
 {
-    public class NewsRules : BaseRules<NewsEntity>, INewsRules,ITransient
+    [Transient(nameof(INewsRules))]
+    public class NewsRules : BaseRules<NewsEntity>, INewsRules
     {
         public void PropertyIsNotImage(IFormFile newsImage)
         {

@@ -1,11 +1,12 @@
 ﻿using News.Domain.Entities;
-using News.Application.Bases.Interfaces.DI;
 using News.Application.Abstraction.Interfaces.Factories;
 using News.Application.Features.NewsCategory.Command.CreateCategory;
+using ServicesRegisterPlugin.Atributes;
 
 namespace News.Persistence.Implementations.Factories
 {
-    public class CategoryFactory : IScoped, ICategoryFactory
+    [Scoped(nameof(ICategoryFactory))]
+    public class CategoryFactory :  ICategoryFactory
     {
         public async Task<NewsCategory> Create(CreateCategoryCommandRequest request) => new NewsCategory(request.Name);
 

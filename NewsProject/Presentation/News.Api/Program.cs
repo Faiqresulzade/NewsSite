@@ -1,6 +1,7 @@
 using News.Api.AllRegistrations;
 using News.Application.Registrations;
 using News.Application.Utilities.Helpers;
+using ServicesRegisterPlugin.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,8 +15,9 @@ builder.Configuration
     .AddJsonFile("appsettings.json", false)
     .AddJsonFile($"appsettings.{env.EnvironmentName}.json", true);
 
-
 AllRegistration.RegisterAllDI(builder);
+
+
 
 var app = builder.Build();
 

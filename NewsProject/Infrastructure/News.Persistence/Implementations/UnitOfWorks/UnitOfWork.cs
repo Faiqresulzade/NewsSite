@@ -1,12 +1,13 @@
 ﻿using News.Application.Abstraction.Interfaces.Repositories;
 using News.Application.Abstraction.Interfaces.UnitOfWorks;
-using News.Application.Bases.Interfaces.DI;
 using News.Persistence.Context;
 using News.Persistence.Implementations.Repositories;
+using ServicesRegisterPlugin.Atributes;
 
 namespace News.Persistence.Implementations.UnitOfWorks
 {
-    public class UnitOfWork : IScoped, IUnitOfWork
+    [Scoped(nameof(IUnitOfWork))]
+    public class UnitOfWork : IUnitOfWork
     {
         private readonly AppDbContext _dbContext;
 

@@ -1,7 +1,6 @@
 ﻿using News.Domain.Entities;
 using System.Security.Claims;
 using System.IdentityModel.Tokens.Jwt;
-using News.Application.Bases.Interfaces.DI;
 
 namespace News.Application.Bases.Interfaces.Tokens
 {
@@ -9,7 +8,7 @@ namespace News.Application.Bases.Interfaces.Tokens
     /// Interface for token-related services.
     /// Inherits from IDependencyInjections to support dependency injection.
     /// </summary>
-    public interface ITokenSrvice : IDependencyInjections
+    public interface ITokenSrvice 
     {
         /// <summary>
         /// Creates a JWT security token for the specified user and their roles.

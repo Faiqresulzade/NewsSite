@@ -1,11 +1,12 @@
 ﻿using FluentValidation;
 using Microsoft.AspNetCore.Http;
-using News.Application.Bases.Interfaces.DI;
 using SendGrid.Helpers.Errors.Model;
+using ServicesRegisterPlugin.Atributes;
 
 namespace News.Application.Exceptions
 {
-    public class ExceptionMiddleware : IMiddleware, ITransient
+    [Transient()]
+    public class ExceptionMiddleware : IMiddleware
     {
         public async Task InvokeAsync(HttpContext context, RequestDelegate next)
         {

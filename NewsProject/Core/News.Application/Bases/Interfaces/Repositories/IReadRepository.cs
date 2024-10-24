@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore.Query;
-using News.Application.Bases.Interfaces.DI;
 using News.Domain.Comman;
 using System.Linq.Expressions;
 
@@ -9,7 +8,7 @@ namespace News.Application.Abstraction.Interfaces.Repositories
     /// Represents a generic read-only repository interface for accessing entities of type <typeparamref name="T"/>.
     /// </summary>
     /// <typeparam name="T">The type of entity for which the repository provides read operations.</typeparam>
-    public interface IReadRepository<T> : IDependencyInjections where T :class, IEntityBase, new()
+    public interface IReadRepository<T>  where T :class, IEntityBase, new()
     {
         /// <summary>
         /// Retrieves all entities asynchronously.

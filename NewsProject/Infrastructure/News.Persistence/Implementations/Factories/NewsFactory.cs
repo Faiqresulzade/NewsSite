@@ -1,13 +1,14 @@
 ﻿using MediatR;
 using News.Application.DTOs.News;
-using News.Application.Bases.Interfaces.DI;
 using News.Application.Bases.Interfaces.Factories;
 using NewsEntity = News.Domain.Entities.News;
 using News.Application.Utilities.Helpers;
+using ServicesRegisterPlugin.Atributes;
 
 namespace News.Persistence.Implementations.Factories
 {
-    public class NewsFactory : IScoped, INewsFactory
+    [Scoped(nameof(INewsFactory))]
+    public class NewsFactory : INewsFactory
     {
         public async Task<NewsEntity> Create(NewsCreateDto trequest)
         {

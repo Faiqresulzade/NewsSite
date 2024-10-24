@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using News.Application.Bases.Interfaces.DI;
 using News.Application.Bases.Interfaces.Tokens;
 using News.Domain.Entities;
+using ServicesRegisterPlugin.Atributes;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
@@ -11,7 +11,8 @@ using System.Text;
 
 namespace News.Infrastructure.Tokens
 {
-    public class TokenService : ITokenSrvice, ITransient
+    [Transient(nameof(ITokenSrvice))]
+    public class TokenService : ITokenSrvice
     {
         private readonly TokenSettings _tokenSettings;
         private readonly UserManager<User> _userManager;

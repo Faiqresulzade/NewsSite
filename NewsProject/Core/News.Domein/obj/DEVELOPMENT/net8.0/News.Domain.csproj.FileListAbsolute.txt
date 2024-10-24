@@ -1,0 +1,13 @@
+C:\Users\fbrasulzade\Desktop\NewsSite\NewsProject\Core\News.Domein\bin\DEVELOPMENT\net8.0\News.Domain.deps.json
+C:\Users\fbrasulzade\Desktop\NewsSite\NewsProject\Core\News.Domein\bin\DEVELOPMENT\net8.0\News.Domain.dll
+C:\Users\fbrasulzade\Desktop\NewsSite\NewsProject\Core\News.Domein\bin\DEVELOPMENT\net8.0\News.Domain.pdb
+C:\Users\fbrasulzade\Desktop\NewsSite\NewsProject\Core\News.Domein\obj\DEVELOPMENT\net8.0\News.Domain.csproj.AssemblyReference.cache
+C:\Users\fbrasulzade\Desktop\NewsSite\NewsProject\Core\News.Domein\obj\DEVELOPMENT\net8.0\News.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fbrasulzade\Desktop\NewsSite\NewsProject\Core\News.Domein\obj\DEVELOPMENT\net8.0\News.Domain.AssemblyInfoInputs.cache
+C:\Users\fbrasulzade\Desktop\NewsSite\NewsProject\Core\News.Domein\obj\DEVELOPMENT\net8.0\News.Domain.AssemblyInfo.cs
+C:\Users\fbrasulzade\Desktop\NewsSite\NewsProject\Core\News.Domein\obj\DEVELOPMENT\net8.0\News.Domain.csproj.CoreCompileInputs.cache
+C:\Users\fbrasulzade\Desktop\NewsSite\NewsProject\Core\News.Domein\obj\DEVELOPMENT\net8.0\News.Domain.sourcelink.json
+C:\Users\fbrasulzade\Desktop\NewsSite\NewsProject\Core\News.Domein\obj\DEVELOPMENT\net8.0\News.Domain.dll
+C:\Users\fbrasulzade\Desktop\NewsSite\NewsProject\Core\News.Domein\obj\DEVELOPMENT\net8.0\refint\News.Domain.dll
+C:\Users\fbrasulzade\Desktop\NewsSite\NewsProject\Core\News.Domein\obj\DEVELOPMENT\net8.0\News.Domain.pdb
+C:\Users\fbrasulzade\Desktop\NewsSite\NewsProject\Core\News.Domein\obj\DEVELOPMENT\net8.0\ref\News.Domain.dll

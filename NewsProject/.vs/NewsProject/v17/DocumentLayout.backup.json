@@ -1,0 +1,190 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\fbrasulzade\\Desktop\\NewsSite\\NewsProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9FA41A70-3FA0-494F-936A-E7BC6C771078}|Infrastructure\\News.Infrastructure\\News.Infrastructure.csproj|c:\\users\\fbrasulzade\\desktop\\newssite\\newsproject\\infrastructure\\news.infrastructure\\tokens\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FA41A70-3FA0-494F-936A-E7BC6C771078}|Infrastructure\\News.Infrastructure\\News.Infrastructure.csproj|solutionrelative:infrastructure\\news.infrastructure\\tokens\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C7499A7-D9D7-4451-BC74-00A141A2087F}|Core\\News.Application\\News.Application.csproj|c:\\users\\fbrasulzade\\desktop\\newssite\\newsproject\\core\\news.application\\features\\newsmodel\\rules\\newsrules.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C7499A7-D9D7-4451-BC74-00A141A2087F}|Core\\News.Application\\News.Application.csproj|solutionrelative:core\\news.application\\features\\newsmodel\\rules\\newsrules.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C7499A7-D9D7-4451-BC74-00A141A2087F}|Core\\News.Application\\News.Application.csproj|c:\\users\\fbrasulzade\\desktop\\newssite\\newsproject\\core\\news.application\\features\\newsmodel\\eventhandler\\newseventhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C7499A7-D9D7-4451-BC74-00A141A2087F}|Core\\News.Application\\News.Application.csproj|solutionrelative:core\\news.application\\features\\newsmodel\\eventhandler\\newseventhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C7499A7-D9D7-4451-BC74-00A141A2087F}|Core\\News.Application\\News.Application.csproj|c:\\users\\fbrasulzade\\desktop\\newssite\\newsproject\\core\\news.application\\features\\newscategory\\rules\\newscategoryrules.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C7499A7-D9D7-4451-BC74-00A141A2087F}|Core\\News.Application\\News.Application.csproj|solutionrelative:core\\news.application\\features\\newscategory\\rules\\newscategoryrules.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C7499A7-D9D7-4451-BC74-00A141A2087F}|Core\\News.Application\\News.Application.csproj|c:\\users\\fbrasulzade\\desktop\\newssite\\newsproject\\core\\news.application\\features\\newscategory\\eventhandler\\categoryeventhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C7499A7-D9D7-4451-BC74-00A141A2087F}|Core\\News.Application\\News.Application.csproj|solutionrelative:core\\news.application\\features\\newscategory\\eventhandler\\categoryeventhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C7499A7-D9D7-4451-BC74-00A141A2087F}|Core\\News.Application\\News.Application.csproj|c:\\users\\fbrasulzade\\desktop\\newssite\\newsproject\\core\\news.application\\features\\auth\\rules\\authrules.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C7499A7-D9D7-4451-BC74-00A141A2087F}|Core\\News.Application\\News.Application.csproj|solutionrelative:core\\news.application\\features\\auth\\rules\\authrules.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C7499A7-D9D7-4451-BC74-00A141A2087F}|Core\\News.Application\\News.Application.csproj|c:\\users\\fbrasulzade\\desktop\\newssite\\newsproject\\core\\news.application\\features\\auth\\eventhandler\\autheventhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C7499A7-D9D7-4451-BC74-00A141A2087F}|Core\\News.Application\\News.Application.csproj|solutionrelative:core\\news.application\\features\\auth\\eventhandler\\autheventhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C7499A7-D9D7-4451-BC74-00A141A2087F}|Core\\News.Application\\News.Application.csproj|c:\\users\\fbrasulzade\\desktop\\newssite\\newsproject\\core\\news.application\\exceptions\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C7499A7-D9D7-4451-BC74-00A141A2087F}|Core\\News.Application\\News.Application.csproj|solutionrelative:core\\news.application\\exceptions\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C7499A7-D9D7-4451-BC74-00A141A2087F}|Core\\News.Application\\News.Application.csproj|c:\\users\\fbrasulzade\\desktop\\newssite\\newsproject\\core\\news.application\\bases\\classes\\eventhandler\\baseeventhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C7499A7-D9D7-4451-BC74-00A141A2087F}|Core\\News.Application\\News.Application.csproj|solutionrelative:core\\news.application\\bases\\classes\\eventhandler\\baseeventhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7EAF9C3-7784-403A-84E1-90099890610D}|Presentation\\News.Api\\News.Api.csproj|c:\\users\\fbrasulzade\\desktop\\newssite\\newsproject\\presentation\\news.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7EAF9C3-7784-403A-84E1-90099890610D}|Presentation\\News.Api\\News.Api.csproj|solutionrelative:presentation\\news.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 112,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "C:\\Users\\fbrasulzade\\Desktop\\NewsSite\\NewsProject\\Infrastructure\\News.Infrastructure\\Tokens\\TokenService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\News.Infrastructure\\Tokens\\TokenService.cs",
+              "ToolTip": "C:\\Users\\fbrasulzade\\Desktop\\NewsSite\\NewsProject\\Infrastructure\\News.Infrastructure\\Tokens\\TokenService.cs",
+              "RelativeToolTip": "Infrastructure\\News.Infrastructure\\Tokens\\TokenService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T10:04:28.004Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NewsRules.cs",
+              "DocumentMoniker": "C:\\Users\\fbrasulzade\\Desktop\\NewsSite\\NewsProject\\Core\\News.Application\\Features\\NewsModel\\Rules\\NewsRules.cs",
+              "RelativeDocumentMoniker": "Core\\News.Application\\Features\\NewsModel\\Rules\\NewsRules.cs",
+              "ToolTip": "C:\\Users\\fbrasulzade\\Desktop\\NewsSite\\NewsProject\\Core\\News.Application\\Features\\NewsModel\\Rules\\NewsRules.cs",
+              "RelativeToolTip": "Core\\News.Application\\Features\\NewsModel\\Rules\\NewsRules.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T10:04:11.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NewsEventHandler.cs",
+              "DocumentMoniker": "C:\\Users\\fbrasulzade\\Desktop\\NewsSite\\NewsProject\\Core\\News.Application\\Features\\NewsModel\\EventHandler\\NewsEventHandler.cs",
+              "RelativeDocumentMoniker": "Core\\News.Application\\Features\\NewsModel\\EventHandler\\NewsEventHandler.cs",
+              "ToolTip": "C:\\Users\\fbrasulzade\\Desktop\\NewsSite\\NewsProject\\Core\\News.Application\\Features\\NewsModel\\EventHandler\\NewsEventHandler.cs",
+              "RelativeToolTip": "Core\\News.Application\\Features\\NewsModel\\EventHandler\\NewsEventHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T10:03:53.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NewsCategoryRules.cs",
+              "DocumentMoniker": "C:\\Users\\fbrasulzade\\Desktop\\NewsSite\\NewsProject\\Core\\News.Application\\Features\\NewsCategory\\Rules\\NewsCategoryRules.cs",
+              "RelativeDocumentMoniker": "Core\\News.Application\\Features\\NewsCategory\\Rules\\NewsCategoryRules.cs",
+              "ToolTip": "C:\\Users\\fbrasulzade\\Desktop\\NewsSite\\NewsProject\\Core\\News.Application\\Features\\NewsCategory\\Rules\\NewsCategoryRules.cs",
+              "RelativeToolTip": "Core\\News.Application\\Features\\NewsCategory\\Rules\\NewsCategoryRules.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T10:03:33.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CategoryEventHandler.cs",
+              "DocumentMoniker": "C:\\Users\\fbrasulzade\\Desktop\\NewsSite\\NewsProject\\Core\\News.Application\\Features\\NewsCategory\\EventHandler\\CategoryEventHandler.cs",
+              "RelativeDocumentMoniker": "Core\\News.Application\\Features\\NewsCategory\\EventHandler\\CategoryEventHandler.cs",
+              "ToolTip": "C:\\Users\\fbrasulzade\\Desktop\\NewsSite\\NewsProject\\Core\\News.Application\\Features\\NewsCategory\\EventHandler\\CategoryEventHandler.cs",
+              "RelativeToolTip": "Core\\News.Application\\Features\\NewsCategory\\EventHandler\\CategoryEventHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T10:03:12.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AuthRules.cs",
+              "DocumentMoniker": "C:\\Users\\fbrasulzade\\Desktop\\NewsSite\\NewsProject\\Core\\News.Application\\Features\\Auth\\Rules\\AuthRules.cs",
+              "RelativeDocumentMoniker": "Core\\News.Application\\Features\\Auth\\Rules\\AuthRules.cs",
+              "ToolTip": "C:\\Users\\fbrasulzade\\Desktop\\NewsSite\\NewsProject\\Core\\News.Application\\Features\\Auth\\Rules\\AuthRules.cs",
+              "RelativeToolTip": "Core\\News.Application\\Features\\Auth\\Rules\\AuthRules.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T10:02:51.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthEventHandler.cs",
+              "DocumentMoniker": "C:\\Users\\fbrasulzade\\Desktop\\NewsSite\\NewsProject\\Core\\News.Application\\Features\\Auth\\EventHandler\\AuthEventHandler.cs",
+              "RelativeDocumentMoniker": "Core\\News.Application\\Features\\Auth\\EventHandler\\AuthEventHandler.cs",
+              "ToolTip": "C:\\Users\\fbrasulzade\\Desktop\\NewsSite\\NewsProject\\Core\\News.Application\\Features\\Auth\\EventHandler\\AuthEventHandler.cs",
+              "RelativeToolTip": "Core\\News.Application\\Features\\Auth\\EventHandler\\AuthEventHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T10:02:26.386Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ExceptionMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\fbrasulzade\\Desktop\\NewsSite\\NewsProject\\Core\\News.Application\\Exceptions\\ExceptionMiddleware.cs",
+              "RelativeDocumentMoniker": "Core\\News.Application\\Exceptions\\ExceptionMiddleware.cs",
+              "ToolTip": "C:\\Users\\fbrasulzade\\Desktop\\NewsSite\\NewsProject\\Core\\News.Application\\Exceptions\\ExceptionMiddleware.cs",
+              "RelativeToolTip": "Core\\News.Application\\Exceptions\\ExceptionMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T10:02:07.23Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BaseEventHandler.cs",
+              "DocumentMoniker": "C:\\Users\\fbrasulzade\\Desktop\\NewsSite\\NewsProject\\Core\\News.Application\\Bases\\Classes\\EventHandler\\BaseEventHandler.cs",
+              "RelativeDocumentMoniker": "Core\\News.Application\\Bases\\Classes\\EventHandler\\BaseEventHandler.cs",
+              "ToolTip": "C:\\Users\\fbrasulzade\\Desktop\\NewsSite\\NewsProject\\Core\\News.Application\\Bases\\Classes\\EventHandler\\BaseEventHandler.cs",
+              "RelativeToolTip": "Core\\News.Application\\Bases\\Classes\\EventHandler\\BaseEventHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T10:01:46.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\fbrasulzade\\Desktop\\NewsSite\\NewsProject\\Presentation\\News.Api\\Program.cs",
+              "RelativeDocumentMoniker": "Presentation\\News.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\fbrasulzade\\Desktop\\NewsSite\\NewsProject\\Presentation\\News.Api\\Program.cs",
+              "RelativeToolTip": "Presentation\\News.Api\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T10:01:41.649Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
